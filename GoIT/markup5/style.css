@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body { 
+    font-size: 100%;
+}
+nav {
+    width:900px;
+    margin: 0.75rem auto 0;
+   /* clear: both;*/
+
+}
+ul.topmenu {
+    list-style-type: none;
+    font-family: Impact;
+    font-size: 100%;
+    width:100%;
+
+}
+ul.topmenu li {
+    background: #1aa4ff;
+    display: inline-block;
+    float: left;
+    padding: 11px 1rem;
+
+
+}
+ul.topmenu li a {
+    color: #fff6ff;
+    font-size: 1rem;
+    text-decoration: none;
+
+
+}
+ul.topmenu li ul  {
+    display: none;
+}
+
+ul.topmenu li:hover ul {
+    display: inline-block;
+    position: absolute;
+    margin-top: 11px;
+    left: 17%;
+    width: 887px;
+    background: #eeeeee;
+}
+ul.topmenu li:hover a{
+    background: #eeeeee;
+    color: #a0a0a0;
+}
+ul.topmenu li:hover {
+    background: #eeeeee;
+
+}
+ul.topmenu li:hover ul li {
+    background: #eeeeee;
+}
+ul.topmenu li:hover ul li a {
+    font-size: 0.62rem;
+    color: #a0a0a0;
+
+}
+/*2 часть */
+.card {
+    position: absolute;
+    left: 17%;
+    width:293px;
+    margin: 100px auto;
+    background: #ee8129;
+    border-radius: 5px;
+}
+.decription {
+    background: #FFF;
+    border: 4px solid #ee8129;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-family:"Trebuchet MS";
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin:23px auto;
+    font-weight:bold;
+}
+h3 {
+    font-size: 24px;
+    font-family:"Trebuchet MS";
+    color: #35495a;
+    text-align: center;
+    text-transform: uppercase;
+    margin:25px auto 10px;
+    font-weight:normal;
+}
+
+span {
+    font-size: 68px;
+    font-family:"Trebuchet MS";
+    color: #35495a;
+    text-align: center;
+    text-transform: uppercase;
+    margin:0px auto;
+
+    font-weight:bold;
+    display: block;
+}
+span sup {
+    font-size: 36px;
+}
+span sub {
+    font-size: 18px;
+
+}
+ul.point {
+    list-style-type: none;
+    margin:25px auto 15px;
+
+}
+ul.point li  {
+    color: #35495a;
+    font-size: 15px;
+    display: block;
+   /* background: #f5f5f6;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 64px;
+    margin: 1px 15px;
+    background: url("marker.png") no-repeat 35px 12px,
+    #f5f5f6;
+
+}
+ul.point li:nth-child(even) {
+    /*background: #edf5fd;*/
+    background: url("marker.png") no-repeat 35px 12px,
+    #edf5fd;
+}
+div.button {
+    width: 254px;
+    height: 30px;
+    margin:10px auto 20px;
+    background: #ee8129;
+    border-radius: 5px;
+    padding-top: 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:bold;
+    box-shadow: 10px 5px 5px #b3560b ;
+}
