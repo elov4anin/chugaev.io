@@ -35,10 +35,13 @@ h1 span {
     position: relative;
 }
 .description::before {
+    content: '';
     position: absolute;
-    border: 30px solid transparent;
-    border-right: 43px solid rgb(255, 68, 0);
+    border: 10px solid transparent;
+    border-right: 13px solid #fff;
     display: block;
+    left: -23px;
+    top: 27px;
     width: 0;
     height: 0;
 }
