@@ -17,7 +17,7 @@
                 <li><a href="#">информация</a></li>
                 <li><a href="#">новости</a></li>
                 <li><a href="price.html">прайс-лист</a></li>
-                <li><a href="shop.html">магазин</a></li>
+                <li class="current"><a href="shop.html">магазин</a></li>
                 <li><a href="#">контакты</a></li>
             </ul>
         </nav>
@@ -132,5 +132,21 @@
         </section>
     </div>
 </footer>
+<div class="modal-window">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <b>личный кабинет</b>
+    <p>введите пожайлуста свой логин и пароль</p>
+    <form action="" class="login-form" method="post">
+        <input type="text" name="username" placeholder="логин" class="icon-user">
+        <input type="password" name="password" placeholder="пароль" class="icon-pass">
+        <input type="checkbox" name="remember" id="remember" value="1"> <label for="remember" class="remember">запомните меня</label>
+        <a href="#" class="pass-reset"> я забыл пароль</a>
+        <button type="button" class="btn">войти</button>
+    </form>
+</div>
+<div class="modal-window-map">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <div id="yandex-map"></div>
+</div>
 </body>
 </html>

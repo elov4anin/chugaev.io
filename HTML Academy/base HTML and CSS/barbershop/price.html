@@ -8,18 +8,19 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<header class="site-header">"background-color: #000;">
-        <a href="#"><img src="img/site-logo-header.png" alt="Барбершоп Бородинский - Главная" width="111" height="24"></a>
+<header class="site-header">
+    <div class="container clearfix">
         <nav class="main-menu">
+            <a href="index.html" class="inner-logo"><img src="img/site-logo-header.png" alt="Барбершоп Бородинский - Главная" width="111" height="24"></a>
             <ul>
-                <div class="container" style=
-                <li><a href="index.html">главная</a></li>
+
                 <li><a href="#">информация</a></li>
                 <li><a href="#">новости</a></li>
-                <li><a href="price.html">прайс-лист</a></li>
+                <li class="current"><a href="price.html">прайс-лист</a></li>
                 <li><a href="shop.html">магазин</a></li>
                 <li><a href="#">контакты</a></li>
-            </ul></nav>
+            </ul>
+        </nav>
         <div class="user-block">
             <a href="#" class="user-block__login">вход</a>
         </div>
@@ -32,8 +33,8 @@
         <li><a href="index.html">главная</a></li>
         <li><a href="price.html">прайс-лист</a></li>
     </ul>
-    <hr>
-    <b>истинно муская классика</b>
+<hr>
+    <b class="head">истинно муская классика</b>
     <div class="price-content">
         <h2>мы используем только лучшие средства:</h2>
         <ul>
@@ -42,6 +43,12 @@
             <li>suavecito</li>
             <li>malin+goetz</li>
         </ul>
+        <h2>несколько слов о нас:</h2>
+        <p>
+            наша парикмахерская занимается исключительно мужскими стрижками.
+            стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа.
+            мы не работаем на количество. мы делаем качество.
+        </p>
     </div>
     <div class="price-content">
         <h2>цены на услуги наших мастеров:</h2>
@@ -59,17 +66,7 @@
                 <td>350 руб.</td>
             </tr>
         </table>
-    </div>
-    <div class="price-content">
-        <h2>несколько слов о нас:</h2>
-        <p>
-            наша парикмахерская занимается исключительно мужскими стрижками.
-            стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа.
-            мы не работаем на количество. мы делаем качество.
-        </p>
-    </div>
-    <div class="price-content">
-        <p>наша мастерская находится в центре города, по этому сделать стильную стрижку можно в любое время,
+          <p>наша мастерская находится в центре города, по этому сделать стильную стрижку можно в любое время,
             даже в обеденное время. здесь вы можете погрузиться в удобную для вас атмостферу, чувствовать себя комфортно и свободно!
         </p>
     </div>
@@ -80,19 +77,36 @@
         <section class="contacts">
             барбершоп "бородинский"<br>
             адрес: г. санкт-петербург. б. конюшная, д. 18/9<br>
-            <span>как нас найти</span>
-            телефон: +7 (495) 666-02-66<br>
+            <u>как нас найти</u><br>
+            телефон: +7 (495) 666-02-6
         </section>
-        <section class="social-button">
-            <a href="#" class="btn">в контакте</a>
-            <a href="#" class="btn">фейсбук</a>
-            <a href="#" class="btn">интсаграм</a>
+        <section class="social-btns">
+            <b>давайте дружить!</b>
+            <a href="#" class="btn btn-social btn-vk"><!--в контакте--></a>
+            <a href="#" class="btn btn-social btn-fb"><!--фейсбук--></a>
+            <a href="#" class="btn btn-social btn-in"><!--интсаграм--></a>
         </section>
-        <section>
-            <p>разработано</p>
-            <a href="#" class="btn">htmlacademy.ru</a>
+        <section class="copyright">
+            <b>разработано:</b>
+            <a href="#" class="btn btn-made">htmlacademy.ru</a>
         </section>
     </div>
 </footer>
+<div class="modal-window">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <b>личный кабинет</b>
+    <p>введите пожайлуста свой логин и пароль</p>
+    <form action="" class="login-form" method="post">
+        <input type="text" name="username" placeholder="логин" class="icon-user">
+        <input type="password" name="password" placeholder="пароль" class="icon-pass">
+        <input type="checkbox" name="remember" id="remember" value="1"> <label for="remember" class="remember">запомните меня</label>
+        <a href="#" class="pass-reset"> я забыл пароль</a>
+        <button type="button" class="btn">войти</button>
+    </form>
+</div>
+<div class="modal-window-map">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <div id="yandex-map"></div>
+</div>
 </body>
 </html>

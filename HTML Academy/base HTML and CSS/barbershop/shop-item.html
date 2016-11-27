@@ -9,17 +9,18 @@
 </head>
 <body>
 <header class="site-header">
-    <div class="container" style="background-color: #000;">
-        <a href="#"><img src="img/site-logo-header.png" alt="Барбершоп Бородинский - Главная" width="111" height="24"></a>
+    <div class="container clearfix">
         <nav class="main-menu">
+            <a href="index.html" class="inner-logo"><img src="img/site-logo-header.png" alt="Барбершоп Бородинский - Главная" width="111" height="24"></a>
             <ul>
-                <li><a href="index.html">главная</a></li>
+
                 <li><a href="#">информация</a></li>
                 <li><a href="#">новости</a></li>
                 <li><a href="price.html">прайс-лист</a></li>
-                <li><a href="shop.html">магазин</a></li>
+                <li class="current"><a href="shop.html">магазин</a></li>
                 <li><a href="#">контакты</a></li>
-            </ul></nav>
+            </ul>
+        </nav>
         <div class="user-block">
             <a href="#" class="user-block__login">вход</a>
         </div>
@@ -34,19 +35,19 @@
         <li><a href="#">средства для ухода</a></li>
         <li><a href="#">Набор для путешествий"baxter of california"</a></li>
     </ul>
-    <div class="shop__gallery-product">
+    <div class="shop-gallery-product">
         <div class="gallery-index-image">
-            <img src="img\gallery_product_index_img.jpg" alt="Набор для путешествий baxter of california" width="486" height="524">
+            <img src="img\gallery_product_index_img.jpg" alt="Набор для путешествий baxter of california" width="460" height="498">
         </div>
         <div class="gallery-more-images">
-            <img src="img\gallery_product_more_1.jpg" alt="Набор для путешествий baxter of california" width="166" height="175">
-            <img src="img\gallery_product_more_2.jpg" alt="Набор для путешествий baxter of california" width="166" height="175">
-            <img src="img\gallery_product_more_3.jpg" alt="Набор для путешествий baxter of california" width="166" height="175">
+            <img src="img\gallery_product_more_1.jpg" alt="Набор для путешествий baxter of california" width="140" height="149">
+            <img src="img\gallery_product_more_2.jpg" alt="Набор для путешествий baxter of california" width="140" height="149">
+            <img src="img\gallery_product_more_3.jpg" alt="Набор для путешествий baxter of california" width="140" height="149">
         </div>
     </div>
-    <div class="shop__product">
-        <section class="shop__description-product">
-           <span class="shop__description-product_aviable">есть в наличии</span>
+    <div class="shop-product">
+        <section class="shop-description-product">
+           <span>есть в наличии</span>
             <span class="vendor">артикул: dexter-ae</span>
             <p>Travel Kit – необходимый аксессуар во время любого путешествия.
                 В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей
@@ -58,11 +59,13 @@
             </div>
             
             <h4>в набор входят:</h4>
-            <ul class="li">Средство для умывания (50 мл)</ul>
-            <ul class="li">Увлажняющий крем (50 мл)</ul>
-            <ul class="li">Крем для бритья (50 мл)</ul>
-            <ul class="li">Крем после бритья, шампунь (50 мл)</ul>
-            <ul class="li">Удобная кожаная косметичка</ul>
+            <ul class="shop-product-set"></ul>
+            <li>Средство для умывания (50 мл)</li>
+            <li>Увлажняющий крем (50 мл)</li>
+            <li>Крем для бритья (50 мл)</li>
+            <li>Крем после бритья, шампунь (50 мл)</li>
+            <li>Удобная кожаная косметичка</li>
+            </ul>
         </section>
     </div>
     </div>
@@ -72,19 +75,36 @@
         <section class="contacts">
             барбершоп "бородинский"<br>
             адрес: г. санкт-петербург. б. конюшная, д. 18/9<br>
-            <span>как нас найти</span>
-            телефон: +7 (495) 666-02-66<br>
+            <u>как нас найти</u><br>
+            телефон: +7 (495) 666-02-6
         </section>
-        <section class="social-button">
-            <a href="#" class="btn">в контакте</a>
-            <a href="#" class="btn">фейсбук</a>
-            <a href="#" class="btn">интсаграм</a>
+        <section class="social-btns">
+            <b>давайте дружить!</b>
+            <a href="#" class="btn btn-social btn-vk"><!--в контакте--></a>
+            <a href="#" class="btn btn-social btn-fb"><!--фейсбук--></a>
+            <a href="#" class="btn btn-social btn-in"><!--интсаграм--></a>
         </section>
-        <section>
-            <p>разработано</p>
-            <a href="#" class="btn">htmlacademy.ru</a>
+        <section class="copyright">
+            <b>разработано:</b>
+            <a href="#" class="btn btn-made">htmlacademy.ru</a>
         </section>
     </div>
 </footer>
+<div class="modal-window">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <b>личный кабинет</b>
+    <p>введите пожайлуста свой логин и пароль</p>
+    <form action="" class="login-form" method="post">
+        <input type="text" name="username" placeholder="логин" class="icon-user">
+        <input type="password" name="password" placeholder="пароль" class="icon-pass">
+        <input type="checkbox" name="remember" id="remember" value="1"> <label for="remember" class="remember">запомните меня</label>
+        <a href="#" class="pass-reset"> я забыл пароль</a>
+        <button type="button" class="btn">войти</button>
+    </form>
+</div>
+<div class="modal-window-map">
+    <button type="button" class="modal-window-close" title="Закрыть"></button>
+    <div id="yandex-map"></div>
+</div>
 </body>
 </html>
