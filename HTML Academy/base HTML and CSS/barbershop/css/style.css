@@ -388,6 +388,11 @@ ul.index-content__news__links li span {
     padding: 17px 0 17px 17px;
     box-sizing: border-box;
     text-transform: uppercase;
+    font-family:PT Sans Narrow, Arial;
+    font-weight:bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    
 }
 .index-content-right input:focus {
 
