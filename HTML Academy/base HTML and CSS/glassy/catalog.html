@@ -37,37 +37,53 @@
     <main class="inner-content">
         <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
-            <li><a href="shop.html">Кагазин</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
             <li><a href="#">Сливочное</a></li>
         </ul>
         <div class="catalog-filter">
             <h1>Сливочное мороженное</h1>
             <form action="#" method="post">
                 <fieldset>
-                <legend>Сортировка:</legend>
-
-                <select name="sorting" id="sorting">
-                    <option value="1" selected>по популярности</option>
-                    <option value="2">сначала не дорогие</option>
-                    <option value="3">сначала дорогие</option>
-                    <option value="3">по жирности</option>
-                </select>
-                    <legend>Цена range:</legend>
-                    <input type="range" min="100" max="500" step="1">
-                <legend>Жирность</legend>
-                <input type="radio" name="fatness" value="1" id="equally-0"><label for="equally-0" class="fatness"></label>
-                <input type="radio" name="fatness" value="2" id="before-10"><label for="before-10" class="fatness"></label>
-                <input type="radio" name="fatness" value="3" id="before-30"><label for="before-30" class="fatness"></label>
-                <input type="radio" name="fatness" value="4" id="after-30"><label for="after-30" class="fatness"></label>
-                 <legend>Наполнители:</legend>
-                    <input type="checkbox" name="fillers" value="" id="chocolate"><label for="chocolate" class="fillers"></label>
-                    <input type="checkbox" name="fillers" value="" id="sugar-powder"><label for="sugar-powder" class="fillers"></label>
-                    <input type="checkbox" name="fillers" value="" id="fruits"><label for="fruits" class="fillers"></label>
-                    <input type="checkbox" name="fillers" value="" id="syrups"><label for="syrups" class="fillers"></label>
-                    <input type="checkbox" name="fillers" value="" id="jams"><label for="jams" class="fillers"></label>
-
+                    <div class="section-form">
+                    <legend>Сортировка:</legend>
+                        <select name="sorting" id="sorting">
+                            <option value="1" selected>по популярности</option>
+                            <option value="2">сначала не дорогие</option>
+                            <option value="3">сначала дорогие</option>
+                            <option value="3">по жирности</option>
+                        </select>
+                    </div>
+                    <div class="section-form">
+                    <legend>Цена: 100 руб. - 500 руб.</legend>
+                    <div class="range-bg">
+                        <div class="range-scale">
+                            <div class="range-ranner-left"></div>
+                            <div class="range-ranner-right"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="section-form">
+                    <legend>Жирность</legend>
+                        <div class="radio-bg">
+                        <input type="radio" name="fatness" value="1" id="equally-0"><label for="equally-0" class="fatness">0%</label>
+                        <input type="radio" name="fatness" value="2" id="before-10"><label for="before-10" class="fatness">До 10%</label>
+                        <input type="radio" name="fatness" value="3" id="before-30"><label for="before-30" class="fatness">До 30%</label>
+                        <input type="radio" name="fatness" value="4" id="after-30"><label for="after-30" class="fatness">Выше 30%</label>
+                        </div>
+                    </div>
+                    <div class="section-form">
+                    <legend>Наполнители:</legend>
+                        <div class="checkbox-bg">
+                        <input type="checkbox" name="fillers" value="" id="chocolate"><label for="chocolate" class="fillers">шоколадные</label>
+                        <input type="checkbox" name="fillers" value="" id="sugar-powder"><label for="sugar-powder" class="fillers">сахарные присыпки</label>
+                        <input type="checkbox" name="fillers" value="" id="fruits"><label for="fruits" class="fillers">фрукты</label>
+                        <input type="checkbox" name="fillers" value="" id="syrups"><label for="syrups" class="fillers">сиропы</label>
+                        <input type="checkbox" name="fillers" value="" id="jams"><label for="jams" class="fillers">джемы</label>
+                        </div>
+                    </div>
+                    <div class="section-form"><button type="button" class="btn">Применить</button></div>
                 </fieldset>
-                <button type="button" class="btn">Применить</button>
+
 
             </form>
         </div>
@@ -170,11 +186,15 @@
             </section>
         </div>
         <div class="paginator">
-            <button class="btn current" type="button">1</button>
-            <button class="btn" type="button">2</button>
-            <button class="btn" type="button">3</button>
-            <button class="btn" type="button">4</button>
             <button class="btn" type="button">5</button>
+            <button class="btn" type="button">4</button>
+            <button class="btn" type="button">3</button>
+            <button class="btn" type="button">2</button>
+            <button class="btn current" type="button">1</button>
+
+
+
+
         </div>
     </main>
     <footer class="site-footer container clearfix">
@@ -198,9 +218,6 @@
         </section>
     </footer>
 </div>
-<script src="js/min-script.js"></script>
-<script src="js/min-index-popup.js"></script>
-
 </body>
 </html>
 
