@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог - Магазин "Глейси"</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="site-wrapper">
+    <header class="site-header clearfix">
+        <nav>
+            <a href="index.html" class="site-logo" title="Главная"><img src="img/site-logo.png" alt="Логотип сайта" width="154" height="64"></a>
+            <ul class="main-menu">
+                <li><a href="catalog.html">Каталог</a>
+                    <ul class="sub-main-menu">
+                        <li><span>Новинки</span></li>
+                        <li><a href="#">Сливочное</a></li>
+                        <li><a href="#">Щербеты</a></li>
+                        <li><a href="#">Фруктовый лед</a></li>
+                        <li><a href="#">Мелороин</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">О Компании</a></li>
+            </ul>
+        </nav>
+        <div class="user-block">
+            <a class="btn btn-cart" href="#">Пусто</a>
+            <a class="btn btn-user" href="#">Вход</a>
+        </div>
+        <div class="shedule">
+            <p>С 10 до 20 ежедневно</p><span class="tel">8 812 450 25 25</span>
+        </div>
+    </header>
+    <main class="inner-content">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="shop.html">Кагазин</a></li>
+            <li><a href="#">Сливочное</a></li>
+        </ul>
+        <div class="catalog-filter">
+            <h1>Сливочное мороженное</h1>
+            <form action="#" method="post">
+                <fieldset>
+                <legend>Сортировка:</legend>
+
+                <select name="sorting" id="sorting">
+                    <option value="1" selected>по популярности</option>
+                    <option value="2">сначала не дорогие</option>
+                    <option value="3">сначала дорогие</option>
+                    <option value="3">по жирности</option>
+                </select>
+                    <legend>Цена range:</legend>
+                    <input type="range" min="100" max="500" step="1">
+                <legend>Жирность</legend>
+                <input type="radio" name="fatness" value="1" id="equally-0"><label for="equally-0" class="fatness"></label>
+                <input type="radio" name="fatness" value="2" id="before-10"><label for="before-10" class="fatness"></label>
+                <input type="radio" name="fatness" value="3" id="before-30"><label for="before-30" class="fatness"></label>
+                <input type="radio" name="fatness" value="4" id="after-30"><label for="after-30" class="fatness"></label>
+                 <legend>Наполнители:</legend>
+                    <input type="checkbox" name="fillers" value="" id="chocolate"><label for="chocolate" class="fillers"></label>
+                    <input type="checkbox" name="fillers" value="" id="sugar-powder"><label for="sugar-powder" class="fillers"></label>
+                    <input type="checkbox" name="fillers" value="" id="fruits"><label for="fruits" class="fillers"></label>
+                    <input type="checkbox" name="fillers" value="" id="syrups"><label for="syrups" class="fillers"></label>
+                    <input type="checkbox" name="fillers" value="" id="jams"><label for="jams" class="fillers"></label>
+
+                </fieldset>
+                <button type="button" class="btn">Применить</button>
+
+            </form>
+        </div>
+        <div class="index-goods">
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/1.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>310 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное с апельсиновым джемом и цитрусовой стружкой </a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/2.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>380 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочно-кофейное с кусочками шоколада</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/3.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>355 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/4.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>415 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное крем-брюле с карамельной подливкой</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/5.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>325 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное с брусничным джемом</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/6.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>410 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочно-черничное с цельными ягодами черники</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/7.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>375 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочно-лимонное с карамельной присыпкой</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/8.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>320 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное с шоколадной стружкой</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/9.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>440 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочно-ванильное с кусочками шоколада</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/10.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>435 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочноe с ментоловым сиропом</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/11.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>355 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное с кусочками черного шоколада</a>
+                </div>
+            </section>
+            <section class="goods">
+                <div class="goods-hover">
+                    <a href="#" class="btn">Быстрый просмотр</a>
+                    <img src="img/12.jpg" alt="" class="product-img" width="266" height="266">
+                    <p class="product-price"><span>420 <img src="img/ruble.svg" width="31" height="36" alt="Рублю"></span>/кг</p>
+                    <a href="#" class="product-name">Сливочное с мятным сиропом</a>
+                </div>
+            </section>
+        </div>
+        <div class="paginator">
+            <button class="btn current" type="button">1</button>
+            <button class="btn" type="button">2</button>
+            <button class="btn" type="button">3</button>
+            <button class="btn" type="button">4</button>
+            <button class="btn" type="button">5</button>
+        </div>
+    </main>
+    <footer class="site-footer container clearfix">
+        <section class="footer-social">
+            <a class="social-btn social-btn-tw" href="#"><img src="img/icon-tw.svg" width="37" height="37" alt="Твитер"> </a>
+            <a class="social-btn social-btn-inst" href="#"><img src="img/icon-in.svg" width="37" height="37" alt="Инстаграм"></a>
+            <a class="social-btn social-btn-fb" href="#"><img src="img/icon-fb.svg" width="37" height="37" alt="Facebok"></a>
+            <a class="social-btn social-btn-vk" href="#"><img src="img/icon-vk.svg" width="37" height="37" alt="ВКонтакте"></a>
+        </section>
+        <section class="footer-menu">
+            <ul>
+                <li><a href="#">Для поставщиков</a></li>
+                <li><a href="#">О производстве</a></li>
+                <li><a href="#">Наши документы</a></li>
+                <li><a href="#">Экологические стандарты</a></li>
+            </ul>
+        </section>
+        <section class="footer-copyright">
+            <img src="img/htmlacademy-logo.svg" width="108" height="37" alt="HTML Academy">
+            <p>Сделано в <a class="footer-href" href="#">HTML Academy</a> &copy; 2016</p>
+        </section>
+    </footer>
+</div>
+<script src="js/min-script.js"></script>
+<script src="js/min-index-popup.js"></script>
+
+</body>
+</html>
+
