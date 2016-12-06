@@ -667,13 +667,12 @@ a.site-logo {
 .catalog-filter select {
     width:190px;
     background: #a9bab0;
-    color:#000000;
+    color: rgba(255, 255, 255, 1);
     font-weight:500;
     line-height:0;
     border-radius: 25px;
     padding:10px 15px 10px 15px;
 }
-.catalog-filter {}
 .catalog-filter .range-bg {
     width:220px;
     height:40px;
