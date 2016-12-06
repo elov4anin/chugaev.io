@@ -106,7 +106,7 @@ a.site-logo {
 .main-menu>li>a:active {
     background: #ededed;
 
-    box-shadow: inset 0px 2px 1px #696969;
+    box-shadow: inset 0 2px 1px #696969;
 }
 .main-menu>li.active>a {
     background: #d07058;
@@ -128,7 +128,7 @@ a.site-logo {
 .sub-main-menu {
     position: absolute;
     top: 26px;
-    left: 0px;
+    left: 0;
     z-index: 100;
     display: none;
     width: 145px;
@@ -138,7 +138,7 @@ a.site-logo {
     background-color: #f8f7f4;
 
     border-radius: 5px;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
 }
 .sub-main-menu li {
     margin: 0;
@@ -262,16 +262,14 @@ a.site-logo {
 .goods-hover:hover {
     background: rgba(167, 184, 173, 0.4);
     position: absolute;
-    padding-bottom:50px;
-    width:270px;
+    z-index: 100;
+    width:267px;
+    min-height:380px;
     padding-left:0;
     margin-left:0;
     border-radius: 10px;
     line-height:0;
-
-
-
-
+    font-size: 0;
 }
 
 .goods .goods-hover > a.btn {
@@ -283,7 +281,6 @@ a.site-logo {
     font-size: 18px;
     font-weight:700;
     background: #ed5a3d;
-
     border-radius:35px;
     padding:10px 23px;
 }
@@ -300,16 +297,16 @@ a.site-logo {
 }
 .goods p {
     position: absolute;
-    bottom: 50px;
+    top: 190px;
     font-weight:700;
 }
 .goods-hover:hover >p {
     position: absolute;
-    bottom: 100px;
+    top: 206px;
 }
 .goods p>span {
     font-size: 45px;
-    line-height:13.13px;
+    line-height: 13.13px;
     font-weight:700;
 }
 .goods p img {
@@ -337,7 +334,6 @@ a.site-logo {
 }
 .social-btn {
     margin-right:10px;
-
 }
 .footer-menu {
     width:400px;
@@ -526,7 +522,7 @@ a.site-logo {
     height:50px;
     position: absolute;
     top:-10px;
-    left: 0px;
+    left: 0;
 }
 .present-product ul li:nth-of-type(1):before {
     background: transparent url("../img/icon-icecream.svg") no-repeat;
@@ -568,7 +564,7 @@ a.site-logo {
     width:305px;
     height:40px;
     border: 2px solid #d3d3d2;
-    padding: 0px 12px;
+    padding: 0 12px;
 }
 .delivery .btn {
     font-size: 18px;
@@ -670,7 +666,7 @@ a.site-logo {
 }
 .catalog-filter select {
     width:190px;
-    background: #fff;
+    background: #a9bab0;
     color:#000000;
     font-weight:500;
     line-height:0;
@@ -687,7 +683,7 @@ a.site-logo {
 .catalog-filter .range-scale {
     width: 195px;
     height:5px;
-    margin:0px auto;
+    margin:0 auto;
     position: relative;
     top: 16px;
     background: #f8f7f4;
@@ -699,7 +695,7 @@ a.site-logo {
     background: #fff;
     border-radius: 50%;
     top: -7px;
-    box-shadow: #909090 0px 1px 5px;
+    box-shadow: #909090 0 1px 5px;
 }
 .catalog-filter .range-ranner-left {
     left: 20px;
