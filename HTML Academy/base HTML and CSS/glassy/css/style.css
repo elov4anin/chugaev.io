@@ -17,9 +17,6 @@ img {
 ul {
     list-style-type: none;
 }
-/*div, span, ul, li, section, article {
-    border: 1px solid #ffff00;
-}*/
 h2 {
     display: inline;
 }
@@ -37,25 +34,17 @@ a.btn:hover, button.btn:hover, .index-main-banner a.btn:hover {
     background: #f07963;
     color: #ffffff;
 }
-
 a {
     font-size: 16px;
     line-height: 18px;
-
     color: white;
-
-
     text-decoration: underline;
 }
-
 a:hover {
     color: #ffbc9e;
-
 }
-
 a:active {
     color: #bdab96;
-
 }
 /*header start*/
 .site-header  {
@@ -74,15 +63,12 @@ a.site-logo {
 .main-menu  {
     margin-top:30px;
     float:left;
-    width:700px;
+    min-width:700px;
     padding-left:0;
 }
 .main-menu li {
     display: inline-block;
-    /*padding-left: 14px;
-    padding-right: 14px;*/
     position: relative;
-
 }
 .main-menu li>a {
     padding-left: 14px;
@@ -91,7 +77,6 @@ a.site-logo {
     padding-top:7px;
 }
 .main-menu>li:hover>a {
-    /*display: inline-block;*/
     padding-left: 14px;
     padding-right: 14px;
     padding-bottom:7px;
@@ -105,7 +90,6 @@ a.site-logo {
 }
 .main-menu>li>a:active {
     background: #ededed;
-
     box-shadow: inset 0 2px 1px #696969;
 }
 .main-menu>li.active>a {
@@ -119,7 +103,6 @@ a.site-logo {
 }
 .main-menu li:hover ul.sub-main-menu {
     display: block;
-
 }
 .main-menu li a {
     font-weight:bold;
@@ -131,12 +114,10 @@ a.site-logo {
     left: 0;
     z-index: 100;
     display: none;
-    width: 145px;
+    min-width: 145px;
     padding: 0;
-
     color: #323232;
     background-color: #f8f7f4;
-
     border-radius: 5px;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
 }
@@ -145,7 +126,7 @@ a.site-logo {
     margin-top: 2px;
     margin-bottom: 3px;
     padding: 0;
-    width: 145px;
+    min-width: 145px;
 }
 .sub-main-menu li:hover {
     background: #fbded7;
@@ -169,10 +150,9 @@ a.site-logo {
 .sub-main-menu>li>span {
     border-bottom: 1px solid #d1d0ce;
     font-weight: 700;
-    width: 113px;
+    min-width: 113px;
     padding-right: 0;
     margin-left: 8px;
-    
 }
     /*main menu end*/
 .user-block a, .user-block button {
@@ -286,7 +266,6 @@ a.site-logo {
 }
 .goods-hover:hover a.btn {
     display: block;
-
 }
 .goods .goods-hover img {
     border-radius: 50%;
@@ -303,6 +282,7 @@ a.site-logo {
 .goods-hover:hover >p {
     position: absolute;
     top: 206px;
+    padding-right:35px;
 }
 .goods p>span {
     font-size: 45px;
@@ -406,9 +386,7 @@ a.site-logo {
     width:280px;
     margin:30px auto 45px;
 }
-.slide {
-
-}
+.slide {}
 #slide-1 {
      background:
             url("../img/bg-icecream.png.png") no-repeat center top,
@@ -488,7 +466,6 @@ a.site-logo {
     border-radius:35px;
     padding:15px 23px;
 }
-
 .present-product {
     background: url("../img/bg-wafer-min.jpg") repeat;
     color: #323232;
@@ -553,10 +530,10 @@ a.site-logo {
 .delivery {
     background-image:  url("../img/bg-delivery-border.png");
     padding: 5px;
-    width:538px;
+    width: 538px;
 }
 .delivery-bg {
-    width:500px;
+    width: 500px;
     border-radius: 15px;
     padding: 17px;
 }
@@ -621,7 +598,6 @@ a.site-logo {
     vertical-align: top;
     position: relative;
     padding-right:20px;
-
 }
 .breadcrumbs li:after {
     content: '>>';
@@ -629,16 +605,9 @@ a.site-logo {
     top:3px;
     right:2px;
     font-size: 12px;
-
-
 }
 .breadcrumbs li:last-child:after {
     content: ' ';
-  /*  position: absolute;
-    top:0;
-    right:0;
-    width: 10px;
-    height:10px;*/
 }
 .breadcrumbs li a {
     font-weight:400;
@@ -703,19 +672,17 @@ a.site-logo {
     left: 120px;
 }
 .catalog-filter .radio-bg {
-    width:411px;
-    height:40px;
+    min-width:411px;
+    min-height:40px;
     background: #a9bab0;
     border-radius: 25px;
     position: relative;
-
 }
 .catalog-filter .checkbox-bg {
-    width:703px;
-    height:40px;
+    min-width:695px;
+    min-height:40px;
     background: #a9bab0;
     border-radius: 25px;
-
 }
 .catalog-filter input[type="radio"], .catalog-filter input[type="checkbox"] {
     display: none;
@@ -725,8 +692,6 @@ a.site-logo {
     display: inline-block;
     padding-left: 40px;
     margin-top:12px;
-
-
 }
 .catalog-filter input[type="radio"] + label:before {
     content: " ";
@@ -758,8 +723,6 @@ a.site-logo {
     display: inline-block;
     padding-left: 40px;
     margin-top:12px;
-
-
 }
 .catalog-filter input[type="checkbox"] + label:before {
     content: " ";
@@ -770,8 +733,7 @@ a.site-logo {
     height:17px;
     background: transparent;
     border: 1px solid #ffffff;
-    border-radius: 5px
-
+    border-radius: 5px;
 }
 .catalog-filter .section-form input[type="checkbox"]:checked + label:before {
     content: " ";
@@ -832,6 +794,5 @@ a.site-logo {
     background: #b2c1b7;
     border-radius: 50%;
 }
-
 /*paginator end*/
 /*inner-page styles end*/
