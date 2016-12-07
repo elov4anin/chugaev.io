@@ -123,6 +123,10 @@ section.contacts {
     margin-right: 80px;
     line-height: 24px;
 }
+section.contacts a.map {
+    color: #ffffff;
+    text-decoration: underline;
+}
 section.social-btns{
     width:143px;
     margin-right: 260px;
@@ -176,7 +180,7 @@ a.btn-made {
 }
 /*footer end*/
 /*modal window start*/
-div.modal-window {
+.modal-window {
     position: absolute;
     display:none;
     width:300px;
@@ -189,6 +193,7 @@ div.modal-window {
     padding: 50px 80px;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
+
 .modal-window-close {
     position: absolute;
     top:0;
@@ -297,7 +302,9 @@ div.modal-window {
     background: url("../img/map.jpg");
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
     border: 7px solid white;
-
+}
+.modal-window-show {
+    display: block;
 }
 /*modal window  end*/
 /*global styles end*/
@@ -352,6 +359,10 @@ main.index-main-content {
 .index-content-left {
     width: 333px;
     line-height:24px;
+}
+.index-content-left a.map {
+    color: #000000;
+    text-decoration: underline;
 }
 .index-content-right {
     width: 300px;
