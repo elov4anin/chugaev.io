@@ -155,6 +155,7 @@ a.site-logo {
     margin-left: 8px;
 }
     /*main menu end*/
+/*user menu, search, form, cart start*/
 div.user-block {
     position: relative;
 }
@@ -320,7 +321,7 @@ div.login-window-wrapper a.registration {
 .user-block a.btn-cart {
     width:75px;
 }
-
+/*user menu, search, form, cart end*/
 .shedule {
     position: absolute;
     bottom: -55px;
@@ -366,7 +367,6 @@ div.login-window-wrapper a.registration {
     line-height:0;
     font-size: 0;
 }
-
 .goods .goods-hover > a.btn {
     display: none;
     position: absolute;
@@ -477,21 +477,19 @@ div.login-window-wrapper a.registration {
 /*global styles end*/
 
 /*index-page styles start*/
-/* slider index page */
+/* slider start */
 .index-main-banner {
     position: relative;
     text-align: center;
 }
 .index-main-banner .slide {
     padding-top:305px;
-   /* background:radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(132,157,143,1) 100%); !* w3c *!
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#849d8f',GradientType=1 ); !* ie6-9 *!*/
 }
 .index-main-banner .slide p {
     font-size: 60px;
     font-weight:900;
     display: inline;
-   }
+}
 .index-main-banner .slide a {
     font-size: 31px;
     line-height:63px;
@@ -738,7 +736,6 @@ div.login-window-wrapper a.registration {
 .feedback-window b {
     color: #000000;
 }
-
 .feedback-window input[type="text"],
 .feedback-window input[type="email"] {
     /*position: relative;
@@ -798,7 +795,7 @@ div.login-window-wrapper a.registration {
 .feedback-show {
     display: block;
 }
-    /*index-page styles end*/
+ /*index-page styles end*/
 
 /*inner-page styles start*/
 /*breadcrumbs start*/
