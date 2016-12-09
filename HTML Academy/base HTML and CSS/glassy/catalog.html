@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/jquery.formstyler.css" rel="stylesheet" />
 </head>
 <body>
 <div class="site-wrapper">
@@ -13,11 +14,11 @@
         <nav>
             <a href="index.html" class="site-logo" title="Главная"><img src="img/site-logo.png" alt="Логотип сайта" width="154" height="64"></a>
             <ul class="main-menu">
-                <li class="active"><a href="catalog.html">Каталог</a>
+                <li ><a href="catalog.html">Каталог</a>
                     <ul class="sub-main-menu">
                         <li><span>Новинки</span></li>
                         <li><a href="#">Сливочное</a></li>
-                        <li><a href="#">Щербеты</a></li>
+                        <li class="active"><a href="#">Щербеты</a></li>
                         <li><a href="#">Фруктовый лед</a></li>
                         <li><a href="#">Мелороин</a></li>
                     </ul>
@@ -27,8 +28,32 @@
             </ul>
         </nav>
         <div class="user-block">
-            <a class="btn btn-cart" href="#">Пусто</a>
-            <a class="btn btn-user" href="#">Вход</a>
+            <a class="btn btn-cart" href="#">Пусто
+                <div class="cart-window-wrapper"></div>
+            </a>
+            <a class="btn btn-user" href="#">Вход
+                <div class="login-window-wrapper" >
+                    <form class="login-window" action="" method="post">
+                        <input type="text" name="login" id="login" placeholder="Электронная почта" autofocus><label for="login"></label>
+                        <input type="password" name="password" id="password" placeholder="Пароль"><label for="password"></label>
+                        <button type="submit">Войти</button>
+                        <div class="login-window-link">
+                            <!--<a class="remember" href="#">Забыли пароль?</a>-->
+                            <!--<a class="registration" href="#">Новая регистрация</a>-->
+                        </div>
+                    </form>
+
+                </div>
+            </a>
+            <a class="btn btn-search" href="#">
+                <div class="search-window-wrapper" >
+                    <form class="search-window" action="" method="post">
+                        <input type="search" name="search" id="search" placeholder="Что ищем?" autofocus><label for="search"></label>
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            </a>
+
         </div>
         <div class="shedule">
             <p>С 10 до 20 ежедневно</p><span class="tel">8 812 450 25 25</span>
@@ -218,6 +243,17 @@
         </section>
     </footer>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script>
+    (function($) {
+        $(function() {
+
+            $('select').styler();
+
+        });
+    })(jQuery);
+</script>
 </body>
 </html>
 
