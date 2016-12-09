@@ -288,14 +288,14 @@ div.login-window-wrapper a.registration {
     border-radius: 5px;
 }
 
-.user-block a.btn-user:hover > .login-window-wrapper .login-window input[type="text"],
-.user-block a.btn-user:hover > .login-window-wrapper .login-window input[type="password"],
-.user-block a.btn-user:hover > .login-window-wrapper .login-window button[type="submit"] {
+.user-block a.btn-user:hover > .login-window-wrapper input[type="text"],
+.user-block a.btn-user:hover > .login-window-wrapper input[type="password"],
+.user-block a.btn-user:hover > .login-window-wrapper button[type="submit"] {
     position: relative;
     top: 15px;
     display: block;
 }
-.user-block a.btn-user:hover > .login-window-wrapper .login-window button[type="submit"] {
+.user-block a.btn-user:hover > .login-window-wrapper button[type="submit"] {
     top: 0;
     font-size: 15px;
     font-weight:700;
