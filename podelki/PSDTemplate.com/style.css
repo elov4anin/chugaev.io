@@ -1,0 +1,224 @@
+* {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin:auto;
+}
+nav {
+    background: #303123;
+    height: 53px;
+    padding: 38px 100px 10px 100px;
+
+}
+@font-face {
+    font-family: erasitc-madium;
+    src: url(fonts/erasitc-medium.ttf);
+}
+nav ul  {
+    margin: 0 auto 0 auto;
+
+}
+nav ul li {
+    float: right;
+    padding: 0 10px;
+
+}
+nav ul li a {
+    font-size: 12px;
+    font-family: erasitc-madium;
+    color: #b5b3b3;
+    line-height: 6.95px;
+}
+nav ul li:hover {
+    border: 1px solid #444532;
+    border-radius: 5px;
+
+}
+nav img {
+    float:left;
+    width: 112px;
+}
+nav ::after {
+    content: " ";
+
+    clear: both;
+}
+header {
+    background: url("img/bg-header.png") -2px 0px ;
+    height: 240px;
+
+    margin-top: -2px;
+}
+header img  {
+    margin-left: 45px;
+    margin-top:18px;
+    float: left;
+    width:356px;
+    height:218px;
+
+}
+@font-face {
+    font-family: gill sans mt;
+    src: url(fonts/gil.TTF);
+}
+
+.header-container {
+    float: left;
+    width:278px;
+    margin-left: 101px;
+    margin-top: 55px;
+}
+header h1 {
+    font-family: "gill sans mt";
+    line-height: 6.95px;
+    color: #ffffff;
+}
+.tagline {
+    font-family: erasitc-madium;
+    font-size: 12px;
+    color: #4c0000;
+    line-height: 6.95px;
+    padding-left: 38px;
+
+
+}
+
+@font-face {
+    font-family: Candara;
+    src: url(fonts/Candara.ttf);
+}
+p.head-text   {
+    font-family:Candara;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 14.95px;
+    font-style: italic;
+}
+hr.line {
+    width: 177px;
+    height: 1px;
+    display: block;
+    background-color: #f9ab6d;
+    margin: 16px auto;
+}
+.content-block {
+    padding: 48px 108px 48px 122px;
+    margin-top: -4px;
+    background-image: linear-gradient(to bottom, #e3e2e2, #f2efef);
+}
+
+.content-block h2 {
+    font-family: "Candara";
+    font-size: 19px;
+    color: #616161;
+    line-height: 7px;
+    font-weight: normal;
+}
+@font-face {
+    font-family: helvetica se regular;
+    src: url("fonts/HV.ttf");
+}
+
+.content-block p {
+    font-family: "helvetica se regular";
+    font-size: 11px;
+    line-height: 17px;
+    color: #9c9b9b;
+    text-indent: 35px;
+    margin-top: 24px;
+}
+
+.content-block ul li {
+    float: left;
+    width:195px;
+    padding: 12px 0 12px 5px;
+    font-family: "helvetica se regular";
+    font-size: 11px;
+    margin-right: 56px;
+    color: #9c9b9b;
+}
+.content-block ul li:last-child {
+    margin-right: 0px;
+}
+.content-block ul li h2 {
+    padding-left: 45px;
+}
+.content-block ul li.Costumer-Review {
+    background: url("img/Customer-Review-Icon.png") 0 2% no-repeat;
+
+}
+
+.content-block ul li.Features {
+    background: url("img/Features-Icon.png") 5% 2% no-repeat
+
+}
+
+.content-block ul li.Prices {
+    background: url("img/Prices-Icon.png") 5% 2% no-repeat;
+}
+.content-block ::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+blockquote {
+    font-style: italic;
+}
+
+.content-block ul li>p{
+    text-indent: 0;
+    margin-top: 24px;
+}
+.Features li {
+
+
+     list-style-image:  url("img/Check-icon.png");
+}
+.Prices li {
+    list-style-image:  url("img/Money-Icon.png");
+}
+
+footer {
+    background: #303123;
+    height: 20px;
+    padding: 10px 100px 20px 100px;
+
+}
+
+
+footer img {
+    float:left;
+    width: 112px;
+    margin-right: 10px;
+}
+footer ::after {
+    content: " ";
+
+    clear: both;
+}
+footer p {
+    font-family: "helvetica se regular";
+    font-size: 11px;
+    margin-top: 7px;
+    margin-left: 10px;
+    color: #9c9b9b;
+}
+footer img.rss {
+    float:right;
+    width: 11px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+footer img.rss+p {
+    position: relative;
+    left: 40px;
+    float:right;
+    top: -18px;
+
+}
