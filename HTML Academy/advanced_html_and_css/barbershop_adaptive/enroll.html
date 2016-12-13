@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Записаться - Барбершоп "Бородинский"</title>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
+    <div class="page-header__logo">
+      <img src="img/logotype-mobile.svg" alt="Барбершоп Бородинский" width="370" height="153">
+    </div>
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+      <button class="main-nav__toggle">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item "><a href="index.html">Главная</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a href="work.html">Наши работы</a></li>
+          <li class="main-nav__item item--active"><a href="">Записаться</a></li>
+          <li class="main-nav__item"><a href="">Контакты</a></li>
+          <li class="main-nav__item"><a href="">Htmlacademy</a></li>
+        </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav_user-item"><a class="main-nav__user-login" href="" title="Войти">Войти</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="record">
+    <header class="record__header">
+      <h2 class="record__title">Запись на стрижку</h2>
+    </header>
+    <form action="#" method="post" class="record-form">
+      <input type="text" name="surname" class="record-form__contact-details" placeholder="Фамилия">
+      <input type="text" name="name" class="record-form__contact-details" placeholder="Имя">
+      <input type="text" name="second-name" class="record-form__contact-details" placeholder="Отчество">
+      <input type="tel" name="phone" class="record-form__contact-details" placeholder="Контактный телефон">
+      <input type="email" name="email" class="record-form__contact-details" placeholder="Контактный e-mail">
+      <textarea class="record-form__comment" name="comment" placeholder="Доп. информация для мастера"></textarea>
+      <b class="record-form__select-beard-model">Выбирите модель бороды</b>
+      <input type="radio" name="beard" id="admiral" value="admiral"><label for="admiral" class="record-form__beard-admiral">адмирал</label>
+      <input type="radio" name="beard" id="lumberjack" value="lumberjack"><label for="lumberjack" class="record-form__beard-lumberjack">лесоруб</label>
+      <input type="radio" name="beard" id="polar" value="polar"><label for="polar" class="record-form__beard-polar">полярник</label>
+      <input type="radio" name="beard" id="boyar" value="boyar"><label for="boyar" class="record-form__beard-boyar">боярин</label>
+      <input type="radio" name="beard" id="sage" value="sage"><label for="sage" class="record-form__beard-sage">мудрец</label>
+      <b class="record-form__select-additional">Выбирите модель бороды</b>
+      <input type="checkbox" name="additional" id="tint-beard" value="tint-beard"><label for="tint-beard" class="record-form__tint-beard">Подкрасить бороду</label>
+      <input type="checkbox" name="additional" id="screwed-mustache" value="screwed-mustache"><label for="screwed-mustache" class="record-form__screwed-mustache">Накрутить усы</label>
+      <input type="checkbox" name="additional" id="comb-beard" value="comb-beard"><label for="comb-beard" class="record-form__comb-beard">Причесать бороду</label>
+      <input type="checkbox" name="additional" id="trim-whiskey" value="trim-whiskey"><label for="trim-whiskey" class="record-form__trim-whiskey">Подровнять виски</label>
+      <input type="checkbox" name="additional" id="remove-gray-hair" value="remove-gray-hair"><label for="remove-gray-hair" class="record-form__remove-gray-hair">Убрать седину</label>
+      <input type="checkbox" name="additional" id="polished-bald" value="polished-bald"><label for="polished-bald" class="record-form__polished-bald">Отполировать лысину</label>
+      <button type="submit" class="record-form__btn-submit">Отправить заявку</button>
+    </form>
+  </div>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__contacts">
+        <b>барбершоп "бородинский"</b><br>
+        г. Cанкт-Петербург. ул. Большая Конюшная, д. 19/8<br>
+        <a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:+7 (812) 666-02-66</span></a>: <br>
+      </p>
+      <p class="page-footer__social">
+            <span class="social-links">
+            <a href="https://vk.com" class="social-link social-link--vk">Мы в Вконтакте</a>
+            <a href="https://facebook.com" class="social-link social-link--fb">Мы в Фейсбуке</a>
+            <a href="https://instagram.com" class="social-link social-link--in">Мы в Инстаграме</a>
+            </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a href="https://htmlacademy.ru" class="btn page-footer__copyright-link">html academy</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
