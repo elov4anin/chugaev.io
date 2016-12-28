@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'PTSans-Narrow';
+  src: url('../fonts/PTSans-Narrow.eot?#iefix') format('embedded-opentype'),  url('../fonts/PTSans-Narrow.woff') format('woff'), url('../fonts/PTSans-Narrow.ttf')  format('truetype'), url('../fonts/PTSans-Narrow.svg#PTSans-Narrow') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSans-NarrowBold';
+  src: url('../fonts/PTSans-NarrowBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/PTSans-NarrowBold.woff') format('woff'), url('../fonts/PTSans-NarrowBold.ttf')  format('truetype'), url('../fonts/PTSans-NarrowBold.svg#PTSans-NarrowBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "PTSans-Narrow", Arial, sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
+
+  background: $bg-darkgrey;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.btn {
+  display: block;
+  width: 278px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin: 10px auto;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+
+  border: 1px solid #e5ddd5;
+}
+
+/*body, div, span, section, ul, li {
+  outline: 1px solid #ffff00;
+}*/
+
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

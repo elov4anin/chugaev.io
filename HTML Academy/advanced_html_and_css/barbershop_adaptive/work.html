@@ -2,26 +2,33 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Наши работы - Барбершоп "Бородинский"</title>
+  <meta name= "viewport" content= "width=device-width, initial-scale=1.0" >
+  <title>Главная - Барбершоп "Бородинский"</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика</h1>
     <div class="page-header__logo">
-      <img src="img/logotype-mobile.svg" alt="Барбершоп Бородинский" width="370" height="153">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" alt="Барбершоп Бородинский" width="370" height="153">
+      </picture>
     </div>
     <nav class="main-nav  main-nav--closed  main-nav--nojs">
       <button class="main-nav__toggle">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__items">
-          <li class="main-nav__item "><a href="index.html">Главная</a></li>
-          <li class="main-nav__item  main-nav__item--active"><a href="">Наши работы</a></li>
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item main-nav__item--active"><a>Наши работы</a></li>
           <li class="main-nav__item"><a href="enroll.html">Записаться</a></li>
           <li class="main-nav__item"><a href="">Контакты</a></li>
           <li class="main-nav__item"><a href="">Htmlacademy</a></li>
         </ul>
         <ul class="main-nav__user-items">
-          <li class="main-nav_user-item"><a class="main-nav__user-login" href="" title="Войти">Войти</a></li>
+          <li class="main-nav_user-item"><a class="main-nav__user-login" href="" title="Войти">Вход</a></li>
         </ul>
       </div>
     </nav>
@@ -32,7 +39,12 @@
       <a href="index.html" class="btn portfolio__btn">На Главную</a>
     </header>
     <div class="recall">
-      <img src="img/recall__photo1.jpg" alt="Лжепетр Мчиславский" width="280" height="480">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/recall__photo1-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/recall__photo1-tablet.jpg">
+      <img src="img/recall__photo1-mobile.jpg" alt="Лжепетр Мчиславский">
+      </picture>
+      <span class="recall__work-of-month">Работа месяца</span>
       <b class="recall__name">Лжепетр Мчиславский</b>
       <p class="recall__comment">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
       <ul class="recall__list-services">
@@ -42,7 +54,11 @@
       </ul>
     </div>
     <div class="recall">
-      <img src="img/recall__photo2.jpg" alt="Саша Мальцев" width="280" height="176">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/recall__photo2-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/recall__photo2-tablet.jpg">
+        <img src="img/recall__photo2-mobile.jpg" alt="Саша Мальцев">
+      </picture>
       <b class="recall__name">Саша Мальцев</b>
       <p class="recall__comment">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
       <ul class="recall__list-services">
@@ -50,16 +66,24 @@
       </ul>
     </div>
     <div class="recall">
-      <img src="img/recall__photo3.jpg" alt="Владимир Иваныч" width="280" height="176">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/recall__photo3-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/recall__photo3-tablet.jpg">
+        <img src="img/recall__photo3-mobile.jpg" alt="Владимир Иваныч">
+      </picture>
       <b class="recall__name">Владимир Иваныч</b>
       <p class="recall__comment">К зимнему сезону — готов!</p>
       <ul class="recall__list-services">
-        <li class="recall__list-services__item recall__list-services__item--beard">Борода</li>
+        <li class="recall__list-services__item recall__list-services__item--shaving">Борода</li>
         <li class="recall__list-services__item recall__list-services__item--mustache">Усы</li>
       </ul>
     </div>
     <div class="recall">
-      <img src="img/recall__photo4.jpg" alt="Винстон Синий" width="280" height="176">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/recall__photo4-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/recall__photo4-tablet.jpg">
+        <img src="img/recall__photo4-mobile.jpg" alt="Винстон Синий">
+      </picture>
       <b class="recall__name">Винстон Синий</b>
       <p class="recall__comment">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!!</p>
       <ul class="recall__list-services">
@@ -72,56 +96,57 @@
     <div class="price__wrapper">
     <table class="price__list">
       <tr>
+        <td class="price__num">1</td>
         <td class="price__name">
           <b>Классическая стрижка</b>
           <span>(c мытьем головы)</span>
         </td>
-        <td class="rate">1 500 руб.</td>
+        <td class="price__rate">1 500 руб.</td>
       </tr>
       <tr>
+        <td class="price__num">2</td>
         <td class="price__name">
           <b>Современный вариант</b>
           <span>(c мытьем головы)</span>
         </td>
-        <td class="rate">1 500 руб.</td>
+        <td class="price__rate">1 500 руб.</td>
       </tr>
       <tr>
+        <td class="price__num">3</td>
         <td class="price__name">
           <b>Индивидуальный подход</b>
           <span>(c мытьем головы)</span>
         </td>
-        <td class="rate">2 000 руб.</td>
+        <td class="price__rate">2 000 руб.</td>
       </tr>
       <tr>
+        <td class="price__num">4</td>
         <td class="price__name">
           <b>Бритье головы</b>
           <span>(без мытья)</span>
         </td>
-        <td class="rate">500 руб.</td>
+        <td class="price__rate">500 руб.</td>
       </tr>
       <tr>
+        <td class="price__num">5</td>
         <td class="price__name">
           <b>Бритье головы</b>
           <span>(c мытьем головы)</span>
         </td>
-        <td class="rate">1 000 руб.></td>
+        <td class="price__rate">1 000 руб.</td>
       </tr>
     </table>
-    </div>
+     <h2 class="price__discount-title visually-hidden">Скидка</h2>
+     <span class="price__discount-time"> C 10:00 до 14:00 скидка 20%</span>
+     </div>
   </section>
-  <section class="discount">
-    <h2 class="discount__title visually-hidden">Скидка</h2>
-    <div class="discount__wrapper">
-      <img src="img/discount__clock.svg" alt="Часы" class="discount__clock" width="58" height="57">
-      <span class="discount__time"> C 10:00 до 14:00 скидка 20%</span>
-    </div>
-  </section>
+
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <p class="page-footer__contacts">
-        <b>барбершоп "бородинский"</b><br>
-        г. Cанкт-Петербург. ул. Большая Конюшная, д. 19/8<br>
-        <a href="tel:+78125556666"><span class="page-footer__contacts-hidden">Тел.:+7 (812) 666-02-66</span></a>: <br>
+        <b>Барбершоп "Бородинский"</b><br>
+        г. Cанкт-Петербург, ул. Большая<br class="br"> Конюшная 19/8<br>
+        <a href="tel:+78125556666" class="btn"><span class="page-footer__contacts-hidden">Тел.: </span>+7 (812) 666-02-66</a> <br>
       </p>
       <p class="page-footer__social">
           <span class="social-links">
@@ -136,5 +161,6 @@
       </p>
     </div>
   </footer>
+  <script src="js/menu.js"></script>
 </body>
 </html>
