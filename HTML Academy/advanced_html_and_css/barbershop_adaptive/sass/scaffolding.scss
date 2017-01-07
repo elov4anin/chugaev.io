@@ -18,6 +18,17 @@ body {
   font-style: normal;
 
   background: $bg-darkgrey;
+
+ @media (min-width: $tablet-widths) {
+    height: 90vh;
+  }
+  @media (min-width: $desktop-widths) {
+    height: 80vh;
+  }
+}
+
+body > svg {
+  display: none;
 }
 img {
   max-width: 100%;
@@ -39,6 +50,14 @@ img {
   color: #ffffff;
 
   border: 1px solid #e5ddd5;
+
+  &:hover {
+    border: 1px solid #6a4d38;
+  }
+  &:active {
+    background-color: #d5c9bd;
+    color: #958c84;
+  }
 }
 
 /*body, div, span, section, ul, li {

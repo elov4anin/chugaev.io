@@ -44,6 +44,10 @@
   margin-bottom: 16px;
   padding-bottom: 18px;
   padding-left: 70px;
+  &:hover {
+    text-decoration: underline;
+    color: #6a4d38;
+  }
 }
 .news__item:nth-child(1) {
   border-bottom: 1px solid #e5ddd5;
@@ -73,6 +77,12 @@
   color: #ffffff;
 
   background-color: #000;
+  &:hover {
+    background-color: #6a4d38;
+  }
+  &:active {
+    color: #978374;
+  }
   &::after {
     content: ' ';
     position: absolute;
@@ -85,6 +95,9 @@
     border-style: solid;
     border-width: 12px 25px 0 25px;
     border-color: #000000 transparent transparent transparent;
+  }
+  &:hover:after {
+    border-color: #6a4d38 transparent transparent transparent;
   }
 }
 .news__item time b {

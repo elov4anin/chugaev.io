@@ -1,3 +1,4 @@
+@import "normalize";
 @import "variables";
 @import "mixins";
 @import "scaffolding";
@@ -10,6 +11,8 @@
 @import "blocks/page-footer";
 @import "blocks/porfolio";
 @import "blocks/price";
+@import "blocks/record";
+@import "modal-window/modal-window__login-form";
 
 
 

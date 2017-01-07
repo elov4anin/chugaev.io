@@ -2,7 +2,7 @@
   @include container();
 
   position: relative;
-  border: 1px solid #e5ddd5;
+
   border-top: 0;
   margin-top: 44px;
 }
@@ -18,7 +18,7 @@
 .social-link {
   display: inline-block;
   vertical-align: top;
-  width: 106px;
+  width: 105px;
   height: 98px;
 
   font-size: 0;
@@ -29,7 +29,7 @@
 
   border: 1px solid #e5ddd5;
   &--vk {
-    border-left: 0;
+
     background-image: url(../img/icon-vk-big.png);
     background-repeat:no-repeat;
     background-position: center center;
@@ -42,7 +42,7 @@
     background-position: center center;
   }
   &--in {
-    border-right: 0;
+
     background-image: url(../img/icon-insta-big.png);
     background-repeat:no-repeat;
     background-position: center center;
@@ -57,9 +57,15 @@
 
 @media (min-width: $tablet-widths) {
   .page-footer {
-    -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
+   /* position: relative;
+    top: -166px;*/
+    /*-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
+    padding-bottom: 58px;*/
+   /* position: relative;
+    top: -158px;*/
+
     padding-bottom: 58px;
   }
   .page-footer__wrapper {
@@ -107,6 +113,10 @@
   }
 }
 @media (min-width: $desktop-widths) {
+  .page-footer {
+ /*   top: -365px;*/
+
+  }
   .page-footer__wrapper {
     font-size: 0;
   }

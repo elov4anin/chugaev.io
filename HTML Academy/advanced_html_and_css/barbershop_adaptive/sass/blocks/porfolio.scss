@@ -2,24 +2,14 @@
   @include container();
 
   margin-bottom: 70px;
+  padding-bottom: 20px;
 
   color: black;
 
   background-color: $bg-lightgrey;
   border-top: 1px solid #e5ddd5;
 
-  &::after {
-    content: ' ';
-    position: relative;
-    top: 64px;
 
-    width: 0;
-    height: 0;
-
-    border-style: solid;
-    border-width: 40px 160px 0 160px;
-    border-color: $bg-lightgrey transparent transparent transparent;
-  }
 }
 .portfolio__title {
   font-size: 30px;
@@ -134,15 +124,54 @@
 @media (min-width: $tablet-widths) {
   .portfolio {
     position: relative;
-    top: -100px;
+    top: -16px;
 
     width: 768px;
+    padding-bottom: 60px;
+    padding-top: 50px;
 
-    &:after {
-      top: 69px;
+    &:before {
+      position: absolute;
+      content: " ";
+      top: -45px;
 
-      border-width: 45px 384px 0 384px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 45px 0 0 384px;
+      border-color: transparent transparent transparent $bg-lightgrey;
     }
+    &:after {
+      position: absolute;
+      content: " ";
+      top: -45px;
+      right: 0;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width:  0 0 45px 384px;
+      border-color: transparent transparent $bg-lightgrey transparent;
+    }
+
+
+  }
+  .portfolio__title {
+    margin-left: 60px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .portfolio__btn {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+
+    display: block;
+    width: 160px;
+
+    color: black;
   }
   .recall {
     @include container;
@@ -165,26 +194,39 @@
   .recall__comment {
     min-height: 100px;
   }
+  .recall__work-of-month {
+    top: 36px;
+  }
+
 
 }
 @media (min-width: $desktop-widths) {
   .portfolio {
-    position: relative;
-    top: -100px;
+    top: 0px;
 
     padding-left: 120px;
 
     font-size: 0;
 
     width: 1080px;
+    &:before {
+      top: -70px;
+      left: 0;
+      border-width: 70px 0 0 600px;
+    }
 
     &:after {
-      display: none;
+      top: -70px;
+      border-width: 0 0 70px 600px
     }
   }
   .portfolio__title {
-    text-align: left;
+    margin-bottom: 90px;
   }
+  .portfolio__btn {
+    right: 120px;
+  }
+
   .recall {
     display: inline-block;
     vertical-align: top;
@@ -213,6 +255,23 @@
   .recall__list-services {
     margin-left: 33px;
     padding-left: 0;
+  }
+  .recall__work-of-month {
+    top: 36px;
+    right: 0;
+
+    &:before {
+      left: -10px;
+
+      border-width: 0 10px 25px 0;
+      border-color: transparent #826550  transparent transparent;
+    }
+    &:after {
+      left: -10px;
+
+      border-width:  0 0 25px 10px;
+      border-color: transparent transparent  #826550 transparent;
+    }
   }
 }
 

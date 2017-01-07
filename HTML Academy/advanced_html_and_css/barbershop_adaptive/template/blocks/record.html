@@ -1,0 +1,58 @@
+<div class="record">
+  <header class="record__header">
+    <h2 class="record__title">Запись на стрижку</h2>
+    <a href="index.html" class="btn record__btn">На Главную</a>
+  </header>
+  <form action="#" method="post" class="record-form">
+    <input type="text" name="surname" class="record-form__contact-details" placeholder="Фамилия">
+    <input type="text" name="name" class="record-form__contact-details" placeholder="Имя">
+    <input type="text" name="second-name" class="record-form__contact-details" placeholder="Отчество">
+    <input type="tel" name="phone" class="record-form__contact-details" placeholder="Контактный телефон">
+    <input type="email" name="email" class="record-form__contact-details" placeholder="Контактный e-mail">
+    <textarea class="record-form__comment" name="comment" placeholder="Доп. информация для мастера"></textarea>
+    <b class="record-form__select-beard-model">Выбирите модель бороды:</b>
+    <input type="radio" name="beard" id="admiral" value="admiral">
+    <label for="admiral" class="record-form__beard record-form__beard--admiral">
+      адмирал
+      <svg width="56" height="53">
+        <use xlink:href='#icon-beard--admiral'/>
+      </svg>
+    </label>
+    <input type="radio" name="beard" id="lumberjack" value="lumberjack">
+    <label for="lumberjack" class="record-form__beard record-form__beard--lumberjack">
+      лесоруб
+      <svg width="62" height="68">
+        <use xlink:href='#icon-beard--lumberjack'/>
+      </svg>
+    </label>
+    <input type="radio" name="beard" id="polar" value="polar">
+    <label for="polar" class="record-form__beard record-form__beard--polar">
+      полярник
+      <svg width="65" height="80">
+        <use xlink:href='#icon-beard--polar'/>
+      </svg>
+    </label>
+    <input type="radio" name="beard" id="boyar" value="boyar">
+    <label for="boyar" class=" record-form__beard record-form__beard--boyar">
+      боярин
+      <svg width="50" height="106">
+        <use xlink:href='#icon-beard--boyar'/>
+      </svg>
+    </label>
+    <input type="radio" name="beard" id="sage" value="sage">
+    <label for="sage" class=" record-form__beard record-form__beard--sage">
+      мудрец
+      <svg width="62" height="94">
+        <use xlink:href='#icon-beard--sage'/>
+      </svg>
+    </label>
+    <b class="record-form__select-additional">Дополнительные услуги:</b>
+    <input type="checkbox" name="additional" id="tint-beard" value="tint-beard"><label for="tint-beard" class="record-form__additional record-form__additional--tint-beard">Подкрасить бороду</label>
+    <input type="checkbox" name="additional" id="screwed-mustache" value="screwed-mustache"><label for="screwed-mustache" class="record-form__additional record-form__additional--screwed-mustache">Накрутить усы</label>
+    <input type="checkbox" name="additional" id="comb-beard" value="comb-beard"><label for="comb-beard" class="record-form__additional record-form__additional--comb-beard">Причесать бороду</label>
+    <input type="checkbox" name="additional" id="trim-whiskey" value="trim-whiskey"><label for="trim-whiskey" class="record-form__additional record-form__additional--trim-whiskey">Подровнять виски</label>
+    <input type="checkbox" name="additional" id="remove-gray-hair" value="remove-gray-hair"><label for="remove-gray-hair" class="record-form__additional record-form__additional--remove-gray-hair">Убрать седину</label>
+    <input type="checkbox" name="additional" id="polished-bald" value="polished-bald"><label for="polished-bald" class="record-form__additional record-form__additional--polished-bald">Отполировать лысину</label>
+    <button type="submit" class=" btn record-form__btn-submit">Отправить заявку</button>
+  </form>
+</div>
