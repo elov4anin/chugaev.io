@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name= "viewport" content= "width=device-width, initial-scale=1.0" >
+  <title>@@page-title</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="page-header @@page-header--inner">
+  <h1 class="visually-hidden">Приложение "Pink"</h1>
+  <div class="page-header__wrapper">
+    <nav class="main-nav main-nav-opened">
+      <img src="img/logotype-white-mobile.svg" width="75" height="22" alt="Приложение Pink">
+      <button class="naim-nav__toggle">Открыть меню</button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
+        <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+        <li class="main-nav__item"><a >Htmnl Academy</a></li>
+      </ul>
+    </nav>
+    <button class="btn btn-download"> Скачать приложение</button>
+   <div class="page-header__icons">
+      <svg width="50" height="60" class="icon-apple">
+        <use xlink:href="#icon-apple"/>
+      </svg>
+      <svg width="50" height="60">
+        <use xlink:href="#icon-android"/>
+      </svg>
+      <svg width="50" height="60" class="icon-microsoft">
+        <use xlink:href="#icon-microsoft"/>
+      </svg>
+   </div>
+    <p class="page-header__icons-description">
+      Доступно для iPhone, iPad, Android. Windows Phone, OS X, Windows 8
+    </p>
+  </div>
+</header>
