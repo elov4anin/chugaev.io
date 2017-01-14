@@ -1,0 +1,10 @@
+build/*
+node_modules/*
+css/*
+.DB_Store
+Thumbs.db
+.idea
+../ckassa/npm-debug.log
+*.psd
+*.ai
+*.pdf

@@ -1,0 +1,96 @@
+.recipes {
+  @include container();
+  color: black;
+  background-color: white;
+  padding-top: 100px;
+
+  text-align: center;
+
+}
+.recipes__header {
+  position: relative;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+
+  text-transform: uppercase;
+  color: black;
+  &::after {
+    content: ' ';
+    position: absolute;
+    right: 30%;
+    left: 30%;
+    bottom: -5px;
+    height: 2px;
+    background-color: #f37264;
+  }
+}
+.recipes__list {
+  margin-top: 40px;
+}
+.recipes__item {
+  box-sizing: border-box;
+  width: 320px;
+  height: 225px;
+
+  padding-top: 80px;
+
+  text-align: center;
+
+  background-color: #f37264;
+
+  &--italian {
+    background: url("../img/recipes__italian.jpg") no-repeat;
+  }
+  &--indian {
+    background: url("../img/recipes__indian.jpg") no-repeat;
+  }
+  &--french {
+    background: url("../img/recipes__french.jpg") no-repeat;
+  }
+  &--steakhouse {
+    background: url("../img/recipes__steakhouse.jpg") no-repeat;
+  }
+  &--seafood {
+    background: url("../img/recipes__seafood.jpg") no-repeat;
+  }
+  &--sushi {
+    background: url("../img/recipes__sushi.jpg") no-repeat;
+  }
+  &--mexican {
+    background: url("../img/recipes__mexican.jpg") no-repeat;
+  }
+  &--chinese {
+    background: url("../img/recipes__chinese.jpg") no-repeat;
+  }
+  &--pizza {
+    background: url("../img/recipes__pizza.jpg") no-repeat;
+  }
+  &--american {
+    background: url("../img/recipes__american.jpg") no-repeat;
+  }
+  a {
+    display: block;
+
+    font-size: 16px;
+    font-family: "Times New Roman",Serif;
+    font-style: italic;
+    text-decoration: none;
+
+    b {
+      font-family: 'Lato', sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+
+      text-transform: uppercase;
+    }
+  }
+}
+@media (min-width: $tablet-widths) {
+  .recipes__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

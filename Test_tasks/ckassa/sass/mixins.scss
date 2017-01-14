@@ -1,0 +1,42 @@
+@mixin clearfix {
+  &::after {
+    content: ' ';
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-widths) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    max-width: 1600px;
+    width: 100%;/*in psd 1600*/
+  }
+}
+@mixin wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-widths) {
+    width: 640px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 1180px;/* @todo узнать на макете отступы width: 960px;;*/
+  }
+}
+@mixin no-outline {
+  outline: none;
+  background: transparent;
+  
+  &::before {
+    display: none;
+  }
+}

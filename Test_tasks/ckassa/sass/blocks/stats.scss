@@ -1,0 +1,26 @@
+.stats {
+  @include container();
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding-top: 60px;
+}
+
+.stats__item {
+  text-align: center;
+
+  margin-bottom: 25px;
+  width: 320px;
+
+  b {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+}
