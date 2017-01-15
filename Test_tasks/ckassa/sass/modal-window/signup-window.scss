@@ -1,9 +1,9 @@
-.login-window {
+.sign-window {
   display: none;
   animation: zoomOut;
   animation-duration: 0.7s;
 }
-.login-window--show {
+.sign-window--show {
   position: absolute;
   top: 165px;
   left: 50%;
@@ -25,13 +25,15 @@
   animation: zoomIn;
   animation-duration: 0.7s;
 }
-.login-window b {
+.sign-window b {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
-.login-form__user,
-.login-form__pass {
+.sign-form__user,
+.sign-form__pass,
+.sign-form__email,
+.sign-form__phone {
   box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
@@ -71,37 +73,15 @@
     color: black;
   }
 }
-.login-form__user {
+.sign-form__user {
   margin-top: 20px;
 }
-.login-window input[type="checkbox"] {
+.sign-window input[type="checkbox"] {
   display: none;
 }
-.login-form__remember {
-  position: absolute;
-  top: 280px;
-  left: 20px;
 
-  display: block;
-  padding-left: 50px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-
-  color: #000000;
-  &:before {
-    content: " ";
-    position: absolute;
-    top: 7px;
-    left: 0;
-
-    width: 35px;
-    height: 35px;
-
-    border: 1px solid #e5ddd5;
-  }
-}
-.login-form__btn,
-.login-window--close {
+.sign-form__btn,
+.sign-window--close {
   display: inline-block;
   width: 130px;
   box-sizing: border-box;
@@ -126,45 +106,35 @@
     transition: 0.7s;
   }
 }
-.login-form__btn {
+.sign-form__btn {
   margin-right: 20px;
   height: 48px;
-
-
 }
-
-
-.login-form input[type="checkbox"]:checked + .login-form__remember {
-  &:before {
-    content: "\2714";
-    position: absolute;
-    top: 7px;
-    left: 0;
-
-    width: 35px;
-    height: 30px;
-    padding-top: 5px;
-    padding-left: 0;
-
-    border: 1px solid black;
-  }
+.sign-form {
+  position: relative;
 }
-.login-form__pass-reset {
+.sign-form__label {
   position: absolute;
-  right: 22px;
-  top: 290px;
+  bottom: 100px;
+  left: 20px;
 
-  color: black;
+  height: 40px;
+  width: 280px;
+  padding-top: 15px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f37264;
 }
-.login-error {
+
+.sign-error {
   animation: pulse;
   animation-duration: 2s;
   animation-iteration-count: 2;
-
-  color: #f37264;
 }
+
 @media (min-width: $tablet-widths) {
-  .login-window--show {
+  .sign-window--show {
     position: absolute;
     top: 165px;
     left: 50%;
@@ -183,33 +153,30 @@
     -moz-box-shadow: 0 21px 31px 3px rgba(0,0,0,0.75);
     box-shadow: 0 21px 31px 3px rgba(0,0,0,0.75);
   }
-  .login-form__user,
-  .login-form__pass {
+  .sign-form__user,
+  .sign-form__pass,
+  .sign-form__email,
+  .sign-form__phone {
     width: 320px;
 
     background-repeat: no-repeat;
     background-position: 97% 15px;
   }
-  .login-form__user {
+  .sign-form__user {
     background-image: url(../img/icon-login-name.png);
 
   }
-  .login-form__pass {
+  .sign-form__pass {
     background-image: url(../img/icon-login-pass.png);
   }
-  .login-form__remember {
-    left: 70px
-  }
-  .login-form__pass-reset {
-    right: 72px
-  }
-  .login-form__btn {
+  
+  .sign-form__btn {
     width: 320px;
     margin-right: 0;
   }
-  .login-window--close {
+  .sign-window--close {
     position: absolute;
-    top: -85px;
+    top: -200px;
     right: -50px;
 
     width: 30px;
@@ -234,10 +201,15 @@
     &::before {
       transform: rotate(45deg)
     }
-    
+
     &::after {
       transform: rotate(-45deg)
     }
+  }
+  .sign-form__label {
+    left: 70px;
+
+    width: 320px;
   }
 }
 

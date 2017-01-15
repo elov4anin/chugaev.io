@@ -61,6 +61,16 @@
 
   border: 2px solid #000;
   border-radius: 50%;
+  &:hover {
+    background-color: #624530;
+
+    transition: 0.7s;
+  }
+  &:active {
+    background-color: #f37264;
+
+    transition: 0.7s;
+  }
 }
 .opportunity__input {
   display: none;
@@ -83,8 +93,21 @@
 
   border: 2px solid #a5a5a5;
   transform: rotate(45deg);
+
   &:first-child {
     margin-left: 0;
+  }
+
+  &:hover {
+    background-color: #624530;
+
+    transition: 0.7s;
+  }
+
+  &:active {
+    background-color: #f37264;
+
+    transition: 0.7s;
   }
 }
 

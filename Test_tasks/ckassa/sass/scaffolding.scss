@@ -81,3 +81,10 @@ body, div, span, section, ul, li {
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}

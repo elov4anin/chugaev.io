@@ -37,6 +37,9 @@
     text-align: center;
   }
   .reviews__item p {
+    width: 200px;
+    height: 125px;
+    overflow: hidden;
     margin-top: 5px;
 
     font-size: 22px;
@@ -63,6 +66,17 @@
     background-color: #796d79;
 
     border-radius: 50%;
+
+    &:hover {
+      background-color: #624530;
+
+      transition: 0.7s;
+    }
+    &:active {
+      background-color: #f37264;
+
+      transition: 0.7s;
+    }
   }
   #reviews-input-1:checked ~ .reviews__toggles label[for="reviews-input-1"],
   #reviews-input-2:checked ~ .reviews__toggles label[for="reviews-input-2"],
@@ -71,24 +85,34 @@
   }
   #reviews-input-1:checked ~ .reviews__items .slider__item-1 {
     display: block;
+
+    transition: 2.7s;
   }
   #reviews-input-1:checked ~ .reviews__items .slider__item-2,
   #reviews-input-1:checked ~ .reviews__items .slider__item-3 {
     display: none;
+
+    transition:2.7s;
   }
   #reviews-input-2:checked ~ .reviews__items .slider__item-2 {
     display: block;
+
+    transition: 2.7s;
   }
   #reviews-input-2:checked ~ .reviews__items .slider__item-1,
   #reviews-input-2:checked ~ .reviews__items .slider__item-3 {
     display: none;
+
+    transition: 2.7s;
   }
   #reviews-input-3:checked ~ .reviews__items .slider__item-3 {
     display: block;
+    transition: 2.7s;
   }
   #reviews-input-3:checked ~ .reviews__items .slider__item-1,
   #reviews-input-3:checked ~ .reviews__items .slider__item-2 {
     display: none;
+    transition: 2.7s;
   }
 
   @media (min-width: $tablet-widths) {
@@ -114,6 +138,8 @@
     }
     .reviews__item p {
       font-size: 30px;
+      width: 400px;
+      height: 136px;
     }
   }
 @media (min-width: $desktop-widths) {
@@ -123,5 +149,9 @@
     padding-bottom: 60px;
 
     background-position: center center;
+  }
+  .reviews__item p {
+    width:940px;
+    height: 68px;
   }
 }

@@ -1,6 +1,7 @@
 @import "normalize";
 @import "variables";
 @import "mixins";
+@import "animate";
 @import "scaffolding";
 @import "srite_svg";
 @import "blocks/page-header";
@@ -12,6 +13,7 @@
 @import "blocks/stats";
 @import "blocks/page-footer";
 @import "modal-window/modal-window__login-form";
+@import "modal-window/signup-window";
 
 
 

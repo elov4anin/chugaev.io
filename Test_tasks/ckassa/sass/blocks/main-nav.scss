@@ -12,7 +12,7 @@
   z-index: 2;
 
   display: block;
-  width: 70px;
+  width: 44px;
   height: 50px;
 
   font-size: 0;
@@ -23,9 +23,13 @@
   border: none;
   &:hover {
     background-color: #624530;
+
+    transition: 0.7s;
   }
   &:active {
-    background-color: #624530;
+    background-color: #f37264;
+
+    transition: 0.7s;
   }
 }
 
@@ -37,7 +41,7 @@
   content: ' ';
   position: absolute;
   top: 15px;
-  left: 17px;
+  left: 3px;
 
   width: 36px;
   height: 2px;
@@ -61,7 +65,7 @@
     content: ' ';
     position: absolute;
     top: 24px;
-    left: 18px;
+    left: 3px;
 
     width: 36px;
     height: 2px;
@@ -91,6 +95,8 @@
   padding: 0;
 
   list-style: none;
+  animation: slideInDown;
+  animation-duration: 0.7s;
 }
 .main-nav__item a {
   display: block;
@@ -111,25 +117,58 @@
 .main-nav__item a[href] {
   &:hover {
     background-color: #775a46;
+    transition: 0.7s;
     border-top-color: #775a46;
   }
   &:active {
-    background-color: #6a4d38;
+    background-color: #f37264;
+
+    transition: 0.7s;
     border-top-color: #6a4d38;
   }
 }
 .main-nav__login {
-  text-decoration: none;
-}
-.main-nav__sign-up {
-  margin-left: 10px;
+  display: block;
+  width: 60px;
+  padding: 20px 10px;
+  margin-top: -20px;
 
   text-decoration: none;
+
+  &:hover {
+    background-color: #624530;
+
+    transition: 0.7s;
+  }
+  &:active {
+    background-color: #f37264;
+
+    transition: 0.7s;
+  }
+}
+.main-nav__sign-up {
+  display: block;
+  width: 65px;
+  padding: 20px 10px;
+  margin-top: -20px;
+
+  text-decoration: none;
+
+  &:hover {
+    background-color: #624530;
+
+    transition: 0.7s;
+  }
+  &:active {
+    background-color: #f37264;
+
+    transition: 0.7s;
+  }
 }
 .main-nav__user-list {
   display: flex;
-  margin-right: 10px;
   margin-left:auto;
+  flex-wrap: wrap;
 
   flex-direction: row;
 }

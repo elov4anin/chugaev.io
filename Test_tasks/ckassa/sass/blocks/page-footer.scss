@@ -28,4 +28,12 @@
   b {
     font-weight: 400;
   }
+
+}
+@media (max-width: $tablet-widths) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+  }
 }

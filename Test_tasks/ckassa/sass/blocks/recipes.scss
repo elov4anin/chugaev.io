@@ -39,6 +39,17 @@
 
   background-color: #f37264;
 
+  &:hover {
+    opacity: 0.7;
+
+    transition: 0.7s;
+  }
+  &:active {
+    opacity: 0.3;
+
+    transition: 0.7s;
+  }
+
   &--italian {
     background: url("../img/recipes__italian.jpg") no-repeat;
   }
