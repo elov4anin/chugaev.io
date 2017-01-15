@@ -2841,6 +2841,17 @@ body, div, span, section, ul, li {
 .visible {
   opacity: 1; }
 
+.overlay:before {
+  content: '';
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
 .icon-burger {
   margin: 20px; }
 
@@ -2853,10 +2864,9 @@ body, div, span, section, ul, li {
 .page-header {
   width: 320px;
   margin: 0 auto;
-  background: #7f3c53 none;
-  background-size: cover;
   color: #ffffff;
-  /*vremenno */ }
+  background: #7f3c53 none;
+  background-size: cover; }
 
 .page-header__wrapper {
   width: 280px;
@@ -2866,13 +2876,13 @@ body, div, span, section, ul, li {
   text-align: center; }
 
 .page-header__header {
+  margin-bottom: 43px;
   font-size: 30px;
-  font-family: "Times New Roman",Serif;
+  font-family: "Times New Roman", serif;
   font-style: italic;
   line-height: 30px;
   font-weight: 400;
-  letter-spacing: 0.05em;
-  margin-bottom: 43px; }
+  letter-spacing: 0.05em; }
   .page-header__header b {
     font-size: 50px;
     font-family: 'Lato', sans-serif;
@@ -2891,6 +2901,8 @@ body, div, span, section, ul, li {
   padding: 22px 85px;
   font-weight: 700;
   line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
   border: 1px solid white; }
   .page-header__btn-get:hover {
     background-color: #624530;
@@ -3328,10 +3340,10 @@ body, div, span, section, ul, li {
 .recipes {
   width: 320px;
   margin: 0 auto;
-  color: black;
-  background-color: white;
   padding-top: 100px;
-  text-align: center; }
+  text-align: center;
+  color: black;
+  background-color: white; }
 
 .recipes__header {
   position: relative;
@@ -3414,9 +3426,9 @@ body, div, span, section, ul, li {
   padding-top: 60px; }
 
 .stats__item {
-  text-align: center;
+  width: 320px;
   margin-bottom: 25px;
-  width: 320px; }
+  text-align: center; }
   .stats__item b {
     font-size: 36px;
     font-weight: 700; }
@@ -3465,6 +3477,7 @@ body, div, span, section, ul, li {
   position: absolute;
   top: 165px;
   left: 50%;
+  z-index: 101;
   display: block;
   width: 320px;
   margin-left: -160px;
@@ -3610,6 +3623,7 @@ body, div, span, section, ul, li {
   position: absolute;
   top: 165px;
   left: 50%;
+  z-index: 101;
   display: block;
   width: 320px;
   margin-left: -160px;
@@ -3885,13 +3899,7 @@ body, div, span, section, ul, li {
   .sign-form__pass,
   .sign-form__email,
   .sign-form__phone{
-    width: 320px;
-    background-repeat: no-repeat;
-    background-position: 97% 15px; }
-  .sign-form__user{
-    background-image: url(../img/icon-login-name.png); }
-  .sign-form__pass{
-    background-image: url(../img/icon-login-pass.png); }
+    width: 320px; }
   .sign-form__btn{
     width: 320px;
     margin-right: 0; }

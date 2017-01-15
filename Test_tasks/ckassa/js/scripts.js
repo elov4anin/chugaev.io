@@ -75,7 +75,7 @@ navToggle.addEventListener('click', function () {
 });
 
 /*login form*/
-
+var body = document.querySelector("body");
 var link = document.querySelector(".main-nav__login");
 var loginWindow = document.querySelector(".login-window");
 var btnClose = document.querySelector(".login-window--close");
@@ -88,12 +88,14 @@ var p = loginWindow.querySelector("p") ;
 link.addEventListener("click", function (event) {
   event.preventDefault();
   loginWindow.classList.add("login-window--show");
+  body.classList.add("overlay");
 
 })
 
 btnClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   loginWindow.classList.remove("login-window--show");
+  body.classList.remove("overlay")
 })
 
 loginForm.addEventListener("submit", function (event) {
@@ -117,24 +119,30 @@ var signPassword = signWindow.querySelector("[name=password]");
 var signEmail = signWindow.querySelector("[name=email]");
 var signPhone = signWindow.querySelector("[name=phone]");
 var re =/^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/;
+var reEmail = /^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i;
 var label = signWindow.querySelector(".sign-form__label");
 
 sign.addEventListener("click", function (event) {
   event.preventDefault();
   signWindow.classList.add("sign-window--show");
+  body.classList.add("overlay");
 });
 
 signClose.addEventListener("click", function (event) {
   event.preventDefault();
   signWindow.classList.remove("sign-window--show");
+  body.classList.remove("overlay");
 })
 
 signForm.addEventListener("submit", function (event) {
   event.preventDefault();
   if (!signLogin.value || !signPassword.value||!signEmail.value||!signPhone.value) {
     label.innerHTML="Please enter your login,password, email, phone";
+  } else if (!reEmail.test(signEmail.value)) {
+    label.innerHTML = "Invalid Email";
+    signEmail.classList.add("sign-error");
   } else if (!re.test(signPhone.value)) {
-    label.innerHTML="Invalid phone number";
+    label.innerHTML = "Invalid phone number";
     signPhone.classList.add("sign-error");
   } else {
     label.innerHTML="All right!";

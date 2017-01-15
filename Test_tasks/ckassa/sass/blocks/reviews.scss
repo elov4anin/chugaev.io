@@ -19,18 +19,18 @@
   }
 .reviews__author-photo {
    margin-bottom: 25px;
+
    text-align: center;
    img {
       border-radius: 50%;
    }
-
   }
+
   .reviews__author-name {
     font-size: 18px;
     line-height: 27px;
     font-weight: 300;
     font-style: italic;
-
   }
 
   .reviews__item {
@@ -53,6 +53,7 @@
   .reviews__toggles {
     display: block;
     margin: 0 auto;
+
     text-align: center;
   }
   .reviews__slider-toggle {

@@ -1,25 +1,30 @@
 .page-header {
   @include container();
+
+  color: #ffffff;
+
   background: #7f3c53 none;
   background-size: cover;
-
-  color: #ffffff;/*vremenno */
 }
+
 .page-header__wrapper {
   @include wrapper();
 }
-.page-header__description-container {
 
+.page-header__description-container {
   text-align: center;
 }
+
 .page-header__header {
+  margin-bottom: 43px;
+
   font-size: 30px;
-  font-family: "Times New Roman",Serif;
+  font-family: "Times New Roman", serif;
   font-style: italic;
   line-height: 30px;
   font-weight: 400;
   letter-spacing: 0.05em;
-  margin-bottom: 43px;
+
   b {
     font-size: 50px;
     font-family: 'Lato', sans-serif;
@@ -27,7 +32,6 @@
     font-weight: 700;
     text-transform: uppercase;
   }
-
 }
 .page-header__btn-get {
   display: block;
@@ -41,6 +45,8 @@
 
   font-weight: 700;
   line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
 
   border: 1px solid white;
 
@@ -66,25 +72,26 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-
   span {
     font-weight: 700;
     text-decoration: underline;
   }
-
 }
 
 @media (min-width: $tablet-widths) {
   .page-header {
     min-height: 880px;
+
     background: #7f3c53 url('../img/page-header__bg.jpg') no-repeat;
   }
   .page-header__header {
     font-size: 36px;
+
     b {
       font-size: 100px;
     }
   }
+
   .page-header__description-container {
     margin-top: 350px;
   }

@@ -3,10 +3,12 @@
   animation: zoomOut;
   animation-duration: 0.7s;
 }
+
 .login-window--show {
   position: absolute;
   top: 165px;
   left: 50%;
+  z-index: 101;
 
   display: block;
   width: 320px;
@@ -25,11 +27,13 @@
   animation: zoomIn;
   animation-duration: 0.7s;
 }
+
 .login-window b {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
+
 .login-form__user,
 .login-form__pass {
   box-sizing: border-box;
@@ -44,26 +48,31 @@
   color: black;
 
   border: 1px solid #e5ddd5;
+
   &::-moz-placeholder {
     font-size: 18px;
     line-height: 30px;
     color: black;
   }
+
   &:-moz-placeholder {
     font-size: 18px;
     line-height: 30px;
     color: black;
   }
+
   &::-webkit-input-placeholder {
     font-size: 18px;
     line-height: 30px;
     color: black;
   }
+
   &:-ms-input-placeholder {
     font-size: 18px;
     line-height: 30px;
     color: black;
   }
+
   &::-ms-input-placeholder
   {
     font-size: 18px;
@@ -71,12 +80,15 @@
     color: black;
   }
 }
+
 .login-form__user {
   margin-top: 20px;
 }
+
 .login-window input[type="checkbox"] {
   display: none;
 }
+
 .login-form__remember {
   position: absolute;
   top: 280px;
@@ -129,10 +141,7 @@
 .login-form__btn {
   margin-right: 20px;
   height: 48px;
-
-
 }
-
 
 .login-form input[type="checkbox"]:checked + .login-form__remember {
   &:before {
@@ -149,6 +158,7 @@
     border: 1px solid black;
   }
 }
+
 .login-form__pass-reset {
   position: absolute;
   right: 22px;
@@ -156,6 +166,7 @@
 
   color: black;
 }
+
 .login-error {
   animation: pulse;
   animation-duration: 2s;
@@ -163,6 +174,7 @@
 
   color: #f37264;
 }
+
 @media (min-width: $tablet-widths) {
   .login-window--show {
     position: absolute;
@@ -183,6 +195,7 @@
     -moz-box-shadow: 0 21px 31px 3px rgba(0,0,0,0.75);
     box-shadow: 0 21px 31px 3px rgba(0,0,0,0.75);
   }
+
   .login-form__user,
   .login-form__pass {
     width: 320px;
@@ -190,23 +203,28 @@
     background-repeat: no-repeat;
     background-position: 97% 15px;
   }
+
   .login-form__user {
     background-image: url(../img/icon-login-name.png);
-
   }
+
   .login-form__pass {
     background-image: url(../img/icon-login-pass.png);
   }
+
   .login-form__remember {
     left: 70px
   }
+
   .login-form__pass-reset {
     right: 72px
   }
+
   .login-form__btn {
     width: 320px;
     margin-right: 0;
   }
+
   .login-window--close {
     position: absolute;
     top: -85px;

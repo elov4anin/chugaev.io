@@ -34,33 +34,28 @@
   url('../fonts/lato-v11-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url('../fonts/lato-v11-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
+
 a {
   color: #ffffff;/*vremenno */
 }
+
 body > svg {
   display: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 ul {
   list-style-type: none;
   padding-left: 0;
-}
-.btn {
- 
-
-  &:hover {
-   
-  }
-  &:active {
-   
-  }
 }
 
 /*
@@ -85,6 +80,23 @@ body, div, span, section, ul, li {
 .hidden{
   opacity:0;
 }
+
 .visible{
   opacity:1;
+}
+
+.overlay {
+  &:before {
+    content: '';
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, .5);
+  }
 }
