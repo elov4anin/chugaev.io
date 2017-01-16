@@ -1,4 +1,38 @@
 .page-header {
-  background-color: #283645;/*vremenno */
+  @include container();
+
+  width: 320px;
+  min-height: 730px;
+
   color: #ffffff;/*vremenno */
+
+  background: #1d2631 url('../img/page-header__bg-mobile.jpg') no-repeat;
+}
+.page-header__wrapper {
+  @include wrapper();
+}
+
+.page-header__download-container {
+  margin-top: 430px;
+  text-align: center;
+
+}
+.page-header__btn-download {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 57px;
+  margin-bottom: 30px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.page-header__icons-description {
+  font-weight: 300;
 }
