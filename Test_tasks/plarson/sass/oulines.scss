@@ -1,0 +1,21 @@
+body {
+  background: $bg-darkgrey url("../img/barbershop-index-mobile.jpg") no-repeat 50% 50%;
+  -webkit-background-size: 720px;
+  background-size: 720px auto;
+  min-height: 750px;
+}
+
+@media (min-width: $tablet-widths) {
+body {
+  background: $bg-darkgrey url("../img/barbershop-index-tablet.jpg") no-repeat 50% 50%;
+  -webkit-background-size: 1180px auto;
+
+}
+}
+@media (min-width: $desktop-widths) {
+  body {
+    background: $bg-darkgrey url("../img/barbershop-index-desktop.jpg") no-repeat 50% 50%;
+    -webkit-background-size: 1391px auto;
+
+}
+}

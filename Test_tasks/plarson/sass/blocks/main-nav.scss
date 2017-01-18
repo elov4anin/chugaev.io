@@ -1,0 +1,12 @@
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  margin-top: 20px;
+
+}
+.main-nav__item {
+  width: 150px;
+  font-weight: 700;
+}
