@@ -6,7 +6,7 @@
 
   color: #ffffff;/*vremenno */
 
-  background: #1d2631 url('../img/page-header__bg-mobile.jpg') no-repeat;
+  background: $bg-color--darkest url('../img/page-header__bg-mobile.jpg') no-repeat;
 }
 .page-header__wrapper {
   @include wrapper();
@@ -29,8 +29,20 @@
   color: white;
 
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid $base-color;
   border-radius: 20px;
+
+  &:hover {
+    color: $base-color--hover;
+
+    background-color: $base-color;
+  }
+
+  &:active {
+    color: transparentize($base-color--hover, 0.3)
+  }
+
+
 }
 
 .page-header__icons-description {

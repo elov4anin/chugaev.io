@@ -37,14 +37,17 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #283645;/*vremenno */
-  color: #ffffff;/*vremenno */
+  color: $base-color;/*vremenno */
 }
+
 a {
-  color: #ffffff;/*vremenno */
+  color: $base-color;/*vremenno */
 }
+
 body > svg {
   display: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -53,22 +56,24 @@ ul {
   list-style-type: none;
   padding-left: 0;
 }
-.btn {
- 
 
+.btn {
   &:hover {
-   
+
   }
+
   &:active {
    
   }
 }
 
 /*
+
 body, div, span, section, ul, li {
   outline: 1px solid #960109;
 }
 */
+
 
 .visually-hidden {
   position: absolute;
