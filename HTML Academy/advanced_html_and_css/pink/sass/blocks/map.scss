@@ -1,0 +1,7 @@
+.map {
+  @include container();
+}
+.map__content {
+  width: 320px;
+  height: 200px;
+}

@@ -1,18 +1,20 @@
 .main-nav {
+
+  position: relative;
+
   padding-top: 20px;
   padding-bottom: 20px;
+
   background-color: transparentize($bg-color--darkest, 0.3);
 }
 
 .main-nav__wrapper {
   @include wrapper();
-
-  position: relative;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: -17px;
+  top: 5px;
   right: 0;
   z-index: 2;
 
@@ -62,8 +64,8 @@
 .main-nav--opened {
   .main-nav__list {
     position: absolute;
-    top: 45px;
-    left: -20px;
+    top: 65px;
+    left: 0px;
 
     @include container();
     display: block;
@@ -109,7 +111,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: -17px;
+  top: 5px;
   right: 0;
   z-index: 2;
 

@@ -1,0 +1,68 @@
+.feedback {
+  @include container();
+  position: relative;
+
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  background-color: $base-color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-width: 32px 160px 0 160px;
+    border-color: $base-color transparent transparent transparent;
+  }
+}
+
+.feedback__wrapper {
+  @include wrapper();
+
+  text-align: center;
+}
+
+.feedback__header {
+  font-size: 24px;
+  font-weight: 300;
+  color: $text-color;
+}
+
+.feedback__contact {
+  display: block;
+  margin-bottom: 30px;
+
+  b {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color;
+  }
+
+  br {
+    line-height: 25px;
+  }
+
+  a {
+    font-size: 24px;
+    font-weight: 300;
+    text-decoration: none;
+    color: $base-color--hover;
+
+    &:hover {
+      text-decoration: underline;
+      color: $text-color;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: transparentize($text-color, 0.3);
+    }
+  }
+
+}
