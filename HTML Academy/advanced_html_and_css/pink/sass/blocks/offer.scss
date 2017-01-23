@@ -41,3 +41,12 @@
   font-size: 24px;
   font-weight: 300;
 }
+
+@media (min-width: $tablet-widths) {
+  .offer {
+    &::after {
+      bottom: -55px;
+      border-width: 55px 700px 0 0;
+    }
+  }
+}

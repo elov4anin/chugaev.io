@@ -45,7 +45,7 @@
   }
 
   br {
-    line-height: 25px;
+    line-height: 20px;
   }
 
   a {
@@ -64,5 +64,26 @@
       color: transparentize($text-color, 0.3);
     }
   }
+}
 
+@media (min-width: $tablet-widths) {
+  .feedback {
+      &:after {
+        bottom: -75px;
+        border-width: 75px 350px 0 350px;
+      }
+  }
+  .feedback__wrapper {
+    font-size: 0;
+  }
+
+  .feedback__header {
+    font-size: 50px;
+  }
+  .feedback__contact {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    margin-bottom: 40px;
+  }
 }

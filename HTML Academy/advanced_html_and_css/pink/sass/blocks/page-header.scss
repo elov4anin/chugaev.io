@@ -1,10 +1,9 @@
 .page-header {
   @include container();
 
-  width: 320px;
   min-height: 730px;
 
-  color: #ffffff;/*vremenno */
+  color: #ffffff;
 
   background: $bg-color--darkest url('../img/page-header__bg-mobile.jpg') no-repeat;
 }
@@ -16,6 +15,9 @@
   margin-top: 430px;
   text-align: center;
 
+}
+.page-header__title {
+  display: none;
 }
 .page-header__btn-download {
   display: block;
@@ -47,4 +49,32 @@
 
 .page-header__icons-description {
   font-weight: 300;
+}
+
+@media (min-width: $tablet-widths) {
+  .page-header {
+    background: $bg-color--darkest url('../img/page-header__bg-tablet.jpg') no-repeat;
+    background-position: center center;
+  }
+  .page-header__wrapper {
+    @include clearfix();
+  }
+  .page-header__download-container {
+    float: left;
+    width: 300px;
+    margin-top: 140px;
+  }
+
+  .page-header__title {
+    display: inline;
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .page-header__btn-download {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .page-header__icons {
+    margin-bottom: 40px;
+  }
 }

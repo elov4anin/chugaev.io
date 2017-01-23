@@ -94,9 +94,9 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  background-color: #283645;
+  background-color: $text-color;
 
-  border-top: 1px solid #485461;
+  border-top: 1px solid $menu-border-color;
   
   &:hover {
     color: $base-color--hover;
@@ -107,7 +107,7 @@
 }
 
 .main-nav--opened {
-  background-color: $bg-color--darkest;
+  background-color: $text-color;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -145,5 +145,30 @@
   &:active::before,
   &:active::after {
     background-color: transparentize($base-color--hover, 0.3);
+  }
+}
+@media (min-width: $tablet-widths) {
+  .main-nav {
+    padding-bottom: 40px;
+  }
+
+  .main-nav__logo {
+    width: 147px;
+    height: auto;
+  }
+
+  .main-nav__toggle {
+    top: 25px;
+    right: 20px;
+  }
+  .main-nav--opened .main-nav__toggle {
+    top: 25px;
+    right: 20px;
+  }
+
+  .main-nav--opened {
+    .main-nav__list {
+      top: 103px;
+    }
   }
 }

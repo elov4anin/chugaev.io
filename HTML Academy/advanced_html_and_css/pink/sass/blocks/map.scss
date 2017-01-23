@@ -5,3 +5,9 @@
   width: 320px;
   height: 200px;
 }
+@media (min-width: $tablet-widths)  {
+  .map__content {
+    width: 700px;
+    height: 380px;
+  }
+}

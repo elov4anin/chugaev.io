@@ -3,19 +3,19 @@
 
   margin-top: -50px;
   padding-top: 85px;
-  padding-bottom: -50px;
-
 
   color: $text-color;
 
   background-color: $base-color--dark;
 
 }
+
 .opportunity__wrapper {
   @include wrapper();
 
   text-align: center;
 }
+
 .opportunity__item {
   margin-bottom: 40px;
 }
@@ -24,11 +24,33 @@
   line-height: 10px;
   font-weight: 700;
 }
+
 .opportunity__item p {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
 }
+
 .opportunity__img {
   margin-bottom: -4px;
+}
+@media (min-width: $tablet-widths) {
+  .opportunity__wrapper {
+    @include clearfix();
+
+    margin-bottom: -50px;
+  }
+
+  .opportunity__list {
+    float: right;
+    width: 320px;
+  }
+
+  .opportunity__img {
+    position: relative;
+    top: -50px;
+
+    height: 480px;
+    width: 265px;
+  }
 }

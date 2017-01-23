@@ -1,3 +1,40 @@
 .page-footer {
   display: none;
 }
+
+@media (min-width: $tablet-widths) {
+  .page-footer {
+    display: block;
+    @include container();
+    margin-top: -5px;
+
+    color: $text-color;
+    
+    background-color: $base-color;
+  }
+  .page-footer__wrapper {
+    @include wrapper();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+  .social-links {
+
+    background-color: yellow;
+    a {
+      /*font-size: 0;*/
+      color: $text-color;
+    }
+  }
+
+  .social-link {
+    display: block;
+    height: 51px;
+    width: 51px;
+    border: 2px solid $base-color--dark;
+    border-radius: 50%;
+    padding: 15px;
+  }
+}
