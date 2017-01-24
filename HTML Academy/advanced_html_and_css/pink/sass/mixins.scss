@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop-widths) {
-  width: 960px;;
+  width: 1200px;;
   }
 }
 @mixin wrapper {
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $desktop-widths) {
-    /* @todo узнать на макете отступы width: 960px;;*/
+    width: 940px;
   }
 }
 

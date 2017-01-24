@@ -78,3 +78,14 @@
     margin-bottom: 40px;
   }
 }
+@media (min-width: $desktop-widths) {
+  .page-header {
+    background: $bg-color--darkest url('../img/page-header__bg-desktop.jpg') no-repeat;
+    background-position: center center;
+  }
+
+  .page-header__download-container {
+
+    margin-top: 70px;
+  }
+}

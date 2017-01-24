@@ -161,6 +161,7 @@
     top: 25px;
     right: 20px;
   }
+
   .main-nav--opened .main-nav__toggle {
     top: 25px;
     right: 20px;
@@ -171,4 +172,92 @@
       top: 103px;
     }
   }
+}
+
+@media (min-width: $desktop-widths)  {
+  .main-nav {
+    padding-bottom: 20px;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--closed {
+    display: block;
+
+    .main-nav__list {
+      position: relative;
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 2;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-content: flex-start ;
+      margin-top: -7px;
+      margin-bottom: 0;
+    }
+  }
+
+  .main-nav__item {
+    width: auto;
+    margin-left: 35px;
+
+    border: none;
+  }
+
+  .main-nav__item a {
+    position: relative;
+
+    background-color: transparent;
+
+    border: none;
+
+    &:hover {
+      color: $base-color;
+    }
+
+    &:hover::after {
+      content: ' ';
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      height: 2px;
+
+      background-color: $base-color;
+    }
+
+    &:active {
+      color: $menu-current-color--active;
+    }
+
+    &:active::after {
+      display: none;
+    }
+  }
+
+  .main-nav__item .current {
+    &:hover {
+      color: $base-color--hover;
+    }
+
+    &:hover::after {
+      background-color: $base-color--hover;
+    }
+
+    &:active {
+      color: $menu-current-color--active;
+    }
+  }
+
+
 }

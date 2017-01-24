@@ -23,7 +23,15 @@
   }
   .effect__description {
     width: 320px;
+
+    margin-top: 20px;
+    margin-left: 60px;
   }
+
+  .effect__description-link {
+    color: $base-color--hover;
+  }
+
   .icon-alarm-wrapper {
     position: relative;
 
@@ -38,5 +46,15 @@
       text-transform: uppercase;
       color: $base-color--hover
     }
+  }
+}
+
+@media (min-width: $tablet-widths) {
+  .effect {
+    background-color: $base-color--dark;
+  }
+  .effect__description {
+    width: 570px;
+    margin-top: 40px;
   }
 }
