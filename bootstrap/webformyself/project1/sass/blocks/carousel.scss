@@ -1,0 +1,113 @@
+.menu-carousel .item {
+  min-height: 600px;
+}
+
+.menu-carousel .bgslide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel.fade {
+  opacity: 1;
+
+  .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    opacity: 0;
+
+    transition: opacity 0.5s;
+  }
+
+  .item.active {
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.menu-carousel .carousel-caption {
+  left: 0;
+  top: 170px;
+
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+  }
+
+  p {
+    margin-bottom: 40px;
+
+    font-size: 30px;
+  }
+
+  .btn-red {
+    padding: 20px 30px;
+    border-radius: 3px;
+    color: $btn-font-color;
+    font-size: 24px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.menu-carousel .container {
+  position: relative;
+}
+
+.menu-carousel .carousel-control {
+  z-index: 10;
+}
+
+.carousel-indicators-wrap {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  text-align: center;
+
+
+  .carousel-indicators {
+    margin-left: 0;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: $slider-toggle-bg-color;
+    width: auto;
+    border: 1px solid $slider-toggle-border-color;
+    border-radius: 3px;
+    padding: 5px 25px;
+    
+    li {
+      background-color: $indicator-bg-color;
+      width: 10px;
+      height: 10px;
+      margin: 0 7px;
+
+
+    }
+
+    li.active {
+      background-color: $indicator-bg-color--active;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}

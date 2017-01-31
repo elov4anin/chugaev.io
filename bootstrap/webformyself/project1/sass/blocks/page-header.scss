@@ -1,0 +1,55 @@
+/* header*/
+
+.menu-top .navbar {
+  margin-bottom: 0;
+  padding: 20px 0;
+
+  text-transform: uppercase;
+
+  background-color: $navbar-bg-color;
+}
+
+.menu-top .navbar-default .navbar-nav > li > a {
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  color: $base-font-color;
+
+  transition: 0.3s;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.btn-red {
+    padding: 5px 20px;
+
+    color: $btn-font-color;
+
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $btn-bg-color--hover;
+
+      text-decoration: none;
+    }
+  }
+
+  .glyphicon {
+    margin-right: 10px;
+
+    font-size: 17px;
+  }
+}
+
+.menu-top .container,
+.menu-top .navbar-collapse {
+  padding-left: 0;
+}
+
+.flag {
+  position: relative;
+  top: -1px;
+
+  margin-right: 5px;
+}
