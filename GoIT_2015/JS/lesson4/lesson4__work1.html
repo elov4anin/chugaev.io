@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lesson4__work1</title>
+</head>
+<body>
+Задание 1 (Последовательность Фибоначчи)
+Последовательность чисел Фибоначчи вычисляется по формуле формулу F(n) = F(n-1) + F(n-2). В ней каждое следующее число вычисляется как сумма двух предыдущих. Первые два числа равны 1 и 1.
+Напишите функцию fib(n), которая возвращает n-е число Фибоначчи.
+Например:
+console.log(fib(3)); //2
+console.log(fib(7)); //13
+console.log(fib(77)); //5527939700884757
+<script>
+  function fib(n) {
+    return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+  }
+
+  alert( fib(3) ); // 2
+  alert( fib(7) ); // 13
+</script>
+</body>
+</html>
