@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name= "viewport" content= "width=device-width, initial-scale=1.0" >
+  <title>@@page-title</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="page-header @@page-header--inner">
+  <h1 class="visually-hidden">Приложение "Pink"</h1>
+  @@include('blocks/main-nav.html')
+  <div class="page-header__wrapper">
+    <div class="page-header__download-container">
+        <h2 class="page-header__title">Вгляните<br> на жизнь иначе!</h2>
+        <button class="btn page-header__btn-download"> Скачать приложение</button>
+        <div class="page-header__icons">
+          <svg width="50" height="60" class="icon-apple">
+            <use xlink:href="#icon-apple"/>
+          </svg>
+          <svg width="50" height="60" class="icon-android">
+            <use xlink:href="#icon-android"/>
+          </svg>
+          <svg width="50" height="60" class="icon-microsoft">
+            <use xlink:href="#icon-microsoft"/>
+          </svg>
+       </div>
+        <p class="page-header__icons-description">
+          Доступно для iPhone, iPad, Android. Windows Phone, OS X, Windows 8
+        </p>
+    </div>
+  </div>
+</header>

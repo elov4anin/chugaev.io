@@ -1,11 +1,10 @@
 var link = document.querySelector(".user-block__login");
 var popup = document.querySelector(".modal-window");
 var close = popup.querySelector(".modal-window-close");
-var form = popup.querySelector("form");
+var form = popup.querySelector(".form");
 var login = popup.querySelector("[name=username]");
 var password = popup.querySelector("[name=password]");
-var storage = localStorage.getItem("login")
-    ;
+var storage = localStorage.getItem("login");
 var mapOpen = document.querySelector(".map");
 var mapPopup = document.querySelector(".modal-window-map");
 var mapClose = mapPopup.querySelector(".modal-window-close");

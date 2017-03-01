@@ -3,3 +3,74 @@
   margin-top: 0;
   margin-bottom: 30px;
 }
+.product {
+  background: $product-bg-color;
+  border: 1px solid $product-border-color;
+  padding: 25px 15px;
+  text-align: center;
+  position: relative;
+  height: 452px;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 16px $product-bg-color--hover;    
+  }
+}
+
+.product-favorites {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  
+  span {
+    color: $product-favorites-color;
+    font-size: 20px;
+  }
+}
+
+.product-sale {
+
+}
+
+.product-img {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.product-tittle a {
+  font-weight: 700;
+  font-size: 14px;
+  color: $base-font-color;
+  text-transform: uppercase;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.product-desc {
+  height: 60px;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: $prouct-price-font-color;
+  margin-bottom: 15px;
+}
+
+.product-buy {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+
+  .btn {
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 2px;
+  }
+}

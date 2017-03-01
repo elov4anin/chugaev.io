@@ -1,0 +1,60 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: $tablet-widths) {
+  .effect {
+    @include container();
+    display: block;
+
+
+    color: $text-color;
+
+    background-color: $base-color;
+  }
+
+  .effect__wrapper {
+    @include wrapper();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .effect__description {
+    width: 320px;
+
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  .effect__description-link {
+    color: $base-color--hover;
+  }
+
+  .icon-alarm-wrapper {
+    position: relative;
+
+    &:after {
+      content: "24";
+      position: absolute;
+      bottom: 75px;
+      left: 65px;
+
+      font-weight: 700;
+      font-size: 96px;
+      text-transform: uppercase;
+      color: $base-color--hover
+    }
+  }
+}
+
+@media (min-width: $tablet-widths) {
+  .effect {
+    background-color: $base-color--dark;
+  }
+  .effect__description {
+    width: 570px;
+    margin-top: 40px;
+  }
+}

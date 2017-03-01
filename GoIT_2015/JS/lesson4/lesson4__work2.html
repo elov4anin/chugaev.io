@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function checkSpam(str) {
+    if ((str.toLowerCase().indexOf('sex') + 1) || (str.toLowerCase().indexOf('spam') + 1)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log(checkSpam('get new Sex videos'));
+  console.log(checkSpam('SPAM] How to earn fast money?'));
+  console.log( checkSpam('New PSD template'));
+
+</script>
+Задание 2 (Проверка на СПАМ)
+Напишите функцию checkSpam которая проверяет строку на содержание слов: spam, sex.
+checkSpam('get new Sex videos'); // true
+checkSpam('[SPAM] How to earn fast money?'); // true
+checkSpam('New PSD template'); // false
+</body>
+</html>

@@ -1,0 +1,120 @@
+.opportunity {
+  @include container();
+
+  margin-top: -50px;
+  padding-top: 85px;
+
+  color: $text-color;
+
+  background-color: $base-color--dark;
+
+}
+
+.opportunity__wrapper {
+  @include wrapper();
+
+  text-align: center;
+}
+
+.opportunity__item {
+  margin-bottom: 40px;
+}
+.opportunity__item b {
+  font-size: 18px;
+  line-height: 10px;
+  font-weight: 700;
+}
+
+.opportunity__item p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.opportunity__img {
+  margin-bottom: -4px;
+}
+@media (min-width: $tablet-widths) {
+  .opportunity__wrapper {
+    @include clearfix();
+
+    margin-bottom: -50px;
+  }
+
+  .opportunity__list {
+    float: right;
+    width: 320px;
+  }
+
+  .opportunity__img {
+    position: relative;
+    top: -50px;
+
+    height: 480px;
+    width: 265px;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .opportunity {
+    margin-top: -100px;
+  }
+
+  .opportunity__img {
+    display: none;
+  }
+
+  .opportunity__list {
+    float: none;
+    font-size: 0;
+
+    width: auto;
+  }
+
+  .opportunity__item {
+    position: relative;
+
+    display: inline-block;
+    vertical-align: top;
+    width: 225px;
+    padding-top: 365px;
+    margin-right: 85px;
+    
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+
+      width: 190px;
+      height: 305px;
+      margin-left: 15px;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .opportunity__item--1 {
+    &:before {
+      background-image: url("../img/phone-gray.png");
+    }
+  }
+
+  .opportunity__item--2 {
+
+
+    &:before {
+      margin-left: 0;
+
+      background-image: url("../img/phone-red.png");
+    }
+  }
+
+  .opportunity__item--3 {
+    margin-right: 0;
+
+    &:before {
+      background-image: url("../img/phone-red-smile.png");
+    }
+  }
+}

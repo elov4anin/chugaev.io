@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Напиште код который выведет сотрудника который выполнил больше всех задач.
+Например:
+var tasksCompleted = {
+'Anna': 29,
+'Serg': 35,
+'Elena': 1,
+'Anton': 99
+};
+<script>
+  var tasksCompleted = {
+    'Anna': 29,
+    'Serg': 35,
+    'Elena': 1,
+    'Anton': 99
+  };
+  var max = 0;
+  var maxName = "";
+  for (var name in tasksCompleted) {
+    if (max < tasksCompleted[name]) {
+      max = tasksCompleted[name];
+      maxName = name;
+    }
+  }
+
+  alert( maxName || "нет сотрудников" );
+</script>
+</body>
+</html>

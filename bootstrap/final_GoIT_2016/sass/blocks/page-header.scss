@@ -1,0 +1,91 @@
+.page-header {
+  @include container();
+
+  min-height: 730px;
+
+  color: #ffffff;
+
+  background: $bg-color--darkest url('../img/page-header__bg-mobile.jpg') no-repeat;
+}
+.page-header__wrapper {
+  @include wrapper();
+}
+
+.page-header__download-container {
+  margin-top: 430px;
+  text-align: center;
+
+}
+.page-header__title {
+  display: none;
+}
+.page-header__btn-download {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 57px;
+  margin-bottom: 30px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: white;
+
+  background-color: transparent;
+  border: 2px solid $base-color;
+  border-radius: 20px;
+
+  &:hover {
+    color: $base-color--hover;
+
+    background-color: $base-color;
+  }
+
+  &:active {
+    color: transparentize($base-color--hover, 0.3)
+  }
+
+
+}
+
+.page-header__icons-description {
+  font-weight: 300;
+}
+
+@media (min-width: $tablet-widths) {
+  .page-header {
+    background: $bg-color--darkest url('../img/page-header__bg-tablet.jpg') no-repeat;
+    background-position: center center;
+  }
+  .page-header__wrapper {
+    @include clearfix();
+  }
+  .page-header__download-container {
+    float: left;
+    width: 300px;
+    margin-top: 140px;
+  }
+
+  .page-header__title {
+    display: inline;
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .page-header__btn-download {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .page-header__icons {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: $desktop-widths) {
+  .page-header {
+    background: $bg-color--darkest url('../img/page-header__bg-desktop.jpg') no-repeat;
+    background-position: center center;
+  }
+
+  .page-header__download-container {
+
+    margin-top: 70px;
+  }
+}
