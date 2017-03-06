@@ -1,0 +1,64 @@
+<div class="page-header text-center">
+  <h4>Транзакции</h4>
+</div>
+<div class="panel panel-default table-payments">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <ul class="payments-action-list">
+      <!--<li class="payments-action-item"> <a href="#" class="glyphicon glyphicon-plus payment-action__link"> </a>
+        <div class="payment-action-add">
+          <div class=".form-horizontal" role="form">
+            <div class="form-group">
+              <label class="sr-only" for="payer">Плательщик</label>
+              <div class="col-sm-10"><input [(ngModel)]="payer" type="text" class="form-control" id="payer" placeholder="Плательщик"></div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="contractor-name">Контрагент</label>
+              <div class="col-sm-10"><input [(ngModel)]="contractor" type="text" class="form-control" id="contractor-name" placeholder="Контрагент"></div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="purpose-of-payment">Назначение платежа</label>
+              <div class="col-sm-10"><input [(ngModel)]="purpose" type="text" class="form-control" id="purpose-of-payment" placeholder="Назначение платежа"></div>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="sum">Сумма</label>
+              <div class="col-sm-10"><input [(ngModel)]="sum" type="number" class="form-control" id="sum" placeholder="Сумма"></div>
+            </div>
+           <div class="col-md-offset-2 col-md-8">
+            <button class="btn btn-danger" (click)="addItem(payer, contractor, purpose, sum)">Добавить</button>
+          </div>
+          </div>
+        </div>
+      </li>-->
+      <li class="payments-action-item"> <input type="search" name="search" placeholder="Поиск"> <a href="#" class="glyphicon glyphicon-search payment-action__link" onclick="searchPayments()"></a>
+
+      </li>
+    </ul>
+  </div>
+  <!-- Table -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Номер</th>
+      <th>Дата: время</th>
+      <th>Плательщик</th>
+      <th>Контрагент</th>
+      <th>Назначение</th>
+      <th>Сумма</th>
+      <th>Состояние</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items"  contenteditable="true">
+      <td >{{item.id}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.payer}}</td>
+      <td>{{item.contractor}}</td>
+      <td>{{item.purpose}}</td>
+      <td>{{item.sum}}</td>
+      <td>{{item.state}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

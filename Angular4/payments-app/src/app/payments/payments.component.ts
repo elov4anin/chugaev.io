@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-/*export class Item {
+export class Item {
   id: number;
   date: any;
   payer: string;
@@ -19,22 +19,16 @@ import { Component } from '@angular/core';
     this.sum = sum;
     this.state = "Новый";
   }
-}*/
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-
-
-  isLogon = false;
-
-
 }
 
-/*export class AppComponent {
+@Component({
+  moduleId: module.id,
+  selector: 'app-payments',
+  templateUrl: './payments.component.html',
+  styleUrls: ['./payments.component.css']
+})
+
+export class PaymentsComponent {
   items: Item[] =
       [
         {id: 1, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
@@ -42,13 +36,13 @@ export class AppComponent {
         {id: 3, date: '05/12/2014', payer: 'Петров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'В обработке'},
         {id: 4, date: '05/12/2016', payer: 'ИП Медведев Д. А..', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отклонено банком'},
         {id: 5, date: '05/12/2013', payer: 'ООО Яндекс.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'}
-      ];*/
+      ];
 
-/*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
-    if(payer==null || payer==undefined || payer.trim()=="")
-    return;
-    if(contractor==null || contractor==undefined || payer.trim()=="")
-    return;
-    this.items.push(new Item(payer, contractor, purpose, sum));
-  }
-}*/
+  /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
+   if(payer==null || payer==undefined || payer.trim()=="")
+   return;
+   if(contractor==null || contractor==undefined || payer.trim()=="")
+   return;
+   this.items.push(new Item(payer, contractor, purpose, sum));
+   }*/
+}
