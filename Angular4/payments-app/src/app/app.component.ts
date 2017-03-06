@@ -2,39 +2,46 @@ import { Component } from '@angular/core';
 
 export class Item {
   id: number;
-  date: string;
+  date: any;
   payer: string;
   contractor: string;
   purpose: string;
   sum: number;
   state: string;
 
-  constructor(id: number, payer: string, contractor: string, purpose: string, sum: number, state: string) {
-    this.id = id;
-    this.date = '15/15/2067';
+  constructor(payer: string, contractor: string, purpose: string, sum: number) {
+
+    this.id = 6;
+    this.date = new Date();
     this.payer = payer;
     this.contractor = contractor;
     this.purpose = purpose;
     this.sum = sum;
-    this.state = "new";
+    this.state = "Новый";
   }
 }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   items: Item[] =
       [
         {id: 1, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 2, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 3, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 4, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 5, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'}
+        {id: 2, date: '05/12/2013', payer: 'Сидоров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Новый'},
+        {id: 3, date: '05/12/2014', payer: 'Петров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'В обработке'},
+        {id: 4, date: '05/12/2016', payer: 'ИП Медведев Д. А..', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отклонено банком'},
+        {id: 5, date: '05/12/2013', payer: 'ООО Яндекс.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'}
       ];
-  addItem(id: number, payer: string, contractor: string, purpose: string, sum: number, state: string):'' void {
 
-    this.items.push(new Item(id, payer, contractor, purpose, sum,  state));
-  }
+/*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
+    if(payer==null || payer==undefined || payer.trim()=="")
+    return;
+    if(contractor==null || contractor==undefined || payer.trim()=="")
+    return;
+    this.items.push(new Item(payer, contractor, purpose, sum));
+  }*/
 }
