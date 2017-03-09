@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PaymentsService } from '../payments.service'
 
 export class Item {
   id: number;
@@ -29,14 +30,8 @@ export class Item {
 })
 
 export class PaymentsComponent {
-  items: Item[] =
-      [
-        {id: 1, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 2, date: '05/12/2013', payer: 'Сидоров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Новый'},
-        {id: 3, date: '05/12/2014', payer: 'Петров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'В обработке'},
-        {id: 4, date: '05/12/2016', payer: 'ИП Медведев Д. А..', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отклонено банком'},
-        {id: 5, date: '05/12/2013', payer: 'ООО Яндекс.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'}
-      ];
+    getPayments();
+
 
   /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
    if(payer==null || payer==undefined || payer.trim()=="")

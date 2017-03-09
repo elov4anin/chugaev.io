@@ -27,9 +27,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-
-  isLogon = false;
+  accessDeny: boolean = true;
+  isSign = true;
+  isPaymets = true;
 
 
 }
