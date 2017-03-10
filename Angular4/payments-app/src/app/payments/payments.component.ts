@@ -17,7 +17,7 @@ export class PaymentsComponent implements OnInit {
   constructor (private  paymentsService: PaymentsService) {}
 
   ngOnInit() {
-   /* this.items = this.paymentsService.getPayments();*/
+    this.items = this.paymentsService.getPayments();
   }
 
 
