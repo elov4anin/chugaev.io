@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { SignComponent } from './sign/sign.component';
 import { PaymentsComponent } from './payments/payments.component';
 import  { PaymentsService } from './payments.service';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignComponent,
-    PaymentsComponent
+    PaymentsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
