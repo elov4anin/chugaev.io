@@ -30,8 +30,8 @@ export class AppComponent {
   accessDeny: boolean = true;
   isSign = true;
   isPaymets = true;
-
-
+  login = document.querySelector("[name=name]");
+  password = document.querySelector("[name=pass]");
 }
 
 /*export class AppComponent {

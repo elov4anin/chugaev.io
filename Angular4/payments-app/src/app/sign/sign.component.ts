@@ -18,12 +18,6 @@ export class user {
 })
 
 export class SignComponent implements OnInit {
-  login = document.querySelector("[name=name]");
-  password = document.querySelector("[name=pass]")
-
-
-
-
 
 
   ngOnInit() {

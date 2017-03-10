@@ -1,26 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { PaymentsService } from '../payments.service'
+import { PaymentsService, Item } from '../payments.service'
+import { SearchComponent } from '../search/search.component';
 
-export class Item {
-  id: number;
-  date: any;
-  payer: string;
-  contractor: string;
-  purpose: string;
-  sum: number;
-  state: string;
 
-  constructor(payer: string, contractor: string, purpose: string, sum: number) {
-
-    this.id = 6;
-    this.date = new Date();
-    this.payer = payer;
-    this.contractor = contractor;
-    this.purpose = purpose;
-    this.sum = sum;
-    this.state = "Новый";
-  }
-}
 
 @Component({
   moduleId: module.id,
@@ -35,7 +17,7 @@ export class PaymentsComponent implements OnInit {
   constructor (private  paymentsService: PaymentsService) {}
 
   ngOnInit() {
-    this.items = this.paymentsService.getPayments();
+   /* this.items = this.paymentsService.getPayments();*/
   }
 
 
