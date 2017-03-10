@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { PaymentsService } from '../payments.service'
 
 export class Item {
@@ -29,8 +29,14 @@ export class Item {
   styleUrls: ['./payments.component.css']
 })
 
-export class PaymentsComponent {
-    getPayments();
+export class PaymentsComponent implements OnInit {
+  items: Item[];
+
+  constructor (private  paymentsService: PaymentsService) {}
+
+  ngOnInit() {
+    this.items = this.paymentsService.getPayments();
+  }
 
 
   /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {

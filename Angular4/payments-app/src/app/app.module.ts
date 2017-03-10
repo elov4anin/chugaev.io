@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SignComponent } from './sign/sign.component';
 import { PaymentsComponent } from './payments/payments.component';
+import  { PaymentsService } from './payments.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { PaymentsComponent } from './payments/payments.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PaymentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
