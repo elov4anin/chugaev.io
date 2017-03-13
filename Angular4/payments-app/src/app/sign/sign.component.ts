@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-export class user {
-  username: string;
-  pass: string;
-  tokenKey: string;
+import { SignService, User } from '../sign.service'
 
-  constructor (username: string, pass: string, tokenKey: string) {
-    this.username = username;
-    this.pass = pass;
-    this.tokenKey = tokenKey;
-  }
-}
 @Component({
   moduleId: module.id,
   selector: 'app-sign',
@@ -18,9 +9,20 @@ export class user {
 })
 
 export class SignComponent implements OnInit {
-
+  users: User[];
+  constructor (private  signService: SignService) {}
 
   ngOnInit() {
+    /*this.users = this.signService.getUsers();*/
   }
+
+
+  submitted: boolean = false;
+
+  onSubmit() {
+    this.submitted = true;
+    console.log(this.submitted);
+  }
+
 
 }
