@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { SignService, User } from '../sign.service'
+import { Component, OnInit, Input } from '@angular/core';
+import { SignService, User, } from '../sign.service'
+
 
 @Component({
   moduleId: module.id,
@@ -10,19 +11,24 @@ import { SignService, User } from '../sign.service'
 
 export class SignComponent implements OnInit {
   users: User[];
+  submitted: boolean = false;
+  usr: string;
+  pass: string;
+  @Input() paySubmitted;
+
   constructor (private  signService: SignService) {}
 
   ngOnInit() {
-    /*this.users = this.signService.getUsers();*/
+    this.users = this.signService.getUsers();
   }
-
-
-  submitted: boolean = false;
 
   onSubmit() {
-    this.submitted = true;
-    console.log(this.submitted);
+    if ((this.users[1].username == this.usr) && (this.users[1].pass == this.pass)) {
+      console.log('Имя и пароль совпадают');
+      this.submitted = true;
+      this.paySubmitted = false;
+    }
+
+
   }
-
-
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import { PaymentsService, Item } from '../payments.service'
 import { SearchComponent } from '../search/search.component';
 
@@ -20,6 +20,8 @@ export class PaymentsComponent implements OnInit {
     this.items = this.paymentsService.getPayments();
   }
 
+
+  @Output() paySubmitted: boolean = false;
 
   /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
    if(payer==null || payer==undefined || payer.trim()=="")
