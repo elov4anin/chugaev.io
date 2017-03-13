@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 /*export class Item {
   id: number;
   date: any;
@@ -28,11 +27,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
   isSign = true;
   isPaymets = true;
-  login = document.querySelector("[name=name]");
-  password = document.querySelector("[name=pass]");
+
 }
 
 /*export class AppComponent {

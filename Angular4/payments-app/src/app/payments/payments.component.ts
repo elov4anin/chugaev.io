@@ -19,9 +19,9 @@ export class PaymentsComponent implements OnInit {
   ngOnInit() {
     this.items = this.paymentsService.getPayments();
   }
+  paySubmitted: boolean = false;
 
 
-  @Output() paySubmitted: boolean = false;
 
   /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
    if(payer==null || payer==undefined || payer.trim()=="")

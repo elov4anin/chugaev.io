@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SignService, User, } from '../sign.service'
 
-
 @Component({
   moduleId: module.id,
   selector: 'app-sign',
@@ -12,9 +11,9 @@ import { SignService, User, } from '../sign.service'
 export class SignComponent implements OnInit {
   users: User[];
   submitted: boolean = false;
+  @Input() isPaymets: boolean;
   usr: string;
   pass: string;
-  @Input() paySubmitted;
 
   constructor (private  signService: SignService) {}
 
@@ -26,7 +25,10 @@ export class SignComponent implements OnInit {
     if ((this.users[1].username == this.usr) && (this.users[1].pass == this.pass)) {
       console.log('Имя и пароль совпадают');
       this.submitted = true;
-      this.paySubmitted = false;
+      this.isPaymets = false;
+
+
+
     }
 
 
