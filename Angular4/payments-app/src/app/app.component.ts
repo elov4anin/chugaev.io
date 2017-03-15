@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SignService, User, } from './sign.service'
 
 /*export class Item {
   id: number;
@@ -26,27 +27,28 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  isSign = true;
-  isPaymets = true;
 
-}
+export class AppComponent implements OnInit {
+  users: User[];
+  submitted: boolean = false;
+  isPaymets: boolean = true;
+  usr: string;
+  pass: string;
 
-/*export class AppComponent {
-  items: Item[] =
-      [
-        {id: 1, date: '05/12/2013', payer: 'Иванов И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'},
-        {id: 2, date: '05/12/2013', payer: 'Сидоров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Новый'},
-        {id: 3, date: '05/12/2014', payer: 'Петров И. И.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'В обработке'},
-        {id: 4, date: '05/12/2016', payer: 'ИП Медведев Д. А..', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отклонено банком'},
-        {id: 5, date: '05/12/2013', payer: 'ООО Яндекс.', contractor: 'ООО ЖКХ', purpose: 'За КУ', sum: 400, state: 'Отправлен в банк'}
-      ];*/
+  constructor (private  signService: SignService) {}
 
-/*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
-    if(payer==null || payer==undefined || payer.trim()=="")
-    return;
-    if(contractor==null || contractor==undefined || payer.trim()=="")
-    return;
-    this.items.push(new Item(payer, contractor, purpose, sum));
+  ngOnInit() {
+    this.users = this.signService.getUsers();
   }
-}*/
+
+  onSubmit() {
+    for (let i = 0; i< this.users.length; i++) {
+      if ((this.users[i].username == this.usr) && (this.users[i].pass == this.pass)) {
+        console.log('Имя и пароль совпадают');
+        this.submitted = true;
+        this.isPaymets = true;
+      }
+    }
+
+  }
+}

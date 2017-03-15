@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SignComponent } from './sign/sign.component';
 import { PaymentsComponent } from './payments/payments.component';
 import  { PaymentsService } from './payments.service';
 import { SearchComponent } from './search/search.component';
@@ -13,7 +12,6 @@ import {SignService} from "./sign.service";
 @NgModule({
   declarations: [
     AppComponent,
-    SignComponent,
     PaymentsComponent,
     SearchComponent
   ],

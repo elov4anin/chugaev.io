@@ -1,10 +1,17 @@
-<div [hidden]="paySubmitted">
+<div>
+
 <div class="page-header text-center">
   <h4>Транзакции</h4>
 </div>
+
 <div class="panel panel-default table-payments">
   <!-- Default panel contents -->
-  <div class="panel-heading">
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#">Главная</a></li>
+    <li><a href="#">Профиль</a></li>
+    <li><a href="#">Выход</a></li>
+  </ul>
+  <div class="panel-heading clearfix">
     <ul class="payments-action-list">
       <!--<li class="payments-action-item"> <a href="#" class="glyphicon glyphicon-plus payment-action__link"> </a>
         <div class="payment-action-add">
@@ -31,9 +38,20 @@
           </div>
         </div>
       </li>-->
-      <li class="payments-action-item"> <input type="search" name="search" placeholder="Поиск"> <a href="#" class="glyphicon glyphicon-search payment-action__link" onclick="searchPayments()"></a>
+      <li class="payments-action-item"> 
+       <form (ngSubmit)="searchPayments()" #searchForm="ngForm" class="search-form">
+         <input  [(ngModel)]="search" type="search" name="search" placeholder="Поиск"> <button type="submit" class="glyphicon glyphicon-search payment-action__link"></button></form>
 
       </li>
+    </ul>
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
     </ul>
   </div>
   <!-- Table -->
@@ -61,5 +79,7 @@
     </tr>
     </tbody>
   </table>
+
 </div>
+
 </div>
