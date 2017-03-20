@@ -21,6 +21,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     HttpModule,
     NgxDatatableModule,
 
+
   ],
   providers: [PaymentsService, SignService],
   bootstrap: [AppComponent]
