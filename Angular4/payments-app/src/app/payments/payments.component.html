@@ -1,3 +1,5 @@
+
+
 <div>
 
 <div class="page-header text-center">
@@ -6,11 +8,14 @@
 
 <div class="panel panel-default table-payments">
   <!-- Default panel contents -->
+
   <ul class="nav nav-pills">
     <li class="active"><a href="#">Главная</a></li>
     <li><a href="#">Профиль</a></li>
     <li><a href="#">Выход</a></li>
   </ul>
+
+
   <div class="panel-heading clearfix">
     <ul class="payments-action-list">
       <!--<li class="payments-action-item"> <a href="#" class="glyphicon glyphicon-plus payment-action__link"> </a>
@@ -38,24 +43,28 @@
           </div>
         </div>
       </li>-->
-      <li class="payments-action-item"> 
-       <form (ngSubmit)="searchPayments()" #searchForm="ngForm" class="search-form">
-         <input  [(ngModel)]="search" type="search" name="search" placeholder="Поиск"> <button type="submit" class="glyphicon glyphicon-search payment-action__link"></button></form>
-
+      <li class="payments-action-item">
+         <input      (keyup)='updateFilter($event)'
+                   type="text" placeholder="пример:Иванов">
+         <span  class="glyphicon glyphicon-search payment-action__link"></span>
       </li>
     </ul>
-    <ul class="pagination">
-      <li><a href="#">&laquo;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">&raquo;</a></li>
-    </ul>
+
   </div>
   <!-- Table -->
-  <table class="table">
+
+  <div>
+    <ngx-datatable class="material"  #table
+                   [rowHeight]="30"
+                   [limit]="10"
+                   [footerHeight]="50"
+                   [rows]="items"
+                   [columns]="columns">
+
+    </ngx-datatable>
+  </div>
+  </div>
+  <!--<table class="table">
     <thead>
     <tr>
       <th>Номер</th>
@@ -69,7 +78,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let item of items">
-      <td >{{item.id}}</td>
+      <td>{{item.id}}</td>
       <td>{{item.date}}</td>
       <td>{{item.payer}}</td>
       <td>{{item.contractor}}</td>
@@ -78,8 +87,6 @@
       <td>{{item.state}}</td>
     </tr>
     </tbody>
-  </table>
-
-</div>
+  </table>-->
 
 </div>

@@ -31,7 +31,7 @@ import { SignService, User, } from './sign.service'
 export class AppComponent implements OnInit {
   users: User[];
   submitted: boolean = false;
-  isPaymets: boolean = false;
+  isPaymets: boolean = true;
   usr: string;
   pass: string;
 

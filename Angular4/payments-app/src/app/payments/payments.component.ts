@@ -1,6 +1,7 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output, ViewChild} from '@angular/core';
 import { PaymentsService, Item } from '../payments.service'
-import { SearchComponent } from '../search/search.component';
+import {DatatableComponent} from "@swimlane/ngx-datatable";
+
 
 
 
@@ -14,33 +15,53 @@ import { SearchComponent } from '../search/search.component';
 export class PaymentsComponent implements OnInit {
   items: Item[];
   search: string;
-  searchResult: Item[];
+  searchResult: Item[] = [];
+  search_date: string;
 
-  constructor (private  paymentsService: PaymentsService) {}
+  columns = [
+    { prop: 'id' },
+    { name: 'Date' },
+    { name: 'Payer' },
+    { name: 'Contractor'},
+    { name: 'Purpose' },
+    { name: 'Sum' },
+    { name: 'State' }
+
+  ];
+
+  temp = [];
+
+  @ViewChild(DatatableComponent) table: DatatableComponent;
+
+
+
+  constructor (private  paymentsService: PaymentsService) {
+    this.items = this.paymentsService.getPayments();
+    this.temp = this.paymentsService.getPayments();
+  }
 
   ngOnInit() {
 
-    this.items = this.paymentsService.getPayments();
+
   }
+  updateFilter(event) {
+    const val = event.target.value;
+    // filter our data
+    const temp = this.temp.filter(function(d) {
+      return d.date.toLowerCase().indexOf(val) !== -1 ||
+              d.id.toString().toLowerCase().indexOf(val) !== -1 ||
+              d.payer.toLowerCase().indexOf(val) !== -1 ||
+              d.contractor.toLowerCase().indexOf(val) !== -1 ||
+              d.purpose.toLowerCase().indexOf(val) !== -1 ||
+              d.sum.toString().toLowerCase().indexOf(val) !== -1 ||
+              d.state.toLowerCase().indexOf(val) !== -1 ||!val;
+    });
 
-  searchPayments() {
-    console.log(this.search);
-    let i = 0;
-    for (; i< this.items.length; i++) {
-      if ((this.items[i].date.indexOf(this.search)) ||
-          (this.items[i].payer.indexOf(this.search)) ||
-          (this.items[i].contractor.indexOf(this.search)) ||
-          (this.items[i].purpose.indexOf(this.search)) ||
-          (this.items[i].state.indexOf(this.search))) {
-        console.log(this.items[i]);
-        this.searchResult.push(this.items[i]);
-      }
-      console.log (this.searchResult);
-      this.items = this.searchResult;
-    }
+    // update the rows
+    this.items = temp;
+    // Whenever the filter changes, always go back to the first page
+    this.table.offset = 0;
   }
-
-
 
   /*  addItem(payer: string, contractor: string, purpose: string, sum: number): void {
    if(payer==null || payer==undefined || payer.trim()=="")
@@ -49,4 +70,5 @@ export class PaymentsComponent implements OnInit {
    return;
    this.items.push(new Item(payer, contractor, purpose, sum));
    }*/
+
 }

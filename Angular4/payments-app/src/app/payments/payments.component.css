@@ -1,8 +1,14 @@
+@import '../../../node_modules/@swimlane/ngx-datatable/release/index.css';
+@import '../../../node_modules/@swimlane/ngx-datatable/release/themes/material.css';
+@import '../../../node_modules/@swimlane/ngx-datatable/release/assets/icons.css';
+
 .table-payments {
     width: 95%;
     max-width: 1120px;
     margin: 0 auto;
+
 }
+
 .payment-action  {
 
 }
