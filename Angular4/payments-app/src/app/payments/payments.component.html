@@ -10,9 +10,9 @@
   <!-- Default panel contents -->
 
   <ul class="nav nav-pills">
-    <li class="active"><a href="#">Главная</a></li>
-    <li><a href="#">Профиль</a></li>
-    <li><a href="#">Выход</a></li>
+<!--    <li class="active"><a href="#">Главная</a></li>
+    <li><a href="#">Профиль</a></li>-->
+    <li><a href="/">Выход</a></li>
   </ul>
 
 
@@ -54,9 +54,10 @@
   <!-- Table -->
 
   <div>
-    <ngx-datatable class="material"  #table
+    <ngx-datatable  #table
                    [rowHeight]="30"
                    [limit]="10"
+                    [columnMode]="'force'"
                    [footerHeight]="50"
                    [rows]="items"
                    [columns]="columns">

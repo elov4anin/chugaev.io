@@ -1,9 +1,6 @@
-import {Component, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { PaymentsService, Item } from '../payments.service'
 import {DatatableComponent} from "@swimlane/ngx-datatable";
-
-
-
 
 @Component({
   moduleId: module.id,
@@ -13,11 +10,8 @@ import {DatatableComponent} from "@swimlane/ngx-datatable";
 })
 
 export class PaymentsComponent implements OnInit {
-  items: Item[];
-  search: string;
-  searchResult: Item[] = [];
-  search_date: string;
-
+  items: Item[] =[];
+  temp = [];
   columns = [
     { prop: 'id' },
     { name: 'Date' },
@@ -26,24 +20,20 @@ export class PaymentsComponent implements OnInit {
     { name: 'Purpose' },
     { name: 'Sum' },
     { name: 'State' }
-
   ];
-
-  temp = [];
 
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
 
-
   constructor (private  paymentsService: PaymentsService) {
-    this.items = this.paymentsService.getPayments();
-    this.temp = this.paymentsService.getPayments();
+    this.items=[];
   }
 
   ngOnInit() {
-
-
+    this.paymentsService.getPayments().subscribe(items => this.items = items );
+    this.paymentsService.getPayments().subscribe(temp => this.temp = temp );
   }
+
   updateFilter(event) {
     const val = event.target.value;
     // filter our data
