@@ -1,7 +1,7 @@
 <div class="container-fluid" >
   <div [hidden]="submitted">
     <h3 class="text-center">Вход в админку</h3>
-    <div class="col-xs-4 col-xs-offset-4">
+    <div class="col-xs-4 col-xs-offset-4" >
       <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="sign-form">
         <div class="form-group">
           <label for="name">Имя пользователя</label>
@@ -23,7 +23,6 @@
 
         <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
         <div>
-          <hr>
         </div>
       </form>
     </div>

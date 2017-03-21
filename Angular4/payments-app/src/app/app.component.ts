@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
   isPaymets: boolean = false;
   usr: string;
   pass: string;
-
+  csrf: string
+/*  token: string = salt + ":" + MD5(salt + ":" + secret)*/
   constructor (private  signService: SignService) {}
 
   ngOnInit() {
