@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output} from '@angular/core';
 import { SignService, User, } from './sign.service'
 
 @Component({
@@ -15,24 +15,28 @@ export class AppComponent implements OnInit {
   usr: string;
   pass: string;
   csrf: string;
-/*  token: string = salt + ":" + MD5(salt + ":" + secret)*/
-  constructor (private  signService: SignService) {}
+  token: string; /*salt + ":" + MD5(salt + ":" + secret)*/
+  tok: any;
+  constructor (private signService : SignService) {}
 
   ngOnInit() {
   /*  this.users = this.signService.getUsers();*/
-    this.signService.getUsers().subscribe(users => this.users = users );
+   /* this.signService.getUsers().subscribe(users => this.users = users );*/
   }
-
   onSubmit() {
-    for (let i = 0; i< this.users.length; i++) {
-      if ((this.users[i].username == this.usr) && (this.users[i].pass == this.pass)) {
-        this.submitted = true;
-        this.isPaymets = true;
-      }
-      else {
-      this.errorSign = false;
-      }
+    console.log(this.usr);
+    this.signService.sendUser(this.usr, this.pass).subscribe(res => res.json());
+
+    if ((this.token)) {
+      this.submitted = true;
+      this.isPaymets = true;
     }
+    else {
+      this.errorSign = false;
+    }
+    /*for (let i = 0; i< this.users.length; i++) {
+     if ((this.users[i].username == this.usr) && (this.users[i].pass == this.pass) && (this.users[i].tokenKey == this.token)) {}
+    }*/
 
   }
 }

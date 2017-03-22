@@ -19,12 +19,12 @@
           <input type="password" class="form-control" id="pass" required
                  [(ngModel)]="pass" name="pass">
         </div>
+
         <div [hidden]="errorSign"
              class="alert alert-danger">
          Username or password is wrong! </div>
         <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
-        <div>
-        </div>
+
       </form>
     </div>
   </div>

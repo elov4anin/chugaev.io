@@ -15,7 +15,7 @@ export class Item {
     sum: number;
     state: string;
 
-    constructor(payer: string, contractor: string, purpose: string, sum: number) {
+    /*constructor(payer: string, contractor: string, purpose: string, sum: number) {
 
         this.id = 6;
         this.date = new Date();
@@ -24,7 +24,7 @@ export class Item {
         this.purpose = purpose;
         this.sum = sum;
         this.state = "Новый";
-    }
+    }*/
 }
 
 @Injectable()
