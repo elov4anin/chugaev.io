@@ -11,9 +11,10 @@ export class AppComponent implements OnInit {
   users: User[];
   submitted: boolean = false;
   isPaymets: boolean = false;
+  errorSign: boolean = true;
   usr: string;
   pass: string;
-  csrf: string
+  csrf: string;
 /*  token: string = salt + ":" + MD5(salt + ":" + secret)*/
   constructor (private  signService: SignService) {}
 
@@ -27,6 +28,9 @@ export class AppComponent implements OnInit {
       if ((this.users[i].username == this.usr) && (this.users[i].pass == this.pass)) {
         this.submitted = true;
         this.isPaymets = true;
+      }
+      else {
+      this.errorSign = false;
       }
     }
 
