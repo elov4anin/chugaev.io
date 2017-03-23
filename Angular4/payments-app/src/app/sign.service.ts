@@ -18,6 +18,14 @@ export class User {
   }
 }
 
+export  class  Second {
+  userId: number;
+  token: string;
+  bestBefore: number;
+  userToken: string;
+
+}
+
 @Injectable()
 export class SignService {
 /*
@@ -30,7 +38,7 @@ export class SignService {
     return this.users;
   }
   */
-
+  seconds: Second[] = [];
   token: any;
   users: User[]= [];
 
@@ -49,8 +57,9 @@ export class SignService {
 
     let options = new RequestOptions({ headers})
     console.log('sendUser servuce');
+
     return this.http.get(`http://10.10.118.146:8080/admin/rs/api/login?login=${user}&password=${pass}`)
-        .map(res => res.json())
+        .map(res => JSON.stringify(res))
         .catch(this.handleErrror);
 
   }
