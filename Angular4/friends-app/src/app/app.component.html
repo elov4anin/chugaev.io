@@ -1,0 +1,27 @@
+<h1>
+  {{title}}
+</h1>
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Фото</th>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Телефон</th>
+    <th>Имя страницы</th>
+    <th>Город</th>
+    <th>Дата рождения</th>
+    <th></th>
+  </tr>
+  <tr  *ngFor="let friend of friends">
+    <td>{{friend.user_id}}</td>
+    <td><img src="{{friend.photo_50}}" alt="{{friend.first_name}} {{friend.last_name}}"></td>
+    <td>{{friend.first_name}}</td>
+    <td>{{friend.last_name}}</td>
+    <td>{{friend.has_mobile}}</td>
+    <td>{{friend.domain}}</td>
+    <td>{{friend.city}}</td>
+    <td>{{friend.bdate}}</td>
+    <td><button type="button" (click)="postOnWall(friend.user_id)">Дать Леща</button></td>
+  </tr>
+</table>
