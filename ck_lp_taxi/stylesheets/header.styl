@@ -1,0 +1,25 @@
+$img_dir = "../images/"
+$main_font = "proxima nova", Corbel, Arial, sans-serif
+$main_size = 16px
+$double_font = "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.visually-hidden
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+clearfix()
+  zoom 1
+  &:after
+  &:before
+    content ""
+    display table
+  &:after
+    clear both

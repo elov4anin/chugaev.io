@@ -1,0 +1,170 @@
+/* Custom input */
+@import "header"
+
+$input_box_error_border_color = #DE463D
+$input_box_background_color = #f5f6f8;
+$input_box_color = #20262c
+
+$Input_box_label
+  font-family: $main_font
+  font-size: 14px
+  line-height normal
+  display block
+
+$Input_box
+  position: relative;
+  z-index 0
+  box-sizing border-box
+  background-color: $input_box_background_color;
+
+$Input_box__input
+  font-family: $main_font
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  box-sizing border-box
+  background-color: transparent
+  font-weight 300
+  text-align left
+  font-size: 18px
+  color $input_box_color
+  line-height: normal
+  vertical-align middle
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+
+Input_Box(name = false, input_box_width = 200px, input_box_height = 40px, box_name = input-box)
+
+  &__label
+    if name
+      @extends $Input_box_label
+
+  &__{box_name}
+    @extends $Input_box
+    width input_box_width
+    height input_box_height
+
+    &.error
+      outline 2px solid $input_box_error_border_color
+
+    &__input
+      @extends $Input_box__input
+
+/* Custom button */
+
+$Button
+  border-radius 50px
+  font-size: 24px;
+  font-family: "Proxima Nova";
+  font-weight normal
+  text-align center
+  line-height: 1;
+  color: rgb(32, 38, 44);
+  padding 18px 25px
+  min-height 60px
+  box-sizing border-box
+  transition: all .3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fbb601;
+  box-shadow: 0 5px 30px 0 rgba(251, 182, 1, 0.4);
+
+Button()
+  a&
+    @extends $Button
+
+    &:hover,
+    &:focus
+      box-shadow: 0 5px 60px 0 rgba(251, 182, 1, 0.8);
+
+    &:active
+      background-color: #f3b001;
+      box-shadow: 0 5px 10px 0 rgba(251, 182, 1, 0.4);
+
+  button&
+    @extends $Button
+
+    &:hover:enabled,
+    &:focus:enabled
+      box-shadow: 0 5px 60px 0 rgba(251, 182, 1, 0.8);
+
+    &:active:enabled
+      background-color: #f3b001;
+      box-shadow: 0 5px 10px 0 rgba(251, 182, 1, 0.4);
+
+media_queries = {
+  old_mobile  : "all and (max-width: 320px)",
+  small_mobile  : "all and (min-width: 321px) and (max-width: 480px)",
+  mobile  : "all and (min-width: 481px) and (max-width: 640px)",
+  small_tablet  : "all and (min-width: 641px) and (max-width: 760px)",
+  tablet  : "all and (min-width: 761px) and (max-width: 968px)",
+  desktop : "all and (min-width: 969px)"
+}
+
+for_breakpoint(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}
+
+Placeholders()
+  input::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder
+    {block}
+
+  input:-moz-placeholder,
+  input[type="text"]:-moz-placeholder,
+  textarea:-moz-placeholder
+    {block}
+
+  input::-moz-placeholder,
+  input[type="text"]::-moz-placeholder,
+  textarea::-moz-placeholder
+    {block}
+
+  input:-ms-input-placeholder,
+  input[type="text"]:-ms-input-placeholder,
+  textarea:-ms-input-placeholder
+    {block}
+
+  input::placeholder,
+  input[type="text"]::placeholder,
+  textarea::placeholder
+    {block}
+
+PlaceholdersFocus()
+  input:focus::-webkit-input-placeholder,
+  input[type="text"]:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder
+    {block}
+
+  input:focus:-moz-placeholder,
+  input[type="text"]:focus:-moz-placeholder,
+  textarea:focus:-moz-placeholder
+    {block}
+
+  input:focus::-moz-placeholder,
+  input[type="text"]:focus::-moz-placeholder,
+  textarea:focus::-moz-placeholder
+    {block}
+
+  input:focus:-ms-input-placeholder,
+  input[type="text"]:focus:-ms-input-placeholder,
+  textarea:focus:-ms-input-placeholder
+    {block}
+
+  input:focus::placeholder,
+  input[type="text"]:focus::placeholder,
+  textarea:focus::placeholder
+    {block}
+
+High_Resolution()
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (   min--moz-device-pixel-ratio: 1.5),
+  only screen and (     -o-min-device-pixel-ratio: 3/2),
+  only screen and (                min-resolution: 144dpi),
+  only screen and (                min-resolution: 2dppx)
+    {block}

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <title>Центральная касса - платежная система разработанная для такси и диспетчерских служб. Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.</title>
+    <meta name="keywords" content="прием платежей, абонентская плата, эквайринг для диспетчерсих служб, зеленая зона, биллинг платежей, интернет эквайринг, онлайн оплата, биллинговая система, бухгалтерия, оплата картой, оплата смс, электронные деньги, подключить оплату, оплата на сайте, платежная система, платежный сервис, выставить счет,  NetUP, LANBilling, UTM5, Carbon Billing, BGBilling, OSMP, Киберплат.">
+    <meta name="description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей">
+    <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+<!--	<link rel="stylesheet" href="css/swiper.min.css" type='text/css'>-->
+    <link rel='stylesheet' href='css/style.min.css' type='text/css'/>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@ckassa">
+    <meta name="twitter:site" content="Центральная касса">
+    <meta name="twitter:domain" content="ckassa.ru">
+	<meta name="twitter:title" content="Центральная касса - платежная система разработанная для такси и диспетчерских служб">
+	<meta name="twitter:description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей.  Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.">
+	<meta name="twitter:image:src" content="http://ckassa.ru/lp/taxi/images/logo_link.png">
+	<meta name="twitter:url" content="http://ckassa.ru/lp/taxi/">
+	<meta property="og:type" content="website">
+    <meta property="og:title" content="Центральная касса - платежная система разработанная для такси и диспетчерских служб.">
+    <meta property="og:description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей.  Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.">
+    <meta property="og:url" content="http://ckassa.ru/lp/taxi/">
+    <meta property="og:site_name" content="Центральная касса">
+    <meta property="og:see_also" content="http://ckassa.ru/lp/taxi/">
+	<meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="http://ckassa.ru/lp/taxi/images/logo_link.png">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="444">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KSNWZD');</script>
+	<!-- End Google Tag Manager -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+	<script src="js/swiper.jquery.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <!--<script type="text/javascript">
+        (function () {
+            'use strict';
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement('style');
+                msViewportStyle.appendChild(document.createTextNode('@-ms-viewport{width:640!important}'));
+                document.querySelector('head').appendChild(msViewportStyle)
+            }
+        })();
+    </script>-->
+    <script type="application/javascript">
+        $(document).ready(function() {
+            var $callback_modal = $("#callback__modal"),
+                $callback_modal_dialog = $("#callback__modal__dialog"),
+                $button_submit_main = $("#button-submit_main"),
+                $button_submit_modal = $("#button-submit_modal");
+
+            var $root = $('html, body');
+
+            $('body').addClass('ready');
+
+            $("a[href^='#pres']").click(function() {
+                $root.animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 500);
+                return false;
+            });
+
+			var start = false;
+			var presSlider = new Swiper('#pres-slider', {
+				effect: "fade",
+				speed: 500,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				paginationType: 'bullets',
+				paginationBulletRender: function (swiper, index, className) {
+					return '<li class="' + className + '">' + $(swiper.slides[index]).find("h3").text() + '</li>';
+				},
+				//touchEventsTarget: 'wrapper',
+				scrollbar: '.swiper-scrollbar',
+				scrollbarHide: false,
+				scrollbarDraggable: true,
+				scrollbarSnapOnRelease: false,
+				followFinger: false,
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				spaceBetween: 30,
+				grabCursor: true,
+				breakpoints: {
+					959: {
+						scrollbarDraggable: false
+					}
+				},
+				fade: {
+					crossFade: true
+				},
+				'onSlideChangeStart': function (swiper) {
+					if (!start) {
+						if (swiper.isHorizontal()) {
+							swiper.bullets.each(function (index) {
+								var params = swiper.bulletsParams[index];
+								params.position = this.offsetLeft;
+								params.size = this.offsetWidth;
+								params.center = (params.position + params.size) / 2;
+							});
+						}
+						else {
+							swiper.bullets.each(function (index) {
+								var params = swiper.bulletsParams[index];
+								params.position = this.offsetTop;
+								params.size = this.offsetHeight;
+								params.center = (params.position + params.size) / 2;
+							});
+						}
+						start = true;
+					}
+				}
+			});
+
+            function validate(input, validateInput) {
+                if (validateInput($(input).val())) {
+                    $(input).parent().removeClass("error");
+                    return true;
+                } else {
+                    $(input).parent().addClass("error");
+                    $(input).focus();
+                    return false;
+                }
+            }
+
+            $('#button_solution-gkh, #button_solution-net, #button_solution-edu, #button_call--header, #button_call--footer').click(function () {
+                callbackModal("Мы&nbsp;перезвоним Вам в&nbsp;течение 7-ми минут и&nbsp;поможем подобрать лучшее решение для&nbsp;приёма платежей");
+            });
+
+			$('#button_stat').click(function () {
+			callbackModal("Укажите адрес своей электронной почты и&nbsp;мы&nbsp;отправим Вам тарифы в&nbsp;течение <br> 7-ми минут");
+			});
+
+            $('#button_special-offer').click(function () {
+                callbackModal("Укажите адрес e-mail и&nbsp;мы&nbsp;отправим Вам доступ в&nbsp;Личный кабинет, где&nbsp;Вы сможете заключить договор.");
+            });
+
+            function callbackModal(describe) {
+                if (!$callback_modal.hasClass("show")) {
+                    $("#callback-content").show();
+                    $("#callback-result").removeClass('success');
+                    $("#modal__describe").html(describe);
+                    showModal();
+                }
+            }
+
+            $('#callback-close__cross, #callback-close__button').click(function () {
+                hideModal()
+            });
+
+            function showModal() {
+                var m_top = Math.round(($(window).height() - $callback_modal_dialog.outerHeight()) / 2);
+                if (m_top > 45) {
+                    $callback_modal_dialog.css({marginTop: m_top});
+                }
+                $callback_modal.addClass("show");
+            }
+
+            function hideModal() {
+                $callback_modal.removeClass("show");
+            }
+
+            function callBack(id, button, submitAction) {
+                var $form = $(id);
+				var wrong = document.getElementById("wrong");
+                button.prop('disabled', true);
+                if (validate($form.find('input[name="name"]'), function isValidName(name) {
+                        return name;
+                    })
+                    && validate($form.find('input[name="phone"]'), function isValidPhone(phone) {
+                        return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone);
+                    })
+                    && validate($form.find('input[name="email"]'), function isValidEmail(email) {
+                        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+                    })
+                    && validate($form.find('input[name="action"]'), function isValidAction(action) {
+                        return true;
+                    })) {
+
+                    setTimeout(function() {button.prop('disabled', false);}, 10000);
+
+                    $.ajax({
+                        url: "/lp/taxi/php/callback.php",
+						/*url: "/ck-landings/Operators/php/callback.php",*/
+						/*url: "/lp/test/taxi/php/callback.php",*/
+
+                        type: "POST",
+                        dataType: 'json',
+                        data: $form.serialize(),
+                        success: function (dat) {
+                            if (submitAction(dat)) {
+                                $form.find('input').val("");
+                            }
+							wrong.style.display="none";
+							wrong.innerText=" ";
+                            button.prop('disabled', false);
+
+
+			},
+                        error: function(){
+		                    /* window.alert("Ошибка!")*/
+							wrong.innerText="Ошибка: Заявка не отправлена. Попробуйте позже";
+							wrong.style.display="block";
+                        },
+                        complete: function(){
+                            button.prop('disabled', false);
+                        }
+                    });
+                } else {
+                    button.prop('disabled', false);
+                }
+            }
+			/*Нижняя форма*/
+            $("#form__main-callback").on('submit', function (e) {
+                if (!$callback_modal.hasClass("show")) {
+                    callBack(this, $button_submit_main, function (data) {
+                        if (!data['error']) {
+                            $("#callback-result").addClass('success');
+                            $("#callback-content").hide();
+                            showModal();
+                            return true
+                        }
+                        else {
+                            //$("callback-result__text").text(data['error']);
+                            //$result.addClass('error');
+                            return false;
+                        }
+                    });
+                }
+                return false;
+            });
+			/*Модальное окно с формой*/
+            $("#form__modal-callback").on('submit', function (e) {
+                callBack(this, $button_submit_modal, function (data) {
+                  	if (!data['error']) {
+                     $("#callback-content").fadeOut(500, function () {
+							$("#callback-result").addClass('success');
+			 				showModal();
+                        });
+                        return true
+                    }
+                    else {
+                        //$("callback-result__text").text(data['error']);
+                        //$result.addClass('error');
+                        return false;
+                    }
+                });
+                return false;
+            });
+
+            $("#phone__main, #phone__modal").mask("+7 (999) 999-9999", {autoclear: false});
+        });
+    </script>
+	<!– Facebook Pixel Code –>
+	<script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1267518740002585', {
+            em: 'insert_email_variable,'
+        });
+        fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	               src="https://www.facebook.com/tr?id=1267518740002585&ev=PageView&noscript=1"
+	/></noscript>
+	<!– DO NOT MODIFY –>
+	<!– End Facebook Pixel Code –>
+	<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=dzjDYQinCyGcily6gq74GXy4z6fFqAaBUsfpj1yiNcRVsSlruu6f4jtZrvsAT0SwFcMZxBjpwJc/ARUVI1gaeTFXri9g9NjazYXdy/qJ3hMuetlVVdFRg/akLkb8qktnfeYn84*Kibwiith0LCxkwGRHptAEmbySsu0*X3W7FFQ-&pixel_id=1000052003';</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSNWZD"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-box">
+                <div class="content">
+                    <span class="header__logo" data-link="welcome">
+                        <img class="header__logo__image" src="images/logo.png" width="200" height="51"
+                             alt="Центральная касса.рф">
+                    </span>
+                    <div class="header__contacts">
+                        <a class="header__contacts__phone" href="tel:++73422252932">+7&nbsp;(342)&nbsp;225&nbsp;29&nbsp;32</a>
+                        <button type="button" onclick="yaCounter42803024.reachGoal('consult_button-1'); return true;" id="button_call--header" class="header__contacts__call">Бесплатная консультация</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section id="welcome" class="section welcome">
+                <div class="content">
+                    <h1 class="welcome__title">Водитель всегда на&nbsp;линии</h1>
+                    <p class="welcome__describe">Лучшее предложение по&nbsp;моментальному пополнению <br class="welcome__br"> диспетчерской</p>
+                    <a href="#pres" onclick="yaCounter42803024.reachGoal(); return true;" id="welcome__button" class="welcome__button btn">Узнать подробнее</a>
+                    <a href="#pres" class="welcome__mouse" onclick="yaCounter42803024.reachGoal('main_button-2'); return true;"><span class="welcome__mouse__text">Узнать больше</span></a>
+                </div>
+            </section>
+            <section id="pres" class="section presentation">
+                <div class="content">
+                    <h2 class="presentation__title">Оплата услуг диспетчерской</h2>
+					<img class="presentation__circle-png" src="images/circle.png">
+					<span class="presentation__circle"></span>
+                    <div id="pres-slider" class="presentation__slider-box owl-carousel swiper-container">
+						<div class="presentation__slider-box__navigation">
+							<ul class="presentation__slider-box__navigation__tabs swiper-pagination"></ul>
+							<div class="swiper-scrollbar"></div>
+						</div>
+						<div class="presentation__slider-box__list swiper-wrapper">
+							<div class="presentation__slider-box__list__item owl-item swiper-slide clearfix">
+								<div class="presentation__slider-box__list__item__image-box mac">
+									<img class="lazyLoad" src="images/phone.png" width="490" height="289">
+								</div>
+								<div class="presentation__slider-box__list__item__info">
+									<h3 class="presentation__slider-box__list__item__info__title">Лицевой счет водителя</h3>
+									<h4 class="presentation__slider-box__list__item__info__header">Моментальная оплата позывного</h4>
+									<ul class="presentation__slider-box__list__item__info__list">
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Кнопка оплаты в&nbsp;приложении водителя или&nbsp;на&nbsp;сервисах платежной системы &laquo;Центральная касса&raquo;</span>
+										</li>
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Оплата круглосуточно из&nbsp;любого места, даже там, где нет банкоматов и&nbsp;платежных терминалов</span>
+										</li>
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Выгодный тариф для диспетчерской службы</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="presentation__slider-box__list__item owl-item swiper-slide clearfix">
+								<div class="presentation__slider-box__list__item__image-box billing"><img class="lazyLoad presentation__dop-img" src="images/billing.png" width="399" height="513"></div>
+								<div class="presentation__slider-box__list__item__info">
+									<h3 class="presentation__slider-box__list__item__info__title">Дополнительные услуги</h3>
+									<h4 class="presentation__slider-box__list__item__info__header">Дополнительные услуги</h4>
+									<ul class="presentation__slider-box__list__item__info__list">
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Продажа световых коробов <br> и&nbsp;шашечек</span>
+										</li>
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Прием платежей за&nbsp;услуги <br> автомойки</span>
+										</li>
+										<li class="presentation__slider-box__list__item__info__item">
+											<span>Прием платежей за&nbsp;услуги <br> автосервиса</span>
+										</li>
+									</ul>
+								<!--	<p class="presentation__slider-box__list__item__info__text"></p>-->
+								</div>
+							</div>
+							<!--<div class="presentation__slider-box__list__item owl-item swiper-slide clearfix">
+								<div class="presentation__slider-box__list__item__image-box acq"><img class="lazyLoad" src="images/acq.png" width="455" height="472"></div>
+								<div class="presentation__slider-box__list__item__info">
+									<h3 class="presentation__slider-box__list__item__info__title">Эквайринг нового поколения</h3>
+									<p class="presentation__slider-box__list__item__info__text">Форма оплаты с&nbsp;проверкой баланса на&nbsp;вашем сайте, повышающая доверие абонента.</p>
+								</div>
+							</div>
+							<div class="presentation__slider-box__list__item owl-item swiper-slide clearfix">
+								<div class="presentation__slider-box__list__item__image-box brand"><img class="lazyLoad" src="images/brand.png" width="487" height="489"></div>
+								<div class="presentation__slider-box__list__item__info">
+									<h3 class="presentation__slider-box__list__item__info__title">Работа с зонтичными брендами</h3>
+									<p class="presentation__slider-box__list__item__info__text">Централизованное определение абонента по&nbsp;лицевому счету при&nbsp;работе через несколько юридических лиц.</p>
+								</div>
+							</div>-->
+						</div>
+                    </div>
+                </div>
+            </section>
+			<section id="stat" class="section stat">
+				<div class="content">
+					<h2 class="stat__title">Узнайте стоимость обслуживания платежей прямо сейчас</h2>
+					<p class="stat__message">Получите тарифы «Центральной&nbsp;кассы» с&nbsp;полным перечнем услуг
+						и&nbsp;специальными предложениями</p>
+					<button type="button" onclick="yaCounter42803024.reachGoal(''); return true;" id="button_stat" class="stat__button btn">Получить тарифы</button>
+				</div>
+			</section>
+			<section id="payment-methods" class="section payment-methods">
+				<div class="content">
+					<h2 class="payment-methods__title">Плюсы оплаты из&nbsp;мобильного приложения</h2>
+					<ol class="payment-methods__list clearfix">
+						<li class="payment-methods__list__item">
+							<h3 class="payment-methods__list__item__title"></h3>
+							<p class="payment-methods__list__item__text">Возможность взять заказ в&nbsp;любом месте за&nbsp;счет быстрого пополнения баланса</p>
+						</li><li class="payment-methods__list__item">
+							<h3 class="payment-methods__list__item__title"></h3>
+							<p class="payment-methods__list__item__text">Автоплатеж для водителей, <br class="payment-methods__br"> в&nbsp;том числе с&nbsp;отрицательным балансом на&nbsp;лицевом счете</p>
+						</li><li class="payment-methods__list__item">
+							<h3 class="payment-methods__list__item__title"></h3>
+							<p class="payment-methods__list__item__text">Экономия времени<br class="payment-methods__br"> и&nbsp;денег</p>
+						</li><li class="payment-methods__list__item">
+							<h3 class="payment-methods__list__item__title"></h3>
+							<p class="payment-methods__list__item__text">Совмещение оплаты <br class="payment-methods__br"> с&nbsp;обычными делами&nbsp;&mdash;&nbsp;<br class="payment-methods__br">обедом, заправкой</p>
+						</li>
+					</ol><div class="payment-methods__info">
+						<h3 class="payment-methods__info__title">современные способы оплаты</h3>
+						<div class="payment-methods__info__box">
+						<!--	<span class="payment-methods__info__logo visa"></span>
+							<span class="payment-methods__info__logo master"></span>
+							<span class="payment-methods__info__logo mir"></span>-->
+							<ul class="payment-methods__list-pay">
+								<li class="payment-methods__list-pay-item">
+									<div class="payment-methods__icons-wrapper">
+										<div class="payment-methods__icons payment-methods__icons--visa"></div>
+										<div class="payment-methods__icons payment-methods__icons--mscard"></div>
+										<div class="payment-methods__icons payment-methods__icons--mir"></div>
+									</div>
+									<p class="payment-methods__icons-text">Кредитные и&nbsp;дебетовые карты любых банков&nbsp;РФ</p>
+								</li>
+								<li class="payment-methods__list-pay-item">
+									<div class="payment-methods__icons-wrapper">
+										<div class="payment-methods__icons payment-methods__icons--yandex"></div>
+									</div>
+									<p class="payment-methods__icons-text">Яндекс.Деньги</p>
+								</li>
+								<li class="payment-methods__list-pay-item">
+									<div class="payment-methods__icons-wrapper">
+										<div class="payment-methods__icons payment-methods__icons--electron"></div>
+										<div class="payment-methods__icons payment-methods__icons--maestro"></div>
+									</div>
+									<p class="payment-methods__icons-text">Карты моментальной выдачи </p>
+								</li>
+								<li class="payment-methods__list-pay-item">
+									<div class="payment-methods__icons-wrapper">
+										<div class="payment-methods__icons payment-methods__icons--ck"></div>
+									</div>
+									<p class="payment-methods__icons-text">Кошелёк <br>
+										Центральная касса</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="payment-methods__balloons">
+					<span class="payment-methods__balloon"></span>
+					<span class="payment-methods__balloon"></span>
+					<span class="payment-methods__balloon"></span>
+				</div>
+			</section>
+			<section id="advantages" class="section advantages">
+				<div class="content">
+					<h2 class="advantages__title">Минусы оплаты через банкоматы	или платежные терминалы</h2>
+					<div class="advantages__list">
+						<div class="advantages__list__item sms-box">
+					<!--		<div class="advantages__list__item__icon sms"></div>-->
+							<!--<h3 class="advantages__list__item__title">Информация – моментально</h3>-->
+							<p class="advantages__list__item__text">Затраченное время на&nbsp;поиск исправного банкомата</p>
+						</div>
+						<div class="advantages__list__item">
+						<!--<div class="advantages__list__item__icon cash"></div>-->
+						<!--<h3 class="advantages__list__item__title">Выставление счетов</h3>-->
+						<p class="advantages__list__item__text">Невыполненные заказы во&nbsp;время поиска точки пополнения</p>
+						</div>
+						<div class="advantages__list__item">
+					<!--	<div class="advantages__list__item__icon acq"></div>-->
+						<!--<h3 class="advantages__list__item__title">Быстрое подключение</h3>-->
+						<p class="advantages__list__item__text">Ограниченное количество мест для пополнения</p>
+						</div>
+						<div class="advantages__list__item">
+							<!--		<div class="advantages__list__item__icon sms"></div>-->
+							<!--<h3 class="advantages__list__item__title">Информация – моментально</h3>-->
+							<p class="advantages__list__item__text">Затраченные деньги на&nbsp;бензин</p>
+						</div>
+						<div class="advantages__list__item">
+							<!--<div class="advantages__list__item__icon cash"></div>-->
+							<!--<h3 class="advantages__list__item__title">Выставление счетов</h3>-->
+							<p class="advantages__list__item__text">Нестабильная работа банкоматов</p>
+						</div>
+						<div class="advantages__list__item">
+							<!--	<div class="advantages__list__item__icon acq"></div>-->
+							<!--<h3 class="advantages__list__item__title">Быстрое подключение</h3>-->
+							<p class="advantages__list__item__text">Проблемы с&nbsp;пополнением в&nbsp;ночные часы</p>
+						</div>
+					</div>
+				</div>
+				<div class="advantages__balloons">
+					<span class="advantages__balloon"></span>
+					<span class="advantages__balloon"></span>
+
+				</div>
+			</section>
+			<section id="special-offer" class="section special-offer">
+				<div class="content">
+					<h2 class="special-offer__title">Специальное предложение для&nbsp;новых клиентов</h2>
+					<div class="special-offer__describe">
+						<span class="special-offer__describe__data green"><span class="special-offer__describe__data__value"><em>100</em><span>%</span></span><br> возможностей</span>
+						<span class="special-offer__describe__data red"><span class="special-offer__describe__data__value"><em>0</em><span>%</span></span><br> комиссии</span>
+					</div>
+					<div class="special-offer__info">
+						<p class="special-offer__info__text">Подключите &laquo;Центральную кассу&raquo; и&nbsp;получите 1&nbsp;месяц работы
+							системы без комиссии до&nbsp;17.12.2017*</p>
+						<span class="special-offer__info-sub">*действительно для тарифов &laquo;Оптимальный&raquo; и&nbsp;&laquo;Супер&raquo;</span>
+					</div>
+					<!--<button type="button" onclick="yaCounter42803024.reachGoal('offer_button'); return true;" id="button_special-offer" class="special-offer__button btn">Подключить бесплатно</button>-->
+					<button type="button" onclick="yaCounter42803024.reachGoal('offer_button'); return true;" class="special-offer__button btn" id="button_special-offer">Подключить бесплатно</button>
+				</div>
+				<div class="special-offer__balloons">
+					<span class="special-offer__balloon"></span>
+					<span class="special-offer__balloon"></span>
+					<span class="special-offer__balloon"></span>
+				</div>
+			</section>
+			<section id="about" class="section about">
+				<div class="content clearfix">
+					<h2 class="about__title"><span>География платежей: </span>от&nbsp;Калининграда до&nbsp;Владивостока</h2>
+					<p class="about__ckassa">Платежная система «Центральная касса» —
+						разработка оператора платежей
+						«Биллинговые системы»
+					</p>
+					<p class="about__achievements">Мы&nbsp;занимаемся обработкой и&nbsp;защитой платежей для служб такси с&nbsp;2014&nbsp;года. Нашими решениями пользуются диспетчерские службы TapTaxi, Везет, Лидер. А&nbsp;также службы такси, работающие на&nbsp;ПО&nbsp;БиТ Мастер.
+					</p>
+					<p class="about__competence">Разработчики &laquo;Центральной кассы&raquo; аккредитованы в&nbsp;&laquo;Сбербанке&raquo; и&nbsp;Центральном банке&nbsp;РФ, а&nbsp;также прошли сертификацию в&nbsp;международных платежных системах VISA и&nbsp;MasterCard. Мы&nbsp;сотрудничаем с&nbsp;крупнейшими банками страны и&nbsp;гарантируем своевременное поступление средств.
+					</p>
+				</div>
+				<div class="about__balloons">
+					<span class="about__balloon"></span>
+					<span class="about__balloon"></span>
+					<span class="about__balloon"></span>
+					<span class="about__balloon"></span>
+				</div>
+			</section>
+            <section id="callback" class="section callback">
+                <div class="content">
+                    <div class="callback__info">
+                        <h2 class="callback__info__title">У&nbsp;вас остались вопросы?</h2>
+                        <p class="callback__info__describe">Мы&nbsp;перезвоним вам в&nbsp;течение 7&#8209;ми минут и&nbsp;ответим на&nbsp;все ваши вопросы про&nbsp;прием платежей</p>
+                    </div>
+                    <form lang="ru" class="callback__send-form" id="form__main-callback" name="contact" action="#" method="post">
+                        <label class="callback__send-form__label">Имя:</label>
+                        <div class="callback__send-form__input-box">
+                            <input class="callback__send-form__input-box__input" maxlength="50" type="text" name="name"
+                                    placeholder="Ваше имя" id="name__main">
+                        </div>
+                        <label class="callback__send-form__label">Телефон:</label>
+                        <div class="callback__send-form__input-box">
+                            <input inputmode="numeric" required class="callback__send-form__input-box__input"
+                                   maxlength="50" type="tel" name="phone" placeholder="+7 (9__) __ __ ___" id="phone__main">
+                        </div>
+                        <label class="callback__send-form__label">e-mail:</label>
+                        <div class="callback__send-form__input-box">
+                            <input inputmode="email" required class="callback__send-form__input-box__input"
+                                   maxlength="50" type="email" name="email" id="email__main" placeholder="Ваш e-mail">
+                        </div>
+                        <button type="submit" onclick="yaCounter42803024.reachGoal('form_button'); return true;" class="callback__send-form__submit-button btn" id="button-submit_main">Перезвоните мне</button>
+                        <p class="callback__send-form__attention">Ваши данные не&nbsp;будут переданы третьим лицам</p>
+                    </form>
+                </div>
+				<div class="callback__balloons">
+					<span class="callback__balloon"></span>
+					<span class="callback__balloon"></span>
+				</div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-box">
+                <div class="content">
+                    <div class="footer__logo">
+                        <img src="images/logo.png" width="200" height="51">
+                    </div>
+                    <div class="footer__req">
+                        <span class="footer__req__name">ООО «Центральная касса»</span> <span class="footer__req__INN">ИНН: 5903123588</span>
+                    </div>
+                    <div class="footer__contacts">
+                        <a class="footer__contacts__phone" href="tel:+73422252932">+7&nbsp;(342)&nbsp;225&nbsp;29&nbsp;32</a>
+                        <button type="button" onclick="yaCounter42803024.reachGoal('consult_button-2'); return true;" id="button_call--footer" class="footer__contacts__call">Бесплатная консультация</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal" id="callback__modal">
+        <div class="modal__dialog clearfix" id="callback__modal__dialog">
+            <div class="modal__dialog__close" id="callback-close__cross">
+                <img class="modal__dialog__close__cross" src="images/close.png" alt="Закрыть">
+            </div>
+            <div id="callback-content" class="modal__dialog__content">
+                <p class="modal__dialog__describe" id="modal__describe">Мы&nbsp;перезвоним вам в&nbsp;течение 7&#8209;ми минут и&nbsp;ответим на&nbsp;все ваши вопросы про&nbsp;прием платежей</p>
+
+                <form lang="ru" class="modal__dialog__send-form" id="form__modal-callback" name="contact" action="#" method="post">
+                    <label class="modal__dialog__send-form__label name" id="modal__name-field">Ваше имя:</label>
+                    <div class="modal__dialog__send-form__input-box">
+                        <input class="modal__dialog__send-form__input-box__input" maxlength="50" inputmode="verbatim" type="text" name="name" id="name__modal" placeholder="Ваше имя">
+                    </div>
+                    <label class="modal__dialog__send-form__label phone" id="modal__phone-field">Телефон:</label>
+                    <div class="modal__dialog__send-form__input-box">
+                        <input inputmode="numeric" required class="modal__dialog__send-form__input-box__input" maxlength="50" type="tel" name="phone" id="phone__modal" placeholder="+7 (9__) __ __ ___">
+                    </div>
+                    <label class="modal__dialog__send-form__label email" id="modal__email-field">e-mail:</label>
+                    <div class="modal__dialog__send-form__input-box">
+                        <input inputmode="email" required class="modal__dialog__send-form__input-box__input" maxlength="50" type="email" name="email" id="email__modal" placeholder="Ваш e-mail">
+                    </div>
+					<div id="wrong" class="wrong"></div>
+                    <button type="submit" onclick="yaCounter42803024.reachGoal('popup_button');/* goog_report_conversion('https://ckassa.ru/lp/providers/'); return true;*/" class="modal__dialog__send-form__submit-button btn" id="button-submit_modal">Отправить</button>
+                    <p class="modal__dialog__send-form__attention">Ваши данные не&nbsp;будут переданы третьим лицам</p>
+                </form>
+            </div>
+            <div id="callback-result" class="modal__dialog__result">
+                <p class="modal__dialog__result__title">Ваша заявка принята</p>
+                <p class="modal__dialog__result__describe">Мы&nbsp;свяжемся с&nbsp;вами, подготовим все необходимые документы, предоставим доступ в&nbsp;личный кабинет и&nbsp;предложим самые выгодные условия</p>
+                <div class="modal__dialog__result__button-block">
+                    <button type="button" id="callback-close__button" class="modal__dialog__result__button-block__close-button btn">Спасибо!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+	(w[c] = w[c] || []).push(function() {
+	    try {
+		w.yaCounter44842198 = new Ya.Metrika({
+		    id:44842198,
+		    clickmap:true,
+		    trackLinks:true,
+		    accurateTrackBounce:true,
+		    webvisor:true
+		});
+	    } catch(e) { }
+	});
+
+	var n = d.getElementsByTagName("script")[0],
+		s = d.createElement("script"),
+		f = function () { n.parentNode.insertBefore(s, n); };
+	s.type = "text/javascript";
+	s.async = true;
+	s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	if (w.opera == "[object Opera]") {
+	    d.addEventListener("DOMContentLoaded", f, false);
+	} else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44842198" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	<!-- Google Code for &#1062;&#1050; &#1055;&#1088;&#1086;&#1074;&#1072;&#1081;&#1076;&#1077;&#1088;&#1099; &#1079;&#1072;&#1103;&#1074;&#1082;&#1072; Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+        goog_snippet_vars = function() {
+            var w = window;
+            w.google_conversion_id = 956039853;
+            w.google_conversion_label = "uonWCMnWnHAQrYXwxwM";
+            w.google_remarketing_only = false;
+        };
+        // DO NOT CHANGE THE CODE BELOW.
+        goog_report_conversion = function(url) {
+            goog_snippet_vars();
+            window.google_conversion_format = "3";
+            var opt = new Object();
+            opt.onload_callback = function() {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            var conv_handler = window['google_trackConversion'];
+            if (typeof(conv_handler) == 'function') {
+                conv_handler(opt);
+            }
+        }
+		/* ]]> */
+	</script>
+	<script type="text/javascript"
+	        src="//www.googleadservices.com/pagead/conversion_async.js">
+	</script>
+</body>
+</html>
