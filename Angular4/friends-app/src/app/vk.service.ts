@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Http, Headers} from "@angular/http";
-import {environment} from "../environments/environment";
+import {Http} from "@angular/http";
+
 
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import {Router} from "@angular/router";
+import {environment} from "../environments/environment";
 
 @Injectable()
 export class VkService {
@@ -14,7 +15,7 @@ export class VkService {
     constructor(private http: Http, private router: Router) {
     }
     authVK() {
-        this.router.navigate('https://oauth.vk.com/authorize?client_id='+ environment.client_id +'&display=page'+'&redirect_uri='+environment.redirect_uri+'&scope: wall&response_type=token&v=5.63&state=123456')
+        this.router.navigateByUrl('https://oauth.vk.com/authorize?client_id='+ environment.client_id +'&display=page&redirect_uri='+environment.redirect_uri+'&scope: wall&response_type=token&v=5.63&state=123456');
 
     }
 
