@@ -5,6 +5,12 @@
       "email": "wfm@mail.ru",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "elov4anin@gmail.com",
+      "password": "12345678",
+      "name": "Сергей Павлович Чугаев",
+      "id": 2
     }
   ],
   "bill": {
