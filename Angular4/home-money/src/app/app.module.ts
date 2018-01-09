@@ -5,10 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {AuthModule} from "./auth/auth.module";
 import {AppRoutingModule} from "./auth/app-routing.module";
-import {FormsModule} from "@angular/forms";
+
 import {UsersService} from "./shared/services/users.service";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./shared/services/auth.service";
+import {SystemModule} from "./system/system.module";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {AuthService} from "./shared/services/auth.service";
     BrowserModule,
     HttpClientModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SystemModule
   ],
   providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
