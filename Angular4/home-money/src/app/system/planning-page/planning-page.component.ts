@@ -30,12 +30,12 @@ export class PlanningPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.s1 = Observable.combineLatest(
-        this.billService.getBill,
+        this.billService.getBill(),
         this.categoriesService.getCategories(),
         this.eventService.getEvetns()
     ).subscribe((data: [Bill, Category[], WFMEvent[]]) => {
       console.log(data);
-      //:[Bill, Category[], WFMEvent[]]
+
       this.bill = data[0];
       this.categories =data[1];
       this.events = data[2];
