@@ -6,7 +6,10 @@
 <div *ngIf="!isLoaded" class="text-center">Loading....</div>
 <div *ngIf="isLoaded">
   <wfm-histoty-chart [data]="chartData"></wfm-histoty-chart>
-  <wfm-histoty-events></wfm-histoty-events>
+  <wfm-histoty-events
+          [categories] = "categories"
+          [events] = "events"
+  ></wfm-histoty-events>
   <wfm-histoty-filter></wfm-histoty-filter>
 </div>
 

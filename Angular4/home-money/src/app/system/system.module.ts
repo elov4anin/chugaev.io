@@ -23,6 +23,7 @@ import { HistotyChartComponent } from './history-page/histoty-chart/histoty-char
 import { HistotyEventsComponent } from './history-page/histoty-events/histoty-events.component';
 import { HistotyDetailComponent } from './history-page/histoty-detail/histoty-detail.component';
 import { HistotyFilterComponent } from './history-page/histoty-filter/histoty-filter.component';
+import {FilterPipe} from "./shared/pipes/filter.pipe";
 
 @NgModule({
     imports: [CommonModule, SharedModule, SystemRoutingModule],
@@ -45,6 +46,7 @@ import { HistotyFilterComponent } from './history-page/histoty-filter/histoty-fi
         HistotyEventsComponent,
         HistotyDetailComponent,
         HistotyFilterComponent,
+        FilterPipe
     ],
     providers: [
         BillService,
