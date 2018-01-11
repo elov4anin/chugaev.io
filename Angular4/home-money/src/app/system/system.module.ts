@@ -19,6 +19,10 @@ import { AddCategoryComponent } from './records-page/add-category/add-category.c
 import { EditCategoryComponent } from './records-page/edit-category/edit-category.component';
 import {CategoriesService} from "./shared/services/categories.service";
 import {EventService} from "./shared/services/events.service";
+import { HistotyChartComponent } from './history-page/histoty-chart/histoty-chart.component';
+import { HistotyEventsComponent } from './history-page/histoty-events/histoty-events.component';
+import { HistotyDetailComponent } from './history-page/histoty-detail/histoty-detail.component';
+import { HistotyFilterComponent } from './history-page/histoty-filter/histoty-filter.component';
 
 @NgModule({
     imports: [CommonModule, SharedModule, SystemRoutingModule],
@@ -37,6 +41,10 @@ import {EventService} from "./shared/services/events.service";
         AddEventComponent,
         AddCategoryComponent,
         EditCategoryComponent,
+        HistotyChartComponent,
+        HistotyEventsComponent,
+        HistotyDetailComponent,
+        HistotyFilterComponent,
     ],
     providers: [
         BillService,
