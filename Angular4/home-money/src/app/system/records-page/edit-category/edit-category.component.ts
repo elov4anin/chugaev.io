@@ -2,7 +2,7 @@ import {Component, OnInit, Input, Output, EventEmitter, OnDestroy} from '@angula
 import {NgForm} from "@angular/forms";
 import {Category} from "../../shared/models/category.model";
 import {CategoriesService} from "../../shared/services/categories.service";
-import {Message} from "../../../shared/services/models/message.model";
+import {Message} from "../../../shared/models/message.model";
 import {Subscription} from "rxjs";
 
 @Component({
