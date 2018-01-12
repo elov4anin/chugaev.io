@@ -15,9 +15,13 @@ export class FilterPipe implements PipeTransform {
                 t[field] += '';
             }
 
-            if (t[field] === 'type') {
-                t[field] = t[field] === 'income' ? 'доход' : 'расход'//@todo Поиск по типу не работает
+            if (field === 'type') {
+                t[field] = t[field] === 'income' ? 'доход' : 'расход';
             }
+            if (field === 'category') {
+                t[field] = t['catName'];
+            }
+
             return t[field].toLowerCase().indexOf(value.toLowerCase()) !== -1;
         })
 

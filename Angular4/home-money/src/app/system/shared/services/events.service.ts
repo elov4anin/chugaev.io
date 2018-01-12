@@ -16,4 +16,7 @@ export class EventService extends BaseApi {
   getEvetns(): Observable<WFMEvent[]> {
     return this.get('events')
   }
+  getEventById(id:string): Observable<WFMEvent> {
+    return this.get(`events/${id}`);
+  }
 }

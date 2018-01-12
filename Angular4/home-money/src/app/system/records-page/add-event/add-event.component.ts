@@ -6,7 +6,7 @@ import * as moment from "moment";
 import {EventService} from "../../shared/services/events.service";
 import {BillService} from "../../shared/services/bill.service";
 import {Bill} from "../../shared/models/bill.model";
-import {Message} from "../../../shared/services/models/message.model";
+import {Message} from "../../../shared/models/message.model";
 import {Subscription} from "rxjs";
 
 

@@ -2,14 +2,26 @@
   <h3 class="title">
     Страница истории <span class="sparkline bar"></span>
   </h3>
+  <div class="pull-right">
+    <button class="btn-sm btn btn-primary-outline" (click)="openFilter()">
+      <i class="fa fa-filter"></i>
+    </button>
+  </div>
 </div>
-<div *ngIf="!isLoaded" class="text-center">Loading....</div>
+<div *ngIf="!isLoaded" class="text-center"><wfm-loader></wfm-loader></div>
 <div *ngIf="isLoaded">
   <wfm-histoty-chart [data]="chartData"></wfm-histoty-chart>
   <wfm-histoty-events
           [categories] = "categories"
-          [events] = "events"
+          [events] = "filteredEvents"
   ></wfm-histoty-events>
-  <wfm-histoty-filter></wfm-histoty-filter>
+  <div *ngIf="isFilterVisible">
+    <wfm-histoty-filter
+            (onFilterApply)="onFilterApply($event)"
+            (onFilterCancel)="onFilterCancel()"
+            [categories]="categories"
+    ></wfm-histoty-filter>
+  </div>
+
 </div>
 
