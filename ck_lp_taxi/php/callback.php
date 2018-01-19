@@ -5,7 +5,6 @@ error_reporting(E_ALL);*/
 define('CRM_HOST', ''); // your CRM domain name
 define('CRM_PORT', '443'); // CRM server port
 define('CRM_PATH', '/crm/configs/import/lead.php'); // CRM server REST service path
-
 // CRM server authorization data
 define('CRM_LOGIN', ''); // login of a CRM user able to manage leads
 define('CRM_PASSWORD', ''); // password of a CRM user
@@ -13,7 +12,6 @@ define('CRM_PASSWORD', ''); // password of a CRM user
 //define('CRM_AUTH', 'HASH авторизации'); // authorization hash
 /*LK server connection data*/
 define('LK_HOST', ''); // your LK domain name
-
 define('LK_PATH', ''); // path LK for post register user
 
 if ($_POST) {
