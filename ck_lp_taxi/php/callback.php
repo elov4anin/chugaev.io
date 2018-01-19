@@ -2,19 +2,19 @@
 /*ini_set('display_errors', 1);
 error_reporting(E_ALL);*/
 // CRM server conection data
-define('CRM_HOST', 'crm.bisys.ru'); // your CRM domain name
+define('CRM_HOST', ''); // your CRM domain name
 define('CRM_PORT', '443'); // CRM server port
 define('CRM_PATH', '/crm/configs/import/lead.php'); // CRM server REST service path
 
 // CRM server authorization data
-define('CRM_LOGIN', 'ckassa'); // login of a CRM user able to manage leads
-define('CRM_PASSWORD', 'SXCQDN'); // password of a CRM user
+define('CRM_LOGIN', ''); // login of a CRM user able to manage leads
+define('CRM_PASSWORD', ''); // password of a CRM user
 // OR you can send special authorization hash which is sent by server after first successful connection with login and password
 //define('CRM_AUTH', 'HASH авторизации'); // authorization hash
 /*LK server connection data*/
-define('LK_HOST', 'https://cabinet.ckassa.ru'); // your LK domain name
+define('LK_HOST', ''); // your LK domain name
 
-define('LK_PATH', '/api/register_user?key=paGlwc5j9zmxP4ns3Rn9&'); // path LK for post register user
+define('LK_PATH', ''); // path LK for post register user
 
 if ($_POST) {
     require "../phpmailer/class.phpmailer.php";
