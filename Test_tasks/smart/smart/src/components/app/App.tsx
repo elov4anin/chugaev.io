@@ -1,9 +1,9 @@
 import * as React from 'react';
 import './App.css';
-import './fixture';
-import products from './fixture';
 
-const logo = require('./logo.svg');
+import products from '../../fixture';
+
+const logo = require('../../logo.svg');
 /*const ReactHighcharts = require('react-highcharts');*/
 
 interface MyProps {}

@@ -267,5 +267,7 @@ const products: DataRow[] = [
   { name: 'Product 148', feature1: 174, feature2: 66.4, year: 2016 },
   { name: 'Product 149', feature1: 163.8, feature2: 67.3, year: 2016 },
 ];
-
+export function  addProduct (product: DataRow) {
+  products.push(product);
+}
 export default products;
