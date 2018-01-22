@@ -1,14 +1,15 @@
 import * as React from 'react';
 import './App.css';
 
-import products from '../../fixture';
+import Header from '../header/header';
+import Menu from '../menu/menu';
+import List from '../list/list';
 
-const logo = require('../../logo.svg');
 /*const ReactHighcharts = require('react-highcharts');*/
 
 interface MyProps {}
 interface MyState {}
-let prods = products;
+
 /*
 const config = {
   /!* HighchartsConfig *!/
@@ -19,24 +20,13 @@ class App extends React.Component<MyProps, MyState> {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <Menu />
+        <Header />
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <table>
-          {
-            prods.map((item, index) =>
-              <tr key={index}>
-                <td>{item.name}</td>
-                <td>{item.feature1}</td>
-                <td>{item.feature2}</td>
-                <td>{item.year}</td>
-              </tr>
-          )}
-        </table>
+        <List />
+
       </div>
     );
   }

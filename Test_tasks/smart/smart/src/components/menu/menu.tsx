@@ -3,8 +3,7 @@ import './menu.css';
 interface MyProps {}
 interface MyState {}
 
-export class Menu extends React.Component<MyProps, MyState> {
-
+class Menu extends React.Component<MyProps, MyState> {
     render() {
         return (
             <ul className="menu">
@@ -21,3 +20,5 @@ export class Menu extends React.Component<MyProps, MyState> {
         );
     }
 }
+
+export default Menu;
