@@ -3,6 +3,8 @@ interface MyProps {}
 interface MyState {}
 /*import * as Product from '../../fixture';*/
 /*Product.addProduct(product);*/
-export class RecordBase extends React.Component<MyProps, MyState> {
-
+export default class RecordBase extends React.Component<MyProps, MyState> {
+    render() {
+        return <h2>Test</h2>;
+    }
 }

@@ -20,5 +20,4 @@ class Menu extends React.Component<MyProps, MyState> {
         );
     }
 }
-
 export default Menu;
