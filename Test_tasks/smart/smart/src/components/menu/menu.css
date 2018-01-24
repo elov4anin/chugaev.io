@@ -1,7 +1,13 @@
 .menu {
     display: flex;
     list-style-type: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
-.menu li {
+.menu a {
     margin-left: 25px;
+}
+
+.active {
+    color: blue;
 }

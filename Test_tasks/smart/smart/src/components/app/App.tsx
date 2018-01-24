@@ -7,6 +7,7 @@ import Header from '../header/header';
 import Menu from '../menu/menu';
 import List from '../list/list';
 import RecordBase from '../record-base/record-base';
+import Charts from '../charts/charts';
 
 /*const ReactHighcharts = require('react-highcharts');*/
 
@@ -21,19 +22,18 @@ class App extends React.Component<MyProps, MyState> {
   render() {
     return (
       <div className="App">
-        <Menu />
-        <Header />
-          <Router>
-              <Switch>
-                  <Route path="/" component={List} />
-                  <Route path="/base" component={RecordBase} />
-              </Switch>
-          </Router>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <List />
 
+          <Router>
+            <div>
+              <Menu />
+              <Header />
+              <Switch>
+                  <Route exact="true" path="/" component={List} />
+                  <Route path="/base" component={RecordBase} />
+                  <Route path="/charts" component={Charts} />
+              </Switch>
+            </div>
+          </Router>
       </div>
     );
   }
