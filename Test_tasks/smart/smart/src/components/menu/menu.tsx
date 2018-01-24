@@ -9,7 +9,7 @@ class Menu extends React.Component<MyProps, MyState> {
       return (
         <nav className="menu">
           <Link exact="true" to="/" activeClassName="active">БД</Link>
-          <Link to="/base" activeClassName="active">О сайте</Link>
+          <Link to="/base" activeClassName="active">Запись</Link>
           <Link to="/charts" activeClassName="active">Графики</Link>
         </nav>
       );
