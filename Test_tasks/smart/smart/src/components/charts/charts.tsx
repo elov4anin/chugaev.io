@@ -1,84 +1,1 @@
-import * as React from 'react';
-const Highcharts = require('highcharts');
-import products from '../../fixture';
-
-interface MyProps {}
-interface MyState {}
-
-let prods = products;
-const config = {
-    chart: {
-        type: 'scatter',
-        zoomType: 'xy'
-    },
-    title: {
-        text: 'Height Versus Weight of 507 Individuals by Gender'
-    },
-    subtitle: {
-        text: 'Source: Heinz  2003'
-    },
-    xAxis: {
-        title: {
-            enabled: true,
-            text: 'Fixture1 (cm)'
-        },
-        startOnTick: true,
-        endOnTick: true,
-        showLastLabel: true
-    },
-    yAxis: {
-        title: {
-            text: 'Fixture2 (kg)'
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'left',
-        verticalAlign: 'top',
-        x: 100,
-        y: 70,
-        floating: true,
-        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-        borderWidth: 1
-    },
-    plotOptions: {
-        scatter: {
-            marker: {
-                radius: 5,
-                states: {
-                    hover: {
-                        enabled: true,
-                        lineColor: 'rgb(100,100,100)'
-                    }
-                }
-            },
-            states: {
-                hover: {
-                    marker: {
-                        enabled: false
-                    }
-                }
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br>',
-                pointFormat: '{point.x} cm, {point.y} kg'
-            }
-        }
-    },
-    series: [{
-        name: prods[0].name,
-        data: [[prods[0].feature1, prods[0].feature2]]
-    }]
-};
-
-for (let product of prods) {
-    config.series[0].data.push([product.feature1, product.feature2]);
-}
-
-export default class Charts extends React.Component<MyProps, MyState> {
-    render() {
-      return(
-        Highcharts.chart('charts', config)
-    );
-    }
-}
+import * as React from 'react';const ReactHighcharts = require('react-highcharts');import products from '../../fixture';import { DataRow } from '../../fixture';interface MyProps {}interface MyState {}function unique(arr: number[]) {    let obj = {};    for (let i = 0; i < arr.length; i++) {        let str = arr[i];        obj[str] = true; // запомнить строку в виде свойства объекта    }    return Object.keys(obj); // или собрать ключи перебором для IE8-}export default class Charts extends React.Component<MyProps, MyState> {    prods: DataRow[] = [];    years: any = [];    options: any = [];    config = {        chart: {            type: 'scatter',            zoomType: 'xy'        },        title: {            text: 'Height Versus Weight of 507 Individuals by Gender'        },        subtitle: {            text: 'Source: Heinz  2003'        },        xAxis: {            title: {                enabled: true,                text: 'Fixture1 (cm)'            },            startOnTick: true,            endOnTick: true,            showLastLabel: true        },        yAxis: {            title: {                text: 'Fixture2 (kg)'            }        },        legend: {            layout: 'vertical',            align: 'left',            verticalAlign: 'top',            x: 0,            y: 0,            floating: false,            backgroundColor: (ReactHighcharts.theme && ReactHighcharts.theme.legendBackgroundColor) || '#FFFFFF',            borderWidth: 1        },        plotOptions: {            scatter: {                marker: {                    radius: 5,                    states: {                        hover: {                            enabled: true,                            lineColor: 'rgb(100,100,100)'                        }                    }                },                states: {                    hover: {                        marker: {                            enabled: false                        }                    }                },                tooltip: {                    headerFormat: '<b>{series.name}</b><br>',                    pointFormat: '{point.x} cm, {point.y} kg'                }            }        },        series: [{            name: products[0].name,            data: [[products[0].feature1, products[0].feature2]]        }]    };    constructor (state: MyState) {       super(state);       this.prods = products;       this.press = this.press.bind(this);    }    press(e: any) {        let currentYear = e.target.value;        this.prods = products.filter((res) => res.year === currentYear);        this.render();    }    render() {        for (let product of this.prods) {            this.config.series.push({name: product.name, data: [[product.feature1, product.feature2]]});            this.years.push(product.year);        }        for (let year of  unique(this.years)) {            this.options.push(year);        }        return(            <div>                <select key="1" onClick={this.press}>                    {this.options.map((i: any) => {                        return <option key={i.id} value={i} >{i}</option>;                    })}                </select>                <ReactHighcharts config={this.config} domProps={{id: 'chartId'}}/>            </div>        );    }}

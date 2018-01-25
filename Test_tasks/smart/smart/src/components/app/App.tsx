@@ -22,7 +22,6 @@ class App extends React.Component<MyProps, MyState> {
   render() {
     return (
       <div className="App">
-
           <Router>
             <div>
               <Menu />
