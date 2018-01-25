@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .square {
+            width: 150px;
+            height: 150px;
+
+        }
+        .square--1 {
+            background-color: red;
+        }
+
+        .square--2 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: blue;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="square square--1"></div>
+<div class="square square--2 "></div>
+<script>
+
+
+
+
+    var sq2 = document.querySelector(".square--2");
+    sq2.addEventListener("click", function (e) {
+        sq2.style="left: 200px";
+        sq2.innerText="Raven Lamer";
+    })
+
+
+
+
+</script>
+</body>
+</html>
