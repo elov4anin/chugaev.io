@@ -8,9 +8,9 @@ class Menu extends React.Component<MyProps, MyState> {
     render() {
       return (
         <nav className="menu">
-          <Link exact="true" to="/" activeClassName="active">БД</Link>
-          <Link to="/base" activeClassName="active">Запись</Link>
-          <Link to="/charts" activeClassName="active">Графики</Link>
+          <Link exact="true" to="/" activeclassname="active">БД</Link>
+          <Link to="/base" activeclassname="active">Запись</Link>
+          <Link to="/charts" activeclassname="active">Графики</Link>
         </nav>
       );
     }

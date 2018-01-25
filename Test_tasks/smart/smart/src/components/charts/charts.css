@@ -1,0 +1,10 @@
+.chart__wrapper {
+    text-align: left;
+    padding: 20px 0px;
+
+}
+.chart__wrapper p {
+    display: inline-block;
+    padding-left: 15px;
+
+}

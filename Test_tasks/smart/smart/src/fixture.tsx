@@ -261,11 +261,11 @@ const products: DataRow[] = [
   { name: 'Product 142', feature1: 172.7, feature2: 68.2, year: 2016 },
   { name: 'Product 143', feature1: 162.6, feature2: 61.4, year: 2016 },
   { name: 'Product 144', feature1: 157.5, feature2: 76.8, year: 2016 },
-  { name: 'Product 145', feature1: 176.5, feature2: 71.8, year: 2016 },
-  { name: 'Product 146', feature1: 164.4, feature2: 55.5, year: 2016 },
-  { name: 'Product 147', feature1: 160.7, feature2: 48.6, year: 2016 },
-  { name: 'Product 148', feature1: 174, feature2: 66.4, year: 2016 },
-  { name: 'Product 149', feature1: 163.8, feature2: 67.3, year: 2016 },
+  { name: 'Product 145', feature1: 176.5, feature2: 71.8, year: 2017 },
+  { name: 'Product 146', feature1: 164.4, feature2: 55.5, year: 2017 },
+  { name: 'Product 147', feature1: 160.7, feature2: 48.6, year: 2017 },
+  { name: 'Product 148', feature1: 174, feature2: 66.4, year: 2018 },
+  { name: 'Product 149', feature1: 163.8, feature2: 67.3, year: 2018 },
 ];
 export function  addProduct (product: DataRow) {
   products.push(product);
