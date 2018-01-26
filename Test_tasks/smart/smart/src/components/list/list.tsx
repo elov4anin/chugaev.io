@@ -21,9 +21,7 @@ class List extends React.Component<MyProps, MyState> {
             )}
         </table>
     );
-
   }
-
 }
 
 export default List;
