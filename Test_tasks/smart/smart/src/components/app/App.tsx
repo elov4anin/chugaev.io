@@ -9,14 +9,8 @@ import List from '../list/list';
 import RecordBase from '../record-base/record-base';
 import Charts from '../charts/charts';
 
-/*const ReactHighcharts = require('react-highcharts');*/
-
 interface MyProps {}
 interface MyState {}
-/*
-const config = {
-  /!* HighchartsConfig *!/
-};*/
 
 class App extends React.Component<MyProps, MyState> {
   render() {
@@ -37,12 +31,5 @@ class App extends React.Component<MyProps, MyState> {
     );
   }
 }
-/*
-export class Charts extends React.Component<MyProps, MyState> {
-
-  render() {
-    return (<ReactHighcharts config = {config}></ReactHighcharts>);
-  }
-}*/
 
 export default App;
