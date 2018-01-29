@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -62,6 +63,7 @@ module.exports = {
     },
 
     plugins: [
+	new CleanWebpackPlugin(['dist']),
 	/*Sens Registr*/
 	new CaseSensitivePathsPlugin(),
 	/*Minification JS*/
