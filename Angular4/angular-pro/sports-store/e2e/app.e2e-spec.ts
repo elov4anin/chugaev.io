@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular-pro App', () => {
+describe('sports-store App', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +9,6 @@ describe('angular-pro App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to ap!');
+    expect(page.getParagraphText()).toEqual('Welcome to ss!');
   });
 });
