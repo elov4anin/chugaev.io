@@ -29,7 +29,7 @@ var path = require('path');
 var newfile = require('gulp-file');
 
 var buildFolder = 'build';/*Папка сборки*/
-var srcNew = "new";
+var srcNew = "src";
 
 gulp.task('scripts', function () {
     return gulp.src('./src/js/app.js')
