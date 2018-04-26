@@ -1,0 +1,13 @@
+@@include('blocks/page-header.html', {
+    "page-title": "Перевод  <%=order.getId()%> с карты на карты - Центральная касса",
+    "jquery": "<script src='js/jquery-3.2.1.min.js'></script>",
+    "html5shiv": "<script src='js/html5shiv.min.js'></script>",
+    "respondjs": "<script src='js/respond.min.js'></script>"
+})
+@@include('blocks/card2card.html')
+@@include('blocks/payment_systems.html')
+@@include('blocks/page-footer.html', {
+    "cvc-window":"@@include('window/cvc-window.html')",
+    "error-window":"@@include('window/error-window.html')",
+    "myscript": "<script src='js/jquery.mask.min.js'></script><script src='js/swiper.min.js'></script><script src='js/script.min.js'></script>"
+})

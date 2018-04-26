@@ -1,0 +1,72 @@
+<section class="card2ck">
+  <h2 class="visually-hidden">Перевод на Кошелёк ЦК </h2>
+  <div class="card2ck__wrapper" id="wrap">
+    <form autocomplete="off">
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" id="slide1">
+          <div class="card2ck__form-card card2ck__form-card--front" id="cardFront">
+            <div class="card2ck__card-num-wrap">
+              <label class="card2ck__card-num-label" for="cardNum" >Номер карты</label>
+              <input class="card2ck__card-num" type="text" name="cardNum" id="cardNum" placeholder="Номер карты" maxlength="16"  autocomplete="off">
+            </div>
+            <div class="card2ck__card-date-wrap">
+              <label class="card2ck__card-date-label" for="month">Срок действия</label>
+              <input type="text" class="card2ck__card-date-month" id="month" maxlength="2" placeholder="MM"  pattern="[0-9]{2}" autocomplete="off" min="00" max="12">
+              <input type="text" class="card2ck__card-date-year" id="year"  maxlength="2" placeholder="ГГ"  pattern="[0-9]{2}" autocomplete="off" min="00" max="99">
+            </div>
+
+          </div>
+
+        </div>
+        <div class="swiper-slide" id="slide2">
+          <div class="card2ck__form-card card2ck__form-card--back" id="cardBack">
+            <div class="card2ck__black-rect"></div>
+            <div class="card2ck__dashed-rect">
+              <label class="card2ck__cvc-label" for="cvc">CVV2/CVC2 </label>
+              <input class="card2ck__cvc" type="text" maxlength="3" name="cvc" id="cvc" placeholder="CVC"  pattern="[0-9]{3}" min="000" max="999">
+              <input type="hidden" name="operation">
+              <input type="hidden" name="type">
+              <input type="hidden" name="form">
+              <input type="hidden" name="order">
+              <input type="hidden" name="exp">
+              <input type="hidden" name="holder">
+              <div class="card2ck__cvc-btn"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="card2ck__item-text-wrap swiper-pagination--init swiper-pagination" id="swpWrap">
+
+        <span class="card2ck__item-text card2ck__item-text--active swiper-pagination-bullet" >Номер карты <br class="card2ck__item-text-br"> и срок действия</span>
+        <span class="card2ck__item-text swiper-pagination-bullet">CVV/CVC</span>
+      </div>
+
+
+    <!--  &lt;!&ndash; If we need scrollbar &ndash;&gt;
+      <div class="swiper-scrollbar">
+      </div>-->
+
+    </div>
+
+    <p class="card2ck__transfer-text">
+      Перевод на Кошелёк ЦК <span class="card2ck__transfer-span"  id="toggleCard">№74602621</span>
+    </p>
+    <p class="card2ck__pay-text">
+      к оплате <span class="card2ck__pay-span">1550<sub>20</sub></span> рублей
+    </p>
+    <p class="card2ck__attention">Внимательно проверьте<br class="card2ck__attention-br-mobile"> номер кошелька.<br>
+      Данная операция<br class="card2ck__attention-br-mobile"> является безотзывной:<br class="card2ck__attention-br-mobile">
+      возврат средств не&nbsp;производится.</p>
+    <p class="card2ck__conditions"> Для карт некоторых банков существуют <br class="card2ck__conditions-br"><a class="card2ck__link" href="">особые условия</a></p>
+    <button class="card2ck__btn card2ck__btn--disabled" type="submit" id="btnTranslate">Перевести</button>
+    </form>
+  </div>
+  <!-- /.card2ck__wrapper -->
+</section>
+

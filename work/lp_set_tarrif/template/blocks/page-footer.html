@@ -1,0 +1,65 @@
+<script>
+    var w = window.screen.availWidth;
+    var container = document.querySelector(".container-fluid");
+    var contactsList = document.querySelector(".contacts__list");
+    var linksList = document.querySelector(".links__list");
+    var copy = document.querySelector(".copy");
+    var nav = {
+        nav: document.getElementById("sidebar"),
+        toggle:  document.getElementById("toggle"),
+        isOpenMenu: false,
+        openHideMenu: function() {
+            this.isOpenMenu = this.isOpenMenu === false ? true : false;
+            if (this.isOpenMenu) {
+                this.nav.classList.add("sidebar--open");
+            } else {
+                this.nav.classList.remove("sidebar--open")
+            }
+        },
+        click: function () {
+            this.toggle.addEventListener("click", this.openHideMenu.bind(this));
+        }
+    };
+
+    if (w <= 1367) {
+        contactsList.parentNode.removeChild(contactsList);
+        linksList.parentNode.removeChild(linksList);
+        copy.parentNode.removeChild(copy);
+        container.appendChild(contactsList);
+        container.appendChild(linksList);
+        container.appendChild(copy);
+        nav.click();
+
+    }
+
+    if (w<=747) {
+        swiper = {
+            classActive: "calc__type-btn--active",
+            operators: document.getElementById("operators").parentNode,
+            inetShop: document.getElementById("inetShop").parentNode,
+            taxi: document.getElementById("taxi").parentNode,
+            init: function () {
+                this.taxi.style.left = "-410px";
+                this.inetShop.style.left = "110px";
+
+            }
+        };
+    }
+
+    if (w<=479) {
+
+        var items = {
+            collection: document.querySelectorAll(".options__item"),
+            init: function () {
+                for (var i = 0; i < this.collection.length; i++) {
+                    this.collection[i].classList.add("options__item--hidden");
+                }
+            }
+        };
+        items.init();
+    }
+</script>
+@@ionslider
+<script src="js/script.js"></script>
+</body>
+</html>

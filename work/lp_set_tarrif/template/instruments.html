@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <title>Центральная касса - платежная система разработанная для такси и диспетчерских служб. Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.</title>
+  <meta name="keywords" content="прием платежей, абонентская плата, эквайринг для диспетчерсих служб, зеленая зона, биллинг платежей, интернет эквайринг, онлайн оплата, биллинговая система, бухгалтерия, оплата картой, оплата смс, электронные деньги, подключить оплату, оплата на сайте, платежная система, платежный сервис, выставить счет,  NetUP, LANBilling, UTM5, Carbon Billing, BGBilling, OSMP, Киберплат.">
+  <meta name="description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей">
+  <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel='stylesheet' href='css/style.min.css' type='text/css'/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ckassa">
+  <meta name="twitter:site" content="Центральная касса">
+  <meta name="twitter:domain" content="ckassa.ru">
+  <meta name="twitter:title" content="Центральная касса - платежная система разработанная для такси и диспетчерских служб">
+  <meta name="twitter:description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей.  Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.">
+  <meta name="twitter:image:src" content="http://ckassa.ru/lp/taxi/images/logo_link.png">
+  <meta name="twitter:url" content="http://ckassa.ru/lp/taxi/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Центральная касса - платежная система разработанная для такси и диспетчерских служб.">
+  <meta property="og:description" content="Центральная касса предоставляет полный комплекс услуг по приему, защите и обработке платежей.  Внедрение от 1 часа. Подключение бесплатно. Комиссию, по вашему выбору, оплачиваете вы или абонент.">
+  <meta property="og:url" content="http://ckassa.ru/lp/taxi/">
+  <meta property="og:site_name" content="Центральная касса">
+  <meta property="og:see_also" content="http://ckassa.ru/lp/taxi/">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="http://ckassa.ru/lp/taxi/images/logo_link.png">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="444">
+
+
+  <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+  @@include('blocks/sidebar.html', {
+  "instr-item-active": "nav__item--ic_settings-active",
+  "instr-link-active": "nav__link--active",
+  "pays-item-active": "",
+  "pays-link-active": "",
+  "options-item-active": "",
+  "options-link-active": "",
+  "tarif-item-active": "",
+  "tarif-link-active": ""
+  })
+  @@include('pages/page_instruments.html')
+</div>
+
+@@include('blocks/page-footer.html', {
+"ionslider": ""
+})

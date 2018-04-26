@@ -1,0 +1,192 @@
+.nav
+  &__toggle
+    display: none
+    bottom: 0
+    outline 0
+
+  &__list
+    margin-bottom: 0
+
+  &__item
+    position: relative
+
+    /*&:nth-child(2) .nav__link
+      padding-top: 18px
+      padding-bottom: 20px*/
+
+    &:before
+      position: absolute
+      content ""
+      top: 30px
+      top: 2.95vh
+      left: $lgSidebarPaddingLeft
+      width: 25px
+      height: 25px
+
+      background-repeat:no-repeat
+
+    &--ic_assessment
+      &:before
+        background-image: url("../images/ic_assessment.svg")
+
+    &--ic_assessment:active
+      &:before
+        background-image: url("../images/ic_assessment--hov.svg")
+
+    &--ic_assessment-active
+      &:before
+        background-image: url("../images/ic_assessment--hov.svg")
+
+    &--ic_settings
+      &:before
+        background-image: url("../images/ic_settings.svg")
+
+    &--ic_settings:active
+      &:before
+        background-image: url("../images/ic_settings--hov.svg")
+
+    &--ic_settings-active
+      &:before
+        background-image: url("../images/ic_settings--hov.svg")
+
+    &--ic_account
+      &:before
+        background-image: url("../images/ic_account.svg")
+
+    &--ic_account:active
+      &:before
+        background-image: url("../images/ic_account--hov.svg")
+
+    &--ic_account-active
+      &:before
+        background-image: url("../images/ic_account--hov.svg")
+
+    &--ic_payment
+      &:before
+        background-image: url("../images/ic_payment.svg")
+
+    &--ic_payment:active
+      &:before
+        background-image: url("../images/ic_payment--hov.svg")
+
+    &--ic_payment-active
+      &:before
+        background-image: url("../images/ic_payment--hov.svg")
+
+  &__link
+    display: block
+    padding-top: 28px
+    padding-top: 2.7vh
+    padding-left: 72px
+    padding-bottom: 28px
+    padding-bottom: 2.7vh
+
+    font-weight: 400;
+    line-height: normal;
+    font-size: 20px;
+    font-size: 2.11vh
+    letter-spacing: -0.02em;
+    text-decoration: none
+    color: #5A6176;
+
+    background transparent
+    cursor pointer
+
+    &:hover
+      background: linear-gradient(101.31deg, rgba(196, 196, 196, 0.7) 0%, rgba(196, 196, 196, 0) 100%);
+
+    &:active
+      font-weight: 500
+      color #36405E
+      border-left 3px solid #348BED
+      padding-left: 68px
+      background: linear-gradient(101.31deg, rgba(196, 196, 196, 0.7) 0%, rgba(196, 196, 196, 0) 100%);
+
+    &--active
+      font-weight: 500
+      color #348BED
+      border-left 3px solid #348BED
+      padding-left: 68px
+      background: linear-gradient(101.31deg, rgba(52, 139, 237, 0.175) 0%, rgba(52, 139, 237, 0) 100%);
+
+/*
+
+@media screen and (max-height: $mdHeight )
+  .nav
+    &__item
+      &:before
+        top: 18px
+
+    &__link
+      padding-top: 15px
+
+      padding-bottom: 15px
+*/
+
+
+@media screen and (max-width: $desktopWidth)
+  .nav
+    position: relative
+    display: flex
+    flex-direction row
+    &__toggle
+      position: relative;
+      top: 15px;
+      right: 25px;
+
+      z-index: 1;
+      display: block;
+      width: 44px;
+      height: 50px;
+      font-size: 0;
+      background: transparent;
+      cursor: pointer;
+      border: none;
+
+      &:before
+        content: " ";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 25px;
+        height: 3px;
+        background-color: #348bed;
+        box-shadow: 0 7px 0 0 #348bed, 0 14px 0 0 #348bed;
+
+    &__list
+          position: absolute
+          z-index 100
+          top: 85px
+          display: none
+          width: 100%
+          background: linear-gradient(161.27deg, #f5f5f5 0%, #fff 100%);
+
+   /* &__item
+      &:before
+        top: 30px*/
+
+
+/*@media screen and (max-width: $desktopWidth17)
+  .nav
+    &__item
+      &:before
+        top: 40px*/
+
+
+@media screen and (max-width: $mobileWidth)
+  .nav
+    &__list
+      top: 54px
+
+    &__item
+      &:before
+        top: 13px
+
+    &__link
+      padding-top: 15px
+      padding-bottom: 15px
+
+
+
+
+

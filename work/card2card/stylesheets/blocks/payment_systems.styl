@@ -1,0 +1,341 @@
+.ps
+  background-color: #ededef //@todo переделать в свг спрайт
+
+
+
+  &__wrapper
+    wrapper-fluid();
+    overflow hidden
+
+
+
+
+  &__list
+    padding 33px 20px
+    font-size: 0
+
+
+  &__item
+    position: relative
+    width: 135px
+
+
+
+    display: inline-block
+    vertical-align top
+
+    height: 105px
+    /*margin-right: 15px*/
+
+    &:before
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -8px;
+      right: 0;
+      bottom: 0;
+
+      margin: auto;
+
+
+      /*filter: gray;
+      filter: grayscale(100%)  ;*/
+      opacity 0.5
+
+      background-repeat: no-repeat;
+
+
+
+    &--visa
+      &:before
+        width: 120px;
+        height: 45px;
+        margin-top: 29px;
+        margin-left: -5px;
+        background-image url(../img/png-sprite/icon-visa.png);
+        background-image: url(../img/pay-system/visa.svg), none;
+        background-size 115px 45px
+        background-position: 0px 0px;/* 2px -33px*/
+
+    &--verified-visa
+      &:before
+        left: -10px;
+        top: -4px;
+        width: 120px;
+        height: 52px;
+
+        background-image url(../img/png-sprite/icon-virified-visa.png);
+
+        background-image: url(../img/pay-system/visa-verified.svg), none;
+        background-size 110px 47px
+        background-position: 0px 0px;
+        /*background-position: 2px -164px;*/
+
+    &--mscard
+      &:before
+        width: 77px;
+        height: 60px;
+
+
+        margin-top: 25px
+        margin-left: 43px
+
+        background-image url(../img/png-sprite/icon-mscard.png);
+        background-image: url(../img/pay-system/mscard.svg), none;
+        background-size auto 50px
+
+        background-position: 0px 0px;
+
+       /* background-position: 0px -216px;*/
+
+    &--mscard-sc
+      &:before
+        width: 170px;
+        height: 60px;
+        margin-top: 24px;
+        margin-left: 17px;
+        background-image url(../img/png-sprite/icon-mscard-securecode.png);
+        background-image: url(../img/pay-system/mscard-sc.svg), none;
+        background-size auto 50px
+
+        background-position: 0px 0px;
+        /*background-position: 1px -114px;*/
+
+    &--mir
+      &:before
+
+        width: 116px;
+        height: 35px;
+        margin-left: -26px;
+        margin-top: 37px;
+
+        background-image url(../img/png-sprite/icon-mir.png);
+        background-image: url(../img/pay-system/mir.svg), none;
+        background-size auto 32px
+
+        background-position: 0px 0px;
+
+        /*background-position: 1px 1px;*/
+
+    &--mir-accept
+      &:before
+        width: 160px;
+        height: 65px;
+        margin-top: 23px
+        margin-left: 5px
+
+        background-image url(../img/png-sprite/icon-mir-accept.png);
+        background-image: url(../img/pay-system/mir-accept.svg), none;
+        background-size auto 57px
+
+        background-position: 0px 0px;
+
+        /*background-position: 0px -320px;*/
+
+    &--pci-dss
+      &:before
+
+        width: 247px;
+        height: 95px;
+        margin-top: 29px
+        margin-left: 45px
+
+        background-image  url(../img/png-sprite/icon-pci-dss.png);
+        background-image: url(../img/pay-system/pci-dss.svg), none;
+        background-size auto 50px
+
+        background-position: 0px 0px;
+       /* background-position: 0 -266px;*/
+
+
+/*
+
+@media (min-width: tablet-widths)
+  .ps
+    &__item
+      width: 135px
+
+      &:before
+        transform scale(1)
+      &--visa
+        &:before
+          !*margin-left: -3px*!
+
+      &--mscard
+        &:before
+          !*margin-top: 23px
+          margin-left: 43px*!
+
+      &--mscard-sc
+        &:before
+          margin-top: 18px;
+          margin-left: 17px;
+
+      &--mir
+        &:before
+          margin-left: -26px;
+          margin-top: 37px;
+
+      &--mir-accept
+        &:before
+          margin-top: 23px
+          margin-left: 5px
+
+      &--pci-dss
+        &:before
+          margin-left: 45px
+*/
+
+@media (min-width: desktop-widths)
+  .ps
+    &__list
+      display: flex
+      justify-content space-around
+      padding: 57px 0;
+
+    &__item
+
+      &--visa
+        order 1
+        &:before
+          margin-top: 37px;
+          margin-left: -8px;
+
+      &--mscard
+        order 2
+        &:before
+          margin-left: -2px;
+          margin-top: 30px;
+
+      &--mir
+        order 3
+        &:before
+          margin-left: -40px;
+          margin-top: 40px;
+
+      &--verified-visa
+        order 4
+        &:before
+          margin-left: -24px;
+          margin-top: 33px;
+
+
+      &--mscard-sc
+          order 5
+          &:before
+            margin-left: -21px;
+            margin-top: 30px;
+
+      &--mir-accept
+        order 6
+        &:before
+          margin-left: 13px;
+
+      &--pci-dss
+        order 7
+        &:before
+          margin-left: 35px;
+          margin-top: 33px;
+
+          background-size: auto 45px;
+
+
+@media (min-width:615px) and (max-width:638px)
+  .ps
+    &__item
+      width: 125px
+
+
+@media (max-width:554px)
+  .ps
+    &__list
+      padding: 0
+      padding-right: 20px
+
+    &__item
+      width: 115px
+      transform scale(0.7)
+
+@media (max-width:494px)
+  .ps
+    &__item
+      height: 90px
+
+      &--mscard-sc
+        &:before
+          margin-left: 0
+          transform scale(0.9)
+      &--mir
+        &:before
+          margin-left: 10px
+
+      &--mir-accept
+        &:before
+          margin-left: 10px
+
+      &--pci-dss
+        &:before
+          margin-left: 10px
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5)
+  .ps
+
+    &__item
+      width: 115px
+      transform scale(1)
+      &:before
+        /*background-size 138px 438px
+
+        background-image: url(../img/png-sprite@2x.png);*/
+
+        /*&--visa
+          &:before
+            width: 120px;
+            height: 35px;
+            margin-top: 30px;
+            margin-left: 0px;
+            background-position: 2px -33px;*/
+
+      &--verified-visa
+        &:before
+          left: -0px;
+
+
+      &--mscard
+        &:before
+
+          margin-left: 30px;
+
+
+
+/*&--mscard-sc
+  &:before
+    width: 134px;
+    height: 56px;
+    margin-top: 20px
+    margin-left: 0px
+
+    background-position: -139px 8px;
+
+&--mir
+  &:before
+    margin-left: 0
+    width: 116px;
+    height: 35px;
+
+    background-position: 1px -109px;
+
+&--mir-accept
+  &:before
+    margin-left: 0
+    width: 137px;
+    height: 56px;
+
+    background-position: 0 0;
+
+&--pci-dss
+  &:before
+    margin-left: 0
+    width: 137px;
+    height: 54px;
+    background-position: 0 -56px;*/

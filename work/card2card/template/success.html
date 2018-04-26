@@ -1,0 +1,15 @@
+@@include('blocks/page-header.html', {
+  "page-title": "Успешно - Перевод  <%=order.getId()%>  с карты на кошелек - Центральная касса",
+  "jquery": "",
+  "html5shiv": "<script src='js/html5shiv.min.js'></script>",
+  "respondjs": "<script src='js/respond.min.js'></script>"
+
+})
+@@include('blocks/success.html')
+@@include('blocks/payment_systems.html')
+@@include('blocks/page-footer.html', {
+  "cvc-window":"",
+  "error-window":"",
+  "myscript": "<script src='js/script_success.min.js'></script>"
+})
+

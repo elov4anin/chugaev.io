@@ -1,0 +1,1026 @@
+.card2ck
+  &__wrapper
+    wrapper-fluid();
+    overflow-x hidden
+
+    padding-top: 30px
+
+  &__list
+    /*margin-bottom: 25px*/
+    margin-bottom: 65px
+    padding-left: 0px
+  /*9*/
+
+  &__item
+    margin: 0 auto /*&:nth-child(1)
+      display: block*/
+    &:nth-child(2)
+      display: none
+
+  &__form-card
+
+    box-sizing border-box
+    width: 410px; /*350*/
+    height: 269px;
+    margin: 0 auto
+    margin-bottom: 45px /*80*/
+    padding-top: 99px
+    padding-left: 33px /*25*/
+
+    border-radius: 17px;
+    background-color: rgb(253, 253, 253);
+    background-image: none;
+    background-repeat: no-repeat
+    background-size: auto
+    background-position: 0 0
+
+    box-shadow: 0 10px 40px 0 rgba(90, 97, 118, 0.3); /*25*/
+
+    transition all 0.3s ease;
+
+    &--visa
+      /*background: url("../img/pay-system/visa.png") no-repeat, linear-gradient(to bottom right, #FFFFFF 60%, #cddeeb 100%)*/
+      /*background-position: 290px 200px, 0 0*/
+      /*background: url("../img/pay-system/visa.png") no-repeat, url("../img/pay-system/visa-bg.png") no-repeat
+      background-size: auto
+      background-position: 290px 200px, 64px 42px*/
+
+      background-image: url("../img/pay-system/visa-bg-2.png")
+
+
+    &--mir
+      /*background: url("../img/pay-system/mir.png") no-repeat, linear-gradient(to bottom right, #FFFFFF 60%, #B7DDCB 100%)
+      background-size: auto
+      background-position: 290px 200px, 0 0*/
+      /* background: url("../img/pay-system/mir.png") no-repeat, url("../img/pay-system/mir-bg.png") no-repeat
+      background-size: auto
+      background-position: 290px 200px, 64px 42px*/
+      background-image: url("../img/pay-system/mir-bg.png")
+
+
+    &--mastercard
+      /*background: url("../img/pay-system/mastercard.png") no-repeat, linear-gradient(to bottom right, #FFFFFF 60%, rgba(246, 157, 27, 0.4) 100%)
+      background-size: auto
+      background-position: 320px 190px, 0 0*/
+      /*background: url("../img/pay-system/mastercard.png") no-repeat, url("../img/pay-system/ms-bg.png") no-repeat
+      background-size: auto
+      background-position: 320px 190px, 10px 0px*/
+      background-image: url("../img/pay-system/mscard-bg.png")
+
+
+    &--maestro
+      background-image: url("../img/pay-system/maestro-bg.png")
+
+
+    &--no-validate
+      background-image: linear-gradient(to bottom right, #FFFFFF 60%, #fce6e7 100%)
+
+    &--back
+      position: relative;
+
+  &__card-num
+    box-sizing border-box
+    width: 340px
+    height: 50px
+    /*padding-top: 5px*/
+    padding-left: 13px
+
+    font-size: 28px;
+    font-family: "Roboto";
+    font-weight: 400
+
+    border-width: 1px;
+    border-color: rgb(155, 155, 155);
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    color: #5a6176
+
+    &--no-validate
+      border-color: #f84850
+
+    &--success
+      border-color: rgb(155, 155, 155);
+
+    &::placeholder
+
+      font-size: 28px; /*28*/
+      font-family: "Roboto";
+      font-weight: 400
+      color: rgb(90, 97, 118);
+      line-height: 1.2;
+      letter-spacing: -0.025em
+      opacity 1
+
+    &::-webkit-input-placeholder
+      line-height: 38px
+
+    &::-moz-placeholder
+      line-height: 44px
+
+    &:focus
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+
+    &:touch
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+  &__card-num-wrap
+    position: relative
+    text-align: left;
+
+  &__card-date-wrap
+    position: relative
+    margin-top: 37px
+    text-align: left;
+    font-size: 0;
+
+  &__card-num-label
+    display: none
+    position: absolute
+    top: -27px
+
+    font-size: 21px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    color: #3079ff;
+
+    &--show
+      display: inline
+
+    &--no-validate
+      display: inline
+      color #f84850
+
+    &--success
+      display: inline
+      color rgb(65, 197, 102);
+
+  &__card-date-label
+    display: none
+    position: absolute
+    top: -27px
+    font-size: 21px;
+    font-family: "Roboto";
+    line-height: 1.2;
+    color: #3079ff;
+    letter-spacing: -0.01em;
+
+    &--show
+      display: inline
+
+    &--no-validate
+      display: inline
+      color #f84850
+
+    &--success
+      display: inline
+      color rgb(65, 197, 102);
+
+  &__card-date-month
+    box-sizing border-box
+    width: 72px;
+    height: 50px;
+    /*padding-top: 3px;*/
+
+    padding-left: 13px;
+
+    font-size: 28px;
+    letter-spacing: -0.025em;
+    font-family: "Roboto";
+    font-weight: 400
+    color: rgb(90, 97, 118);
+    line-height: 1.2;
+
+
+    border-width: 1px;
+    border-color: rgb(155, 155, 155);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    &--no-validate
+      border-color: #f84850
+      &:focus
+        outline none
+        border-width: 1px;
+        border-color: #f84850
+        border-style: solid;
+        border-radius: 3px;
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25)
+
+    &--success
+      border-color: rgb(155, 155, 155);
+
+    &::placeholder
+      font-size: 22px;
+      font-family: "Roboto";
+      font-weight: 400
+      color: #5a6176;
+      line-height: 46px;//@todo Проверить сафари и огрызки
+      letter-spacing: -0.025em
+      opacity 1
+
+    &::-webkit-input-placeholder
+      line-height: 44px
+
+    &::-moz-placeholder
+      line-height: 47px
+
+    &:-ms-input-placeholder
+      padding-left: 15px !important
+      line-height: 44px !important
+
+    &:focus
+      position: relative
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+      z-index 10
+
+    &:touch
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+  &__card-date-year
+    position: absolute;
+    top: 0
+    left: 71px;
+    box-sizing: border-box;
+    width: 72px;
+    height: 50px;
+    /*padding-top: 3px;*/
+    padding-left: 14px;
+
+    font-size: 28px;
+    font-family: "Roboto";
+    font-weight: 400
+    color: rgb(90, 97, 118);
+    line-height: 1.2;
+    letter-spacing: -0.025em
+    border-width: 1px;
+    border-color: rgb(155, 155, 155);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+    &--no-validate
+      border-color: #f84850
+      &:focus
+        outline none
+        border-width: 1px;
+        border-color: #f84850
+        border-style: solid;
+        border-radius: 3px;
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+    &--success
+      border-color: rgb(155, 155, 155);
+
+    &::placeholder
+      /*padding-top: 3px*/
+      font-size: 22px;
+      font-family: "Roboto";
+      font-weight: 400
+      color: #5a6176;
+      line-height: 48px;
+      letter-spacing: -0.025em
+      opacity 1
+
+    &::-webkit-input-placeholder
+      line-height: 44px
+
+    &::-moz-placeholder
+      line-height: 48px
+
+
+
+    &:focus
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+    &:touch
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+  &__item-text-wrap
+    display: flex
+    justify-content space-between
+    padding-left 6px
+    padding-right: 5px
+
+  &__item-text
+
+    font-size: 19.43px;
+    font-family: "Roboto";
+    color: rgb(90, 97, 118);
+    line-height: 1.2;
+    line-height: 0.2;
+    text-align: center;
+    opacity 0.2
+
+    transition opacity 1s ease
+
+    cursor pointer
+
+    &:nth-child(2)
+      margin-left: 100px
+      margin-left: 0
+      margin-right: 156px/*156*/
+      /*12*/
+
+    &--active
+      opacity 1
+
+    &--no-active
+      transform translateX(-165px)
+
+  &__black-rect
+    position: absolute
+    top: 40px
+    left: 0
+    right: 0
+    background-color: rgb(187, 187, 187);
+    width: 100%;
+    height: 64px;
+
+  &__dashed-rect
+    border-radius: 3px;
+    background-color: rgb(249, 249, 249);
+    background-image: url("../img/bg-dashed-rect.png");
+
+    position: absolute;
+    top: 150px
+    left: 0
+    right: 0
+    z-index 1/*10*/
+
+    width: 342px;
+    height: 61px;
+    margin: 0 auto
+
+  &__cvc-label
+    display: none
+    position: absolute
+    top: -23px
+    right: 5px
+
+    font-size: 21px;
+    font-family: "Roboto";
+    color: #3079ff;
+    line-height: 1.2;
+
+    &--show
+      display: inline
+
+    &--no-validate
+      display: inline
+      color #f84850
+
+    &--success
+      display: inline
+      color rgb(65, 197, 102);
+
+  &__cvc-btn
+    display: block
+    position: absolute
+    top: 21px;
+    right: 13px;
+
+    z-index: 7;
+
+    box-sizing border-box
+
+    width: 20px
+    height: 20px
+    border-radius 50%
+    border 1px solid rgb(155, 155, 155)
+    cursor pointer
+
+    &:after
+      content "?"
+      position: absolute
+      top: 0
+      left: 5px
+      font-size: 16px
+      font-weight: 700
+      color: rgb(155, 155, 155)
+
+  &__cvc
+    position: absolute;
+    right: 5px;
+    top: 5px;
+
+    box-sizing border-box
+    width: 98px;
+    height: 50px;
+    z-index: 6;
+
+    padding-left: 15px
+    padding-top: 0
+
+    font-size: 28px;
+    color: #5a6176
+
+    border-width: 1px;
+    border-color: rgb(155, 155, 155);
+    border-style: solid;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+
+    &--no-validate
+      border-color: #f84850
+      &:focus
+        outline none
+        border-width: 1px;
+        border-color: #f84850
+        border-style: solid;
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+    &--success
+      border-color: rgb(155, 155, 155);
+
+    &::placeholder
+
+      font-size: 22px;
+      font-family: "Roboto";
+      font-weight: 400
+      color: #5a6176;
+      line-height: 1.3;
+
+      opacity 1
+
+    &::-webkit-input-placeholder
+      line-height: 38px
+
+    &:-ms-input-placeholder
+      position: relative
+      top: 6px
+      left: 115px
+      font-size: 22px;
+      font-family: "Roboto";
+      font-weight: 400
+      color: #5a6176;
+      line-height: 48px;
+      opacity 1
+
+    &::-moz-placeholder
+      line-height: 48px
+
+    &:focus
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+    &:touch
+      outline none
+      border-width: 1px;
+      border-color: rgb(48, 121, 255);
+      border-style: solid;
+      border-radius: 3px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 5px 10px 0px rgba(48, 121, 255, 0.25);
+
+  &__transfer-text
+    position: relative
+
+    padding-bottom: 15px
+
+    text-align: center
+    font-size: 23.316px;
+    font-family: "Roboto";
+    /*line-height: 1.2*/
+    color: rgb(175, 175, 175);
+
+    line-height: 1;
+    top: 61px;
+
+    box-shadow: 0 15px 40px -15px rgba(90, 97, 118, 0.3);
+    border-bottom-left-radius 15px
+    border-bottom-right-radius 15px
+
+    &:after
+      content "";
+      position: absolute
+      bottom: -10px
+      right: 0
+      left: 0
+
+      margin auto
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #f5f5f5 transparent transparent transparent;
+
+  &__transfer-span
+    color: rgb(74, 133, 197);
+
+  &__pay-text
+    position: relative /*transform scale(0.8)
+
+    margin-bottom: 97px
+
+    font-size: 28px;*/
+    font-family: "Roboto";
+    color: rgb(90, 97, 118);
+    line-height: 1.2;
+
+    left: 0px;
+    margin-top: 97px
+    margin-bottom: 101px;
+    font-size: 36px;
+    transform scale(1) /*&:before
+      content ""
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -53px
+
+      width: 100%
+      height: 2px
+
+      border-bottom: 3px dotted #c6c8cf;*/
+
+    &:after
+      content ""
+      position: absolute
+      right: 0 /*top: 65px
+      left: 12px
+
+      bottom: -118px*/
+
+      top: 130px;
+      left: -6px;
+      bottom: 0;
+
+      width: 63px;
+      height: 65px;
+      margin: auto
+
+      background-image: url("../img/png-sprite/icon-attention.png");
+      background-repeat: no-repeat;
+      background-size auto 65px
+      background-position: 0px 0px;
+      /*background-size 138px 438px
+      background-position: 3px -379px;*/
+
+    &:before
+      content ""
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -41px/**/
+
+      width: 100%
+      height: 2px
+
+
+      border-bottom: 2px dotted #c6c8cf;
+      border-radius: 2px;
+
+  &__pay-span
+    position: relative
+    /*top: 0*/
+
+    display: inline-block /*margin-left: 20px;!*46*!
+    margin-right: 10px;!*51*!*/
+
+    font-size: 60px;
+    font-family: "Roboto";
+    color: rgb(68, 135, 214);
+    line-height: 1.2;
+
+    top: 9px
+    margin-left: 47px;
+    margin-right: 70px;
+
+    sub
+      top: 0
+      left: -10px;
+      font-size: 41px;
+
+  &__attention
+    font-size: 24px;
+    font-family: "Roboto";
+    color: rgb(175, 175, 175);
+    line-height: 1.2;
+    text-align: center;
+
+    width: 513px;
+
+    position: relative;
+    top: -4px;
+
+    /*width: 100%;*/
+    margin: 0 auto
+
+  &__conditions
+    /*margin-top: 23px;*/
+    margin-bottom: 48px
+    margin-top: 19px;
+
+    font-size: 20px;
+    font-weight: 500
+    line-height: 1.2;
+    text-align: center;
+    color: rgb(116, 116, 116);
+
+  &__conditions-br
+    display: none
+
+  &__attention-br-mobile
+    display: none
+
+  &__link
+    color: rgb(68, 135, 214);
+
+  &__btn
+    width: 353px;
+    height: 80px;
+    margin: 0 auto
+
+    margin-bottom: 65px
+    margin-left: -6px
+
+    font-size: 35.611px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center
+
+    background-color: rgb(251, 182, 1);
+    box-shadow: 0 15px 30px 0 rgba(251, 182, 1, 0.3);
+    outline none
+    border 1px solid transparent;
+    border-radius 40px
+
+    cursor pointer
+
+    &:hover
+      /*box-shadow: 0 5px 60px 0 rgba(251,182,1,.8);*/
+      box-shadow: 0px 15px 60px 0px rgba(251, 182, 1, 0.7);
+
+    &:active
+      background-color: rgb(251, 171, 0);
+      box-shadow: 0 15px 30px 0 rgba(251, 182, 1, 0.3);
+
+    &--disabled
+      opacity: 0.4;
+      color: rgb(255, 255, 255);
+      line-height: 1.2;
+      background-color: rgb(251, 182, 1);
+      box-shadow: 0px 15px 30px 0px rgba(251, 182, 1, 0.4);
+
+
+
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination
+    left: 26% /*23*/
+
+    &--init
+
+      transform: translateX(-300px); /*-225*/
+      transition-duration: 1s
+      transition transform 1s
+
+    &--left
+      transform: translateX(0px);
+      transition-duration: 1s
+      transition transform 1s
+
+@media (min-width:580px)
+  .card2ck
+    &__pay-text
+      &:after
+        top: 159px;
+      &:before
+        bottom: -45px
+
+
+@media (min-width: tablet-widths)
+  .card2ck
+    &__list
+      margin-bottom: 65px
+
+    &__form-card
+      transform scale(1)
+      width: 410px;
+      padding-left: 33px
+      margin-bottom: 45px
+
+    &__card-num
+      width: 340px
+
+    &__card-date-year
+      font-size: 28px
+
+    &__transfer-text
+      line-height: 1;
+      top: 61px;
+
+    /*&__pay-text
+      &:before
+        bottom: -53px
+      &:after
+        top: 155px;*/
+
+
+    &__pay-span
+      top: 9px
+      margin-left: 30px;
+      margin-right: 20px;
+
+    &__attention
+      width: 513px;
+      font-size: 24px;
+      position: relative;
+      top: -4px;
+
+    &__conditions
+      margin-top: 19px;
+
+    &__attention-br-mobile
+      display: none
+
+    &__btn
+      margin-left: -6px
+
+    /*&__item-text
+      line-height: 0.2;
+      &:nth-child(2)
+        margin-left: 0
+        margin-right: 156px*/
+
+  /*12*/
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination
+    left: 26% !important
+    &--init
+
+      transform: translateX(0px) !important;
+      transition-duration: 1s
+      transition transform 1s
+
+    &--left
+      transform: translateX(-250px) !important;
+      transition-duration: 1s
+      transition transform 1s
+
+@media (min-width: desktop-widths)
+  .swiper-container
+    padding-top: 30px
+    overflow visible
+
+  .swiper-slide
+    width: 50%
+    top: -15px/*30*/
+    &:nth-child(2)
+      z-index -1
+
+  #cardFront
+    position: relative
+    left: 195px
+
+  #cardBack
+    position: relative
+    left: -186px;
+    top: 43px;
+    z-index -1
+  @-moz-document url-prefix()
+    input[type=password]
+      font-size: 21px
+
+  .card2ck
+    &__wrapper
+      padding-top: 6px;
+    &__form-card
+      padding-left: 35px;
+      margin-bottom: -24px;
+
+    &__item-text-wrap
+      display: none
+
+    &__dashed-rect
+      top: 138px
+
+    &__cvc
+      width: 101px;
+      &::placeholder
+        top: 1px
+        left: 2px
+        font-size: 22px;
+
+
+      &:-ms-input-placeholder
+        top: 5px
+        left: 114px
+
+    &__cvc-btn
+      top: 23px;
+      right: 12px;
+
+      width: 17px;
+      height: 17px;
+
+      &:after
+        font-size: 14px;
+
+    &__item-text
+      display: none
+
+    &__transfer-text
+      width: 54%
+      margin-right: auto
+      margin-left: auto
+
+      box-shadow none
+      position: relative
+
+      &:after
+        position: absolute
+        content ""
+        left: 4px;
+        opacity: 0.4;
+        bottom: -74px;
+        z-index: -1;
+        width: 600px;
+        height: 70px;
+        background-image: url("../img/arrow-shadow.png");
+        background-repeat:no-repeat
+        background-position: 0 0
+
+    &__pay-text
+      margin-top: 86px;
+
+      /*font-size: 44px;*/
+      top: 0px;
+
+      left: 0/*26px*/
+      margin-bottom: 85px;
+      &:after
+        left: 10px;
+        top: 85px !important
+        bottom: auto
+      &:before
+        bottom: -47px !important
+
+    &__pay-span
+      left: -37px;
+      top: 8px
+      margin-left: 70px;
+      margin-right: 0px;
+      /*font-size: 74px;*/
+      sub
+        left: -13px;
+    /*font-size: 46px;*/
+
+    &__attention
+      width: 100%
+      left: 5px;
+
+    &__conditions
+      margin-top: 6px;
+      margin-bottom: 29px;
+      margin-left: 15px;
+
+    &__btn
+      margin-bottom: 95px;
+      margin-left: 6px;
+
+    &__card-date-month
+      &::placeholder
+        padding-left: 2px
+        letter-spacing: 0.055em
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5)
+  .card2ck
+    &__pay-text
+      &:after
+        background-image: url("../img/png-sprite/icon-attention@2x.png");
+
+
+@media (max-width:580px)
+  .card2ck
+    &__pay-text
+      font-size: 28px
+
+      /*&:after
+        top: 135px;*/
+
+    &__pay-span
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 48px;
+
+
+
+
+@media (max-width:640px)
+
+  .card2ck .swiper-pagination-fraction--init, .card2ck .swiper-pagination-custom--init, .card2ck .swiper-container-horizontal > .swiper-pagination
+
+    &--init
+      transform: translateX(0px) !important;
+
+    &--left
+      transform: translateX(-250px) !important;
+
+
+@media (max-width:600px)
+  .card2ck .swiper-pagination-fraction--init, .card2ck .swiper-pagination-custom--init, .card2ck .swiper-container-horizontal > .swiper-pagination
+
+    &--init
+      transform: translateX(0px) !important;
+
+    &--left
+      transform: translateX(-275px) !important;
+
+@media (max-width:536px)
+  .card2ck
+    &__item-text-wrap
+      bottom: -40px !important;
+    &__item-text
+      line-height: 1.2
+
+    &__item-text-br
+      display: inline-block
+
+    &__attention
+      width: 100%
+      font-size: 20px
+      padding-left: 10px
+      padding-right: 10px
+
+    &__conditions-br
+      display: inline-block
+
+  .card2ck .swiper-pagination-fraction--init, .card2ck .swiper-pagination-custom--init, .card2ck .swiper-container-horizontal > .swiper-pagination
+
+    &--init
+      transform: translateX(0px) !important;
+
+    &--left
+      transform: translateX(-220px) !important;
+
+@media (max-width:433px)
+  .card2ck
+    &__pay-span
+      font-size: 38px
+      top: 3px;
+
+      sub
+        left: -7px
+        font-size: 30px;
+  .card2ck .swiper-pagination-fraction--init, .card2ck .swiper-pagination-custom--init, .card2ck .swiper-container-horizontal > .swiper-pagination--init
+    transform: translateX(130px);

@@ -1,0 +1,24 @@
+<svg width="41" height="40" viewBox="0 0 41 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>facebook</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(193 -226)">
+<g id="facebook">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-192.2 226)" fill="#4C85C5"/>
+</g>
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(-182.632 237.678)" fill="#FFFFFF"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(-177.6 240.835)" fill="#C7DFEB"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M -1.79036e-06 20C -1.79036e-06 8.95467 8.95467 7.48698e-06 20 7.48698e-06C 31.0453 7.48698e-06 40 8.95467 40 20C 40 31.0453 31.0453 40 20 40C 8.95467 40 -1.79036e-06 31.0453 -1.79036e-06 20Z"/>
+<path id="path1_fill" d="M 19.264 0.589979L 16.2171 15.9517C 16.2171 15.9517 15.7912 17.0161 14.6195 16.5047L 7.58842 11.1143L 5.03167 9.87972L 0.728262 8.43047C 0.728262 8.43047 0.0678834 8.19596 0.0036336 7.68462C -0.0606162 7.17327 0.748799 6.89639 0.748799 6.89639L 17.8578 0.185257C 17.8585 0.184594 19.264 -0.432719 19.264 0.589979Z"/>
+<path id="path2_fill" d="M 2.01625 12.6222C 2.01625 12.6222 1.81091 12.603 1.55524 11.7935C 1.30023 10.9835 -1.7384e-06 6.72313 -1.7384e-06 6.72313L 10.3336 0.161012C 10.3336 0.161012 10.9298 -0.201303 10.9086 0.161012C 10.9086 0.161012 11.0152 0.224613 10.6959 0.52268C 10.3767 0.821408 2.57927 7.83061 2.57927 7.83061"/>
+</defs>
+</svg>

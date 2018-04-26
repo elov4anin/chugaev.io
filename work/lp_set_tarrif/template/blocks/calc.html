@@ -1,0 +1,28 @@
+<div class="calc">
+  <div class="calc__comission" onclick="btnCommission.click(event)">
+    <button class="calc__comission-btn calc__comission-btn--active" id="comissionSupplier">Комиссия <br>с&nbsp;поставщика услуги</button>
+    <button class="calc__comission-btn" id="comissionPayer" >Комиссия <br>с&nbsp;плательщика</button>
+  </div>
+ <div class="calc__type-wrap">
+     <ul class="calc__type-list" onclick="bthTypes.click(event)" id="caclList">
+    <li class="calc__type-item ">
+      <button class="calc__type-btn calc__type-btn--active"  id="operators" >Операторы связи</button>
+    </li>
+    <li class="calc__type-item">
+      <button class="calc__type-btn" id="inetShop">Интернет-магазины</button>
+    </li>
+    <li class="calc__type-item">
+      <button class="calc__type-btn" id="taxi">Такси</button>
+    </li>
+  </ul></div>
+  <div class="calc__calculation">
+    <div class="calc__calculation-panel" id="calcPanel">
+      @@include('blocks/range.html')
+    </div>
+    <div class="calc__calculation-result">
+      @@include('blocks/calc_result.html')
+    </div>
+
+  </div>
+
+</div>

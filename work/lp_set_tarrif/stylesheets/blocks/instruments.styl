@@ -1,0 +1,171 @@
+.instruments
+  &__list
+    display: flex
+    flex-wrap wrap
+
+  &__item
+    position: relative
+
+    /* width: 470px*/
+    width: 48%;
+    /*min-height 180px*/
+    height: 199px
+    background: #F2F7FB;
+    border-radius: 12px;
+    margin: 10px
+    padding: 20px
+    padding-left: 150px
+
+    text-align: left
+
+    &:after
+      content: ''
+      position: absolute
+      width: 1px;
+      height: 182px;
+      left: 128px;
+      top: 8px;
+
+      border-right:2px dotted #C4C4C4
+      opacity:0.4
+
+    &:before
+      position: absolute
+      content ""
+      top: 75px
+      left: 33px
+
+
+
+      background-repeat:no-repeat
+
+    &--autopays
+      &:before
+        left: 36px
+        width: 63px
+        height: 59px
+
+        background-image: url("../images/icons_autopays.svg");
+
+    &--invoicing
+      &:before
+        left: 28px
+        width: 74px
+        height: 58px
+
+        background-image: url("../images/icons_invoicing.svg");
+
+    &--card
+      &:before
+
+        width: 64px
+        height: 57px
+        background-image: url("../images/icons_card.svg");
+
+    &--check
+      &:before
+        left: 33px
+        width: 68px
+        height: 68px
+        background-image: url("../images/icons_check.svg");
+
+    &--service
+      &:before
+        left: 28px
+        width: 71px
+        height: 46px
+        background-image: url("../images/icons_service.svg");
+
+    &--guard
+      &:before
+        left: 37px
+        top: 65px
+        width: 56px
+        height: 66px
+        background-image: url("../images/icons_guard.svg");
+
+
+  &__header
+    margin-top: 0
+    margin-bottom: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+
+    color: #5A6176;
+
+  &__text
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+
+    color: #5A6176;
+
+  &__count
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+
+    color: #348BED;
+
+
+@media screen and (max-width: $desktopWidth17)
+  .instruments
+    &__item
+      width: 490px
+      min-height: 200px
+      margin-right: auto
+      margin-left: auto
+
+@media screen and (max-width: $mobileWidth)
+  .instruments
+    &__header
+      font-size: 20px
+
+    &__text
+      font-size: 12px
+
+
+
+    &__item
+      padding-bottom: 10px
+      padding-top: 10px
+      padding-left: 85px
+      padding-right: 5px;
+      &:after
+        display: none
+
+      &:before
+
+        background-size: 62px
+
+      &--autopays:before
+        left: 10px;
+
+      &--invoicing:before
+        left: 10px;
+
+      &--card:before
+        left: 10px
+
+      &--check:before
+        left: 10px;
+        top: 70px;
+
+      &--service:before
+        left: 10px
+
+      &--guard:before
+        left: 10px
+        width: 70px;
+        height: 74px;

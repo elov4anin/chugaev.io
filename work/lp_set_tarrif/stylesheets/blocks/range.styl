@@ -1,0 +1,340 @@
+.range
+  &__header
+    font-weight: 300;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    padding-left: 11px
+
+    color: #4C85C5;
+    margin-bottom: 85px
+
+  &__count
+    display: none
+
+  /*&__count-text
+    display: none
+
+  &__count
+    position: relative
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 10px;
+    letter-spacing: -0.02em;
+    color: #5A6176;
+    opacity 0.4
+
+    &:after
+      position: absolute
+      bottom: 0px
+      right: -10px
+      content  "\20BD";
+      font-family: ALS Rubl;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 10px;
+      letter-spacing: -0.02em;
+      color: #5A6176;
+
+    &:before
+      position: absolute
+      bottom: -15px
+      right: -0
+      left: 0
+      content ""
+      width: 2px;
+      margin: 0 auto
+      height: 10px;
+      background: #D7E1E8;
+
+
+  &__list
+    margin-top:100px
+    display: flex
+    justify-content space-around
+    padding-bottom: 10px
+
+  &__item
+    &:nth-child(1)
+      position: relative
+      left: 55px
+
+    &:nth-child(2)
+      position: relative
+      left: 15px
+
+    &:nth-child(3)
+      position: relative
+      left: -35px
+
+    &:nth-child(4)
+      position: relative
+      left: -45px
+
+    &:nth-child(5)
+      position: relative
+      left: -55px
+
+    &--active
+      .range__count
+        position: relative
+        top: -35px
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+
+
+        color: #4C85C5;
+        opacity 1
+
+        &:after
+          right: -15px
+          font-size: 20px
+
+        &:before
+          position: absolute
+          bottom: -45px
+
+      .range__count-text
+        position: relative
+        top: -35px
+        display: block
+        padding-left: 15px
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        text-align: center
+
+        color: #5A6176;
+
+*/
+
+.dops
+  position: relative
+  border-top:1px solid #D7E1E8
+  margin-top: 40px
+  padding-top: 30px
+  padding-bottom: 30px
+  text-align: left
+  
+  
+
+  &__header
+    position: absolute
+    right: 0
+    left: 0
+    top: -13px
+    display: block
+    width: 260px
+    margin: 0 auto
+    background #F2F7FB
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+
+    color: #92A1B0;
+
+  &__check
+    display: none
+
+  &__label
+    position: relative
+    padding-left: 40px
+    padding-top: 2px
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+
+    color: #5A6176;
+
+    cursor pointer
+    user-select: none;
+
+
+.dops__check + .dops__label:after {
+  content "";
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 19px;
+  height: 18px;
+
+  border 2px solid #010101;
+  opacity: 0.53
+  border-radius 3px
+}
+
+.dops__check + .dops__label:before {
+  content "";
+  position: absolute
+  display: none
+}
+
+.dops__check:checked + .dops__label:after {
+  content "";
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 19px;
+  height: 18px;
+
+  border 2px solid #348BED;
+  background-color: #348BED
+  opacity 1
+  border-radius 3px
+}
+
+.dops__check:checked + .dops__label:before {
+  content "";
+  position: absolute
+  top: 5px
+  left: 4px
+  z-index 10
+
+  width: 13px;
+  height: 6px;
+  display: block
+
+  border 2px solid white;
+  border-right: transparent
+  border-top transparent
+
+  transform skewX(-10deg) rotate(-55deg) scaleY(1.2) scaleX(0.9)
+}
+
+.rubble
+  font-family: ALS Rubl
+
+.irs-slider
+  cursor move
+
+.irs-single .rubble {
+  color #5A6176;
+}
+
+@media screen and (max-width: $tabletWidth)
+  .range__header
+    font-size: 20px
+  .irs-line-right
+    display: none
+  .irs-line-mid
+    width:84%
+
+@media screen and (max-width: $mobileWidth)
+
+  .range
+    &__header
+
+      line-height: 1.1em;
+      padding-left: 17px
+      letter-spacing: -0.05em
+
+    &__count
+      position: absolute
+      top: 100px
+      right: 0
+      left: 0
+      display: block
+
+      width: 250px;
+      margin-right: auto
+      margin-left: auto
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      color: #4c85c5;
+      opacity: 1;
+      padding: 1px 5px;
+      background: #f2f7fb;
+      border-radius: 4px;
+
+      .rubble
+        color #5A6176;
+
+
+      &:after
+        position: absolute;
+        left: 0;
+        right: 0
+        bottom: -28px;
+        display: block;
+        margin: 0 auto;
+        content: "принятых платежей";
+        padding-left: 7px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        background: #f2f7fb;
+        color: #5a6176;
+        width: 110px;
+        height: 30px;
+
+        overflow: hidden;
+        border: none;
+        border-top-color: #ed5565;
+
+  .irs-single
+    font-size: 16px
+    background: transparent
+    top: -55px;
+    display: none
+
+    &:after
+      background: transparent
+      font-size: 12px
+      left: -6px
+
+  .irs-grid-text
+    display: none
+
+  .irs-line-right
+    display: none
+
+
+  .irs-line-mid
+    width: 74%
+
+
+  .dops
+    &__label
+      font-size: 14px;
+      padding-left: 52px;
+
+  .dops__check + .dops__label:after {
+    left: 22px
+  }
+
+  .dops__check:checked + .dops__label:after {
+    left: 22px
+  }
+
+  .dops__check:checked + .dops__label:before {
+    left: 26px
+  }
+
