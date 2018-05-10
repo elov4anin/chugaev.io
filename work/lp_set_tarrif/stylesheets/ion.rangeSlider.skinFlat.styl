@@ -1,0 +1,196 @@
+/* Ion.RangeSlider, Flat UI Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+.irs-line-mid,
+.irs-line-left,
+.irs-line-right,
+.irs-bar,
+.irs-bar-edge,
+.irs-slider {
+    background: url(../images/sprite-skin-flat.png) repeat-x;
+    border-radius 5px
+}
+
+.irs {
+    height: 40px;
+    position: relative
+}
+.irs-with-grid {
+    height: 60px;
+}
+.irs-line {
+    height: 12px; top: 25px;
+    width: 87%
+   /* max-width: 645px;*/
+    left: 40px;
+}
+    .irs-line-left {
+        height: 12px;
+        background-position: 0 -30px;
+    }
+    .irs-line-mid {
+        height: 12px;
+        background-position: 0 0;
+    }
+    .irs-line-right {
+        height: 12px;
+        background-position: 96% -30px;
+    }
+
+.irs-bar {
+    height: 12px; top: 25px;
+    background-position: 0 -60px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+    .irs-bar-edge {
+        top: 25px;
+        height: 12px; width: 9px;
+        background-position: 0 -90px;
+        display: none;
+    }
+
+.irs-shadow {
+    height: 3px; top: 34px;
+    background: #000;
+    opacity: 0.25;
+}
+.lt-ie9 .irs-shadow {
+
+}
+
+.irs-slider {
+    width: 78px;
+    height: 80px;
+    top:-5px;
+    background-image url("../images/range-begin.svg")
+    background-repeat no-repeat
+   /* width: 25px; height: 20px;
+    top: 22px;
+    background-position: 0 -118px;
+    transform scale(2.5)*/
+}
+.irs-slider.state_hover, .irs-slider:hover {
+    width: 80px;
+    height: 80px;
+    top:-5px;
+    background-image url("../images/range-begin.svg")
+   /* background-position: 0 -150px;*/
+}
+
+.irs-min, .irs-max {
+    color: #999;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    top: 0; padding: 1px 3px;
+    background: #e1e4e9;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: #fff;
+    font-size: 10px; line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background: #ed5565;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.irs-from:after, .irs-to:after, .irs-single:after {
+    position: absolute; display: block; content: "";
+    bottom: -6px; left: 50%;
+    width: 0; height: 0;
+    margin-left: -3px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-top-color: #ed5565;
+}
+.irs-grid {
+    bottom: 45px
+}
+
+.irs-grid-pol {
+    /*background: #e1e4e9;*/
+    background: #5A6176;
+    height: 10px;
+
+}
+.irs-grid-text {
+
+    bottom: 25px;
+    padding-left: -25px
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    text-align: center
+
+    color: #5A6176;
+}
+
+.irs-grid-pol.small {
+    display: none
+}
+
+.irs-disabled {
+}
+
+.irs-single
+    position: absolute
+    top: -60px
+
+    margin-left: 0px;
+
+    z-index: 2
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: #4C85C5;
+    opacity 1
+    padding: 1px 5px;
+    background: #f2f7fb;
+    border-radius: 4px;
+
+    &:after
+        position: absolute;
+        left: 0;
+        bottom: -28px;
+        display: block;
+        margin: 0 auto
+        content: "принятых платежей";
+        padding-left: 7px
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        text-align: center
+        background: #f2f7fb;
+
+        color: #5A6176;
+        width: 110px
+        height: 30px
+
+        margin-left: 0px;
+
+        overflow: hidden;
+        border: none
+        border-top-color: #ed5565;
+
+
+
+
+

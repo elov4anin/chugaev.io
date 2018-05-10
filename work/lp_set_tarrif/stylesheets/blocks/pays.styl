@@ -1,0 +1,147 @@
+.pays
+  &__list
+    position: relative
+    display: flex
+    margin-top: 80px
+    padding-bottom: 30px
+    counter-reset: list
+    border-bottom 2px dotted #CAD6DF
+    
+    &:after
+      content: '!'
+      position: absolute
+      bottom: -40px
+      left: 0
+      right: 0
+      z-index 10
+
+      margin: 0 auto
+      width: 80px
+      height: 81px
+
+      background-image: url("../images/ic_attention.svg");
+      background-repeat:no-repeat
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 83px;
+      font-size: 30px;
+      letter-spacing: -0.06em
+      text-align: center
+
+      color: #FFFFFF;
+
+  &__item
+    position: relative
+    width: 320px
+    margin: 10px
+    border-top 1px solid #348BED
+    text-align: left
+
+    &:before
+      counter-increment: list;
+      content  counter(list)
+      position: absolute
+      top: -98px;
+      z-index: -1;
+      left: -3px
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 141px;
+      font-size: 80px;
+      letter-spacing: -0.02em
+      color: #FBB601
+
+    &:nth-child(2)
+      margin-left: 20px
+      margin-right: 20px
+
+      .pays__sublist div
+        font-weight: 500
+        font-size: 18px
+        line-height: 28px;
+
+    &:nth-child(3)
+      &:before
+        top: -98px;
+
+
+  &__header
+    margin-top: 5px
+    margin-bottom:  5px
+
+    font-weight: 500;
+    line-height: 42px;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #348BED;
+
+  &__sublist
+    list-style-type disc
+    padding-left: 23px;
+
+  &__subitem
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: #348BED;
+
+    /*&:nth-child(3)
+      div
+        line-height: 0.2em*/
+
+
+    div
+      color: #5A6176;
+      margin-bottom: 5px
+
+  &__subitem-header
+    margin: 0
+    padding: 0
+
+
+    font-size: 18px
+    font-weight: 500
+
+  &__subitem-text
+    margin-top: -1px
+    font-size: 16px
+    line-height: 18px
+    margin-bottom: 0
+    padding-bottom: 0
+
+  &__text
+    margin-top: 45px
+    margin-bottom: 35px
+
+    font-weight: 300;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #4C85C5;
+
+@media screen and (max-width: $tabletWidth)
+  .pays
+    &__list
+      flex-wrap wrap
+      width: 480px
+    &__item
+      width: 100%
+      margin-bottom: 70px
+      margin-left: 30px
+
+      &:nth-child(2)
+        margin-left: 30px
+
+@media screen and (max-width: $mobileWidth)
+  .pays
+    &__list
+      min-width 320px
+      width: 100%
+    &__text
+      font-size: 18px

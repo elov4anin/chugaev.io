@@ -1,0 +1,89 @@
+.links
+  &__list
+    padding-top: 30px
+    padding-top: 2.5vh
+
+    padding-bottom: 50px
+    padding-bottom: 5.5vh
+
+    margin: 0
+
+    background: linear-gradient(180deg, #F0F0F0 0%, rgba(240, 240, 240, 0) 100%);
+
+  &__item
+    padding-left: $lgSidebarPaddingLeft+38
+
+    margin-bottom: 2vh
+
+    &:nth-child(3) .links__link
+      letter-spacing: -0.05em;
+
+    &:last-child
+      margin-bottom: 22px
+
+  &__link
+    font-weight: 400;
+    line-height: normal;
+    font-size: 18px;
+    font-size: 1.89vh
+    letter-spacing: -0.02em;
+    color: #5A6176;
+    text-decoration: none
+
+    &:hover
+      color #348BED
+      font-weight: 500
+
+@media screen and (min-height: $lgHeight - 30px )
+
+  .links
+    &__list
+      padding-top: 5.7vh
+
+    &__link
+      font-size: 18px;
+
+@media screen and (max-width: $desktopWidth)
+  .links
+    background: linear-gradient(180deg, #F0F0F0 0%, rgba(240, 240, 240, 0) 100%);
+    &__list
+      padding-top: 50px
+      padding-bottom: 40px
+
+      background: transparent
+      width: 74%
+      margin: 0 auto
+
+      display: flex
+      flex-wrap wrap
+
+    &__item
+      width: 50%
+      margin-bottom: 30px
+
+      &:nth-child(1)
+        order 1
+
+      &:nth-child(2)
+        order 5
+
+      &:nth-child(3)
+        order 2
+
+      &:nth-child(4)
+        order 3
+
+      &:nth-child(5)
+        order 3
+
+    &__link
+      font-size: 20px
+
+
+@media screen and (max-width: $tabletWidth)
+  .links
+    flex-direction column
+    &__item
+      width: 100%
+      padding-left: 0
+

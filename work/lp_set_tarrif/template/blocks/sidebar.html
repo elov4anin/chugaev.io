@@ -1,0 +1,14 @@
+<div class="sidebar" id="sidebar">
+  @@include('blocks/logo.html')
+  <button class="nav__toggle" id="toggle" title="Открыть меню">Открыть меню</button>
+  <ul class="nav__list">
+    <li class="nav__item nav__item--ic_assessment @@tarif-item-active"><a class="nav__link  @@tarif-link-active" href="index.html">Тарифы</a></li>
+    <li class="nav__item nav__item--ic_settings @@options-item-active"><a class="nav__link @@options-link-active"  href="options.html">Опции</a></li>
+    <li class="nav__item nav__item--ic_account @@instr-item-active"><a class="nav__link @@instr-link-active"  href="instruments.html">Для плательщика</a></li>
+    <li class="nav__item nav__item--ic_payment @@pays-item-active"><a class="nav__link @@pays-link-active"  href="pays.html">Способы оплаты</a></li>
+  </ul>
+
+  @@include('blocks/contacts.html')
+  @@include('blocks/links.html')
+  @@include('blocks/copy.html')
+</div>

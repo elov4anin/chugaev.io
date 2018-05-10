@@ -1,0 +1,9 @@
+<div class="error-window">
+  <img class="error-window__img" src="img/error.png" alt="Ошибка опер">
+  <h2 class="error-window__header">Ошибка</h2>
+  <p class="error-window__text">
+    <% if (errorMessage != null) { %><b><%=errorMessage%>.</b><% } %><br>
+    Продолжить перевод с новой картой?
+  </p>
+  <button class="error-window__btn">Готово</button>
+</div>

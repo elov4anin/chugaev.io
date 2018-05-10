@@ -1,0 +1,221 @@
+.page
+  position: absolute
+  left: $lgSidebarWidth
+
+  top: 0
+  bottom: 0
+
+  width: 74%
+
+  padding-top 0
+  min-width 1040px
+  min-height: 100%
+
+  text-align: center
+
+
+  &--pays
+    z-index 9
+
+
+  &__wrapper
+    position: relative
+    width: 72%
+    width 1000px
+    margin: 0 auto
+
+  &__header
+    margin-bottom: 5px;
+
+    text-align: left
+    color: #5A6176;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 51px;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+
+  &__btn
+    position: fixed
+    bottom: -150px
+    bottom: 30px
+    left:110px
+    right: 0
+    z-index 10
+
+    display: block
+    width: 300px
+    padding: 15px
+    margin: 0 auto
+
+    outline none
+    border 0
+
+    background: linear-gradient(261.47deg, #FBB601 0%, #F2994A 99.27%);
+    border-radius: 30px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-decoration: none
+    transition: all .2s ease-in-out;
+
+    color: #FFFFFF;
+
+    box-shadow: 0 5px 30px 0 rgba(251,182,1,.4)
+
+    &:hover
+      /*background: linear-gradient(260.71deg, rgba(251, 182, 1, 0.3) 0%, rgba(242, 153, 74, 0.3) 99.14%);*/
+      box-shadow: 0 15px 25px 0  rgba(242, 153, 74, 0.3);
+      transform scale(1.05)
+
+    /*&--pays
+      bottom: -70px*/
+
+/*@media screen and (min-height: $lgHeight + 1)
+  .page
+    padding-top: 10vh*/
+/*
+
+@media screen and (max-width: $lgWidth)
+  .page
+    left: 150px
+    right: 0
+    margin: 0 auto
+
+    min-height 850px
+*/
+
+/*
+@media screen and (max-height: $lgHeight )
+  .page
+    &__wrapper
+     transform scale(0.8)
+
+*/
+
+@media screen and (min-height: 800px) and (max-height: 900px) and (min-width: $desktopWidth )
+  .page
+    &__btn
+      position: absolute
+      bottom: -70px
+
+
+
+@media screen and (min-width: $desktopWidth17) and  (max-width: $desktopWidth)
+  .page
+    min-width: 1008px
+    &__wrapper
+      margin-left: 5px
+
+    /*&__header
+      margin-left: 40px*/
+
+
+@media screen and (max-width: $desktopWidth)
+  .page
+    position: relative
+    left: auto
+    top: auto
+    bottom: auto
+    margin: 0 auto
+
+    &__header
+      font-size: 36px
+
+    &__btn
+      position: relative
+      left: auto
+      right: auto
+      bottom auto
+      top: auto
+      margin: 70px auto
+
+@media screen and (max-width: $desktopWidth17)
+  .page
+    min-width:730px
+    &__wrapper
+      width: 730px
+    &__header
+      text-align: center
+
+@media screen and (min-width: $mobileWidth) and (max-width: $tabletWidth)
+  .page
+    min-width:480px
+    &__wrapper
+      width: 480px
+    &__header
+      font-size: 24px
+      line-height: 1.3em
+
+@media screen and (max-width: $mobileWidth)
+  .page
+    min-width 320px
+    width: 100%
+    &__wrapper
+      min-width 320px
+      padding-left: 5px
+      padding-right: 5px
+      width: 100%
+
+    &__header
+      font-size: 24px
+      text-align: left
+      line-height: 1.2em
+      margin-left: 12px
+      margin-top: 35px
+
+@media screen and (min-width: $desktopWidth) and (max-width: 1770px)
+  .page
+    &__btn
+      position: absolute
+      bottom: -95px
+      left: 10px
+
+      &--pays
+        bottom: -225px
+
+@media screen and (min-width: 1800px) and (max-width: 1999px)
+  .page
+    &__btn
+      left: 120px
+      bottom 70px
+
+@media screen and (min-width: 2000px) and (max-width: 2099px)
+  .page
+    &__btn
+      left: 90px
+
+@media screen and (min-width: 2100px) and (max-width: 2199px)
+  .page
+    &__btn
+      left: 70px
+@media screen and (min-width: 2200px) and (max-width: 2299px)
+  .page
+    &__btn
+      left: 50px
+
+@media screen and (min-width: 2300px) and (max-width: 2399px)
+  .page
+    &__btn
+      left: 0
+@media screen and (min-width: 2400px) and (max-width: 2499px)
+  .page
+    &__btn
+      left: -30px
+
+@media screen and (min-width: 2500px)
+  .page
+    &__btn
+      left: -60px
+
+
+
+
+
+

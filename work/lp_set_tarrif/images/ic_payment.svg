@@ -1,0 +1,14 @@
+<svg width="21" height="17" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>ic_payment_black_24px</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(360 24)">
+<g id="ic_payment_black_24px">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-359.865 -23.892)" fill="#5A6176"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 18 0L 2 0C 0.89 0 0.00999999 0.89 0.00999999 2L 0 14C 0 15.11 0.89 16 2 16L 18 16C 19.11 16 20 15.11 20 14L 20 2C 20 0.89 19.11 0 18 0ZM 18 14L 2 14L 2 8L 18 8L 18 14ZM 18 4L 2 4L 2 2L 18 2L 18 4Z"/>
+</defs>
+</svg>

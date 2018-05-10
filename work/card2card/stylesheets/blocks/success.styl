@@ -1,0 +1,1027 @@
+.success
+  background: #f5f5f5
+
+  padding-top: 9px
+
+
+  margin 0 auto
+  text-align: center
+  &__wrapper
+    wrapper-fluid();
+
+  &--show
+    display: block
+
+  /*&__img
+      position: relative;
+      top: 4px;
+      left: 6px;
+      width: 483px;
+      height: 397px;
+      margin: 0 auto;*/
+
+
+  &__header
+    margin-top: 6px
+    margin-bottom: 53px
+    padding-left: 10px
+
+    font-size: 84px;
+    font-family: "Roboto";
+    color: rgb(65, 197, 102);
+    line-height: 1.2;
+    font-weight: 300
+    letter-spacing: -0.055em
+
+  &__text
+    position: relative
+    z-index 12
+    margin-top: 0px
+    margin-bottom: 0
+    margin-right: auto
+    margin-left: auto
+    padding-top: 40px;
+    max-width 570px
+    width: 100%
+    
+    
+
+    font-size: 36px;
+    font-family: "Roboto";
+    color: rgb(90, 97, 118);
+    background-color: #f5f5f5
+    line-height: 1.0;
+    /*box-shadow: inset 0 15px 40px -25px rgba(90,97,118,0.3)*/
+
+    &:after
+      content "";
+      position: absolute
+      top: 0px
+      right: 0
+      left: 12px
+      z-index 15
+
+      margin auto
+      width: 0;
+      height: 0;
+
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #41c566 transparent transparent transparent;
+      opacity 0
+
+      animation triangle  ease 0.1s
+      animation-iteration-count 1
+      animation-fill-mode forwards
+      animation-delay 0.1s
+
+    &:before
+      position: absolute;
+      content: "";
+      left: -14px;
+      opacity: 0.4;
+      top: 0
+      z-index: -1;
+      width: 600px;
+      height: 70px;
+      background-image: url(../img/arrow-shadow.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+
+  br
+    font-size: 42px
+  &__cost
+    font-size: 54px;
+    padding-left: 10px;
+    letter-spacing: -0.075em;
+
+    sub
+      bottom: 0px
+      left: -2px
+
+      font-size: 73%;
+
+      
+
+  &__btn
+
+    width: 353px;
+    height: 80px;
+    margin: 0 auto
+
+    margin-bottom: 94px
+    margin-left: 8px
+
+    font-size: 35.611px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center
+
+    background-color: rgb(251, 182, 1);
+    box-shadow: 0 15px 30px 0 rgba(251, 182, 1, 0.4);
+    outline none
+    border 1px solid transparent;
+    border-radius 40px
+
+    cursor pointer
+
+    &:hover
+      /*box-shadow: 0 5px 60px 0 rgba(251,182,1,.8);*/
+      box-shadow: 0px 15px 60px 0px rgba(251, 182, 1, 0.7);
+
+    &:active
+      background-color: rgb(251, 171, 0);
+      box-shadow: 0 15px 30px 0 rgba(251, 182, 1, 0.4);
+
+.animation-wrapper
+  position: relative
+  top: 4px;
+  left: 6px;
+
+  width: 483px
+  height: 397px
+  margin 0 auto
+
+
+.sm-circle
+  position: absolute
+  z-index 10
+  top: 86px;
+  left: 0;
+  right: 0;
+  margin: auto
+  width: 320px
+  height: 320px
+
+  opacity 0
+
+  background-image: url("../img/for-success-animations/sm-circle.png")
+  background-repeat: no-repeat
+
+  animation sm-circle  ease 0.2s
+  animation-iteration-count 1
+  animation-fill-mode forwards
+
+.xs-circle
+  position: absolute
+  z-index 9
+  top: 46px;
+  left: 0;
+  right: 0;
+  margin: auto
+  width: 400px
+  height: 480px
+  opacity 0
+
+  background-image: url("../img/for-success-animations/xs-circle.png")
+  background-repeat: no-repeat
+
+  animation sm-circle  ease 0.2s
+  animation-iteration-count 1
+  animation-fill-mode forwards
+  animation-delay 0.1s
+
+.lg-circle
+  position: absolute
+  z-index 8
+  top: 9px;
+  left: 0;
+  right: 0;
+  margin: auto
+  width: 480px
+  height: 480px
+  opacity 0
+
+  background-image: url("../img/for-success-animations/lg-circle.png")
+  background-repeat: no-repeat
+  animation sm-circle  ease 0.2s
+  animation-iteration-count 1
+  animation-fill-mode forwards
+  animation-delay 0.2s
+
+.dimon
+  position: absolute
+  z-index 11
+  top: 78px;
+  left: 117px;
+
+  margin: auto
+  width: 400px
+  height: 400px
+  opacity 0
+
+  background-image: url("../img/for-success-animations/dimon.png")
+  background-repeat: no-repeat
+  animation dimon  ease 1s
+  animation-iteration-count 1
+  animation-fill-mode forwards
+  animation-delay 0.5s
+
+.money
+  position: absolute
+  z-index 11
+  right: 0;
+  margin: auto
+  width: 60px
+  height: 60px
+  opacity 1
+
+  background-image: url("../img/for-success-animations/money.png")
+  background-repeat: no-repeat
+  animation-duration 3s
+  animation-timing-function ease
+  animation-iteration-count 1
+  animation-fill-mode both
+  animation-delay 0.6s
+
+
+  &--1
+    left: 349px;
+    top: 38px;
+
+    animation-name money, money-1
+
+  &--2
+    left: 70px;
+    top: -1px;
+
+    animation-name money, money-2
+
+
+  &--3
+    left: -174px;
+    top: 34px;
+
+    animation-name money, money-3
+
+
+  &--4
+    left: -346px;
+    top: 53px;
+
+    animation-name money, money-4
+
+
+  &--5
+    left: 245px;
+    top: 175px;
+
+    animation-name money, money-5
+
+
+
+  &--6
+    left: 358px;
+    top: 254px;
+    animation-name money, money-6
+
+  &--7
+    left: 197px;
+    top: 130px;
+
+    animation-name money, money-7
+
+
+
+  &--8
+    left: -340px;
+    top: 250px;
+
+    animation-name money, money-8
+
+
+
+  &--9
+    left: -267px;
+    top: 167px;
+
+    animation-name money, money-9
+
+
+
+  &--10
+    left: 110px;
+    top: 212px;
+
+    animation-name money, money-10
+
+
+
+
+  &--11
+    left: -140px;
+    top: 224px;
+    transform:  scale(0.9);
+
+    animation-name money, money-11
+
+  &--12
+    left: -138px;
+    top: 72px;
+
+    animation-name money, money-12
+
+
+@media (min-width: desktop-widths)
+  .success-window
+    width: 710px
+
+
+@keyframes triangle {
+  0% {
+    opacity 0;
+
+  }
+  30% {
+    opacity 0.3;
+
+  }
+  60% {
+    opacity 0.7;
+
+  }
+  100% {
+    opacity 1;
+
+  }
+}
+
+
+@keyframes sm-circle {
+  0% {
+    opacity 0;
+    transform scale(0.3)
+  }
+  30% {
+    opacity 0.3;
+
+  }
+  60% {
+    opacity 0.7;
+
+  }
+  100% {
+    opacity 1;
+    transform scale(1)
+  }
+}
+
+@keyframes dimon {
+  0% {
+    opacity 0;
+
+  }
+  30% {
+    opacity 0.3;
+    transform translateY(-50px)
+
+
+  }
+  60% {
+    opacity 0.7;
+  }
+  100% {
+    opacity 1;
+    transform translateY(0)
+
+
+  }
+}
+
+@keyframes money {
+  0% {
+    opacity 0;
+    transform translateY(0px);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+    transform translateY(-100px);
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform translateY(0px);
+  }
+}
+
+@keyframes money-1 {
+  0% {
+    opacity 0;
+    transform: rotate(0deg);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(-101deg);
+  }
+}
+
+  @keyframes money-2 {
+    0% {
+      opacity 0;
+      transform: rotate(0) scale(0);
+    }
+
+    10% {
+      opacity 0.1;
+    }
+
+    20% {
+      opacity 0.2;
+    }
+
+    30% {
+      opacity 0.3;
+    }
+
+    40% {
+      opacity 0.4;
+
+    }
+
+    50% {
+      opacity 0.5;
+    }
+
+    60% {
+      opacity 0.6;
+    }
+
+    70% {
+      opacity 0.7;
+    }
+
+    80% {
+      opacity 0.8;
+    }
+
+    90% {
+      opacity 0.9;
+    }
+
+    100% {
+      opacity 1;
+      transform: rotate(-93deg) scale(0.7);
+    }
+  }
+
+@keyframes money-3 {
+  0% {
+    opacity 0;
+    transform:  scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+  opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform:  scale(0.65);
+  }
+}
+
+@keyframes money-4 {
+  0% {
+    opacity 0;
+    transform: rotate(0) scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(-151deg) scale(0.9);
+  }
+}
+
+@keyframes money-5{
+  0% {
+    opacity 0;
+    transform: rotate(0) scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(-82deg) scale(0.8);
+  }
+}
+
+@keyframes money-6 {
+  0% {
+    opacity 0;
+    transform: rotate(0deg) scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes money-7 {
+  0% {
+    opacity 0;
+    ttransform: rotate(0deg) scale(0)
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+   opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(-4deg) scale(0.7)
+  }
+}
+
+@keyframes money-8 {
+  0% {
+    opacity 0;
+    transform: rotate(0) scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(107deg) scale(0.6);
+  }
+}
+
+@keyframes money-9 {
+  0% {
+  opacity 0;
+  transform: rotate(0deg);
+  }
+
+  10% {
+  opacity 0.1;
+  }
+
+  20% {
+  opacity 0.2;
+  }
+
+  30% {
+  opacity 0.3;
+  }
+
+  40% {
+  opacity 0.4;
+
+  }
+
+  50% {
+  opacity 0.5;
+  }
+
+  60% {
+  opacity 0.6;
+  }
+
+  70% {
+  opacity 0.7;
+  }
+
+  80% {
+  opacity 0.8;
+  }
+
+  90% {
+  opacity 0.9;
+  }
+
+  100% {
+  opacity 1;
+    transform: rotate(276deg);
+}
+}
+
+@keyframes money-10 {
+  0% {
+    opacity 0;
+    transform: rotate(0deg) scale(0);
+  }
+
+  10% {
+    opacity 0.1;
+  }
+
+  20% {
+    opacity 0.2;
+  }
+
+  30% {
+    opacity 0.3;
+  }
+
+  40% {
+    opacity 0.4;
+
+  }
+
+  50% {
+    opacity 0.5;
+  }
+
+  60% {
+    opacity 0.6;
+  }
+
+  70% {
+    opacity 0.7;
+  }
+
+  80% {
+    opacity 0.8;
+  }
+
+  90% {
+    opacity 0.9;
+  }
+
+  100% {
+    opacity 1;
+    transform: rotate(107deg) scale(0.7);
+  }
+}
+
+@keyframes money-11 {
+  0% {
+  opacity 0;
+    transform:  scale(0);
+  }
+
+  10% {
+  opacity 0.1;
+  }
+
+  20% {
+  opacity 0.2;
+  }
+
+  30% {
+  opacity 0.3;
+  }
+
+  40% {
+  opacity 0.4;
+
+  }
+
+  50% {
+  opacity 0.5;
+  }
+
+  60% {
+  opacity 0.6;
+  }
+
+  70% {
+  opacity 0.7;
+  }
+
+  80% {
+  opacity 0.8;
+  }
+
+  90% {
+  opacity 0.9;
+  }
+
+  100% {
+  opacity 1;
+    transform:  scale(0.9);
+  }
+}
+
+  @keyframes money-12 {
+    0% {
+      opacity 0;
+      transform: rotate(0) scale(0);
+    }
+
+    10% {
+      opacity 0.1;
+    }
+
+    20% {
+      opacity 0.2;
+    }
+
+    30% {
+      opacity 0.3;
+    }
+
+    40% {
+      opacity 0.4;
+
+    }
+
+    50% {
+      opacity 0.5;
+    }
+
+    60% {
+      opacity 0.6;
+    }
+
+    70% {
+      opacity 0.7;
+    }
+
+    80% {
+      opacity 0.8;
+    }
+
+    90% {
+      opacity 0.9;
+    }
+
+    100% {
+      opacity 1;
+      transform: rotate(60deg) scale(0.65);
+    }
+  }

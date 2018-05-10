@@ -1,0 +1,109 @@
+.page-footer
+  background-color: #dedfe2
+
+  &__wrapper
+    wrapper-fluid();
+    display: flex
+    flex-direction column
+    flex-wrap wrap
+
+  &__list
+    text-align: left
+    padding-top: 14px;
+    padding-left: 16px;
+
+  &__item
+    margin-bottom: 14px
+    padding-left: 16px
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: 400
+    color: rgb(121, 128, 146);
+    letter-spacing: 0.045em;
+
+
+    line-height: 1.624;
+    text-align: left;
+
+    &:nth-child(1)
+      position: relative
+
+      &:before
+        content "©"
+        position: absolute
+        left: -1px
+
+    &:nth-child(2)
+      padding-left: 17px
+      letter-spacing: 0.055em;
+      margin-bottom: 12px
+
+    &:nth-child(3)
+      padding-left: 17px
+
+
+      a
+        letter-spacing: 0.050em;
+
+  &__link
+    text-decoration: underline
+
+@media (min-width: tablet-widths)
+  .page-footer
+    background-image: url("../img/bg-footer.png")
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 563px;
+    /*background-size contain*/
+
+    &__list
+      padding-left: 0
+
+
+@media (min-width: desktop-widths)
+  .page-footer
+    background-image: url("../img/bg-footer-d.png")
+    background-position-y: 0
+    background-size cover
+
+    &__wrapper
+      padding-top: 75px
+      flex-direction row
+      align-items flex-start
+
+    &__list
+      display: flex
+      justify-content space-between
+      width: 100%
+      padding-top: 6px
+      position: relative
+
+      &:after
+        content ""
+        position: absolute
+        height: 2px
+        width: 100%
+        right: 0
+        left: 0
+        top: -19px;
+        border-top: 2px dotted #c6c8cf;
+        border-radius: 1px;
+
+
+    &__item
+      width: 30%
+      padding-left: 22px;
+
+      &:nth-child(1)
+        &:before
+          left: 6px;
+
+      &:nth-child(2)
+        width: 40%
+        padding-left: 53px;
+
+
+      &:nth-child(3)
+        text-align: right
+        position: relative
+        left: 5px

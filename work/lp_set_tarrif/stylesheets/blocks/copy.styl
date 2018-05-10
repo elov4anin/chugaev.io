@@ -1,0 +1,43 @@
+.copy
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+  padding-left: $lgSidebarPaddingLeft
+
+  font-weight: 500;
+  line-height: normal;
+  font-size: 16px;
+  /*font-size: 1.8vh*/
+  letter-spacing: -0.02em;
+
+  color: #92A1B0;
+  border-top: 1px solid  rgba(146, 161, 176, 0.25);
+
+
+  &__text
+    margin: 12px auto;
+    padding-bottom: 0px;
+
+@media screen and (max-width: $desktopWidth)
+  .copy
+    position: relative
+    bottom: auto
+    right: auto
+    left: auto
+    padding-left: auto
+    text-align: center
+
+    &__text
+      margin: 25px auto;
+
+
+@media screen and (max-width: $mobileWidth)
+  .copy
+    padding-left: 0
+/*
+@media screen and (max-width: $mdWidth)
+  .copy
+    text-align: left
+    font-size: 12px
+    padding-left: 5px*/

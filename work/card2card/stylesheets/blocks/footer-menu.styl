@@ -1,0 +1,128 @@
+.footer-menu
+  &__list
+    display: flex
+    flex-direction column
+    margin-top: 40px
+    padding-left: 0
+
+  &__item
+    &:nth-child(1)
+      width: 100%
+      margin-bottom: 20px
+    &:nth-child(2)
+      box-sizing content-box
+      width 100%
+      padding-left: 0
+
+      .footer-submenu__item:not(:nth-child(1))
+        padding-left: 29px
+        padding-bottom: 21px
+
+.footer-submenu
+  &__list
+    padding-left: 0
+
+  &__item
+
+    font-weight: 300
+    font-family: "Roboto";
+
+    line-height: 0.876;
+    text-align: left;
+    font-size: 30px;
+    letter-spacing 0.025em
+    color: rgb(145, 162, 176);
+
+
+    padding-left: 30px
+    padding-bottom: 20px
+
+    &:nth-child(1)
+      font-size: 29.673px;
+      padding-bottom 45px
+      padding-left: 27px
+      letter-spacing: 0.025em
+
+  &__link
+    font-size: 24px;
+    font-weight: 400
+    color: rgb(90, 97, 118);
+    line-height: 1.2;
+    text-align: left;
+    text-decoration none
+
+    cursor pointer
+
+    &:hover
+      color: rgb(74, 133, 197);
+
+@media (min-width: tablet-widths)
+  .footer-menu
+
+    &__list
+      flex-direction row
+      padding-left: 14px;
+
+    &__item
+      &:nth-child(1)
+        width: 48%
+        margin-bottom: 0
+      &:nth-child(2)
+        width 52%
+        padding-left: 15px
+
+
+@media (min-width: desktop-widths)
+  .footer-menu
+
+    &__list
+      margin-top 5px
+      padding-left: 0
+
+    &__item
+      margin-top:112px
+      width 290px
+
+      &:nth-child(1)
+        box-sizing border-box
+        width 252px
+        padding-left: 74px
+
+      &:nth-child(2)
+        box-sizing border-box
+        width 330px
+        padding-left: 45px;
+        &:nth-child(2)
+          width auto
+          padding-left: 45px
+
+          .footer-submenu__item:not(:nth-child(1))
+            padding-left: 0
+            padding-bottom: 0
+
+  .footer-submenu
+
+    &__item
+      padding-bottom: 0px
+      padding-left: 0
+
+      font-size: 16px
+      font-weight: 500
+      line-height: 1.625;
+
+      &:nth-child(1)
+        font-size: 16px
+        padding-bottom 19px
+        padding-left: 0
+        font-weight: 500
+        letter-spacing: 0.025em;
+
+
+    &__link
+      font-size: 18px;
+      line-height: 1.667;
+
+
+
+
+

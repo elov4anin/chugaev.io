@@ -1,0 +1,80 @@
+<svg width="73" height="75" viewBox="0 0 73 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>5</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-807 -1729)">
+<g id="5">
+<g id="Group">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(807 1729)" fill="url(#paint0_linear)"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(819.001 1743)" fill="url(#paint1_linear)"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(831.001 1743)" fill="url(#paint2_linear)"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(825.001 1743)" fill="url(#paint3_linear)"/>
+</g>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(808.001 1801)" fill="#92A1B0"/>
+</g>
+<g id="Group">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path3_fill" transform="translate(826.001 1771)" fill="#92A1B0"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(837.001 1745)" fill="#92A1B0"/>
+</g>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(831.411 1782)" fill="#92A1B0"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path6_fill" transform="translate(832.001 1748)" fill="#92A1B0"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path7_fill" transform="translate(855.184 1748)" fill="#92A1B0"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path8_fill" transform="translate(834.088 1739)" fill="#92A1B0"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path9_fill" transform="translate(833.001 1758)" fill="#92A1B0"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-38.001 24.1533 -28.5011 -741.98 52.2515 370.99)">
+<stop offset="0" stop-color="#FBB601"/>
+<stop offset="1" stop-color="#F2994A"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-2 1.50002 -1.50002 -46.08 2.75001 23.04)">
+<stop offset="0" stop-color="#FBB601"/>
+<stop offset="1" stop-color="#F2994A"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-2 1.50002 -1.50002 -46.08 2.75001 23.04)">
+<stop offset="0" stop-color="#FBB601"/>
+<stop offset="1" stop-color="#F2994A"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-2 1.50002 -1.50002 -46.08 2.75001 23.04)">
+<stop offset="0" stop-color="#FBB601"/>
+<stop offset="1" stop-color="#F2994A"/>
+</linearGradient>
+<path id="path0_fill" d="M 16.001 32.204L 6.625 24L 3.14599 24C 1.41199 24 -3.41797e-06 22.589 -3.41797e-06 20.854L -3.41797e-06 3.14599C -3.41797e-06 1.41099 1.41099 -7.8125e-06 3.14599 -7.8125e-06L 34.855 -7.8125e-06C 36.589 -7.8125e-06 38.001 1.41099 38.001 3.14599L 38.001 7.99999L 36.001 7.99999L 36.001 3.14599C 36.001 2.51399 35.487 1.99999 34.855 1.99999L 3.14599 1.99999C 2.51399 1.99999 2 2.51399 2 3.14599L 2 20.854C 2 21.486 2.51399 22 3.14599 22L 7.376 22L 14 27.796L 14 22L 24 22L 24 24L 16 24L 16 32.204L 16.001 32.204Z"/>
+<path id="path1_fill" d="M 2 -7.8125e-06L 3.66211e-06 -7.8125e-06L 3.66211e-06 1.99999L 2 1.99999L 2 -7.8125e-06Z"/>
+<path id="path2_fill" d="M 72 2.97852e-05L 3.66211e-06 2.97852e-05L 3.66211e-06 2.00003L 72 2.00003L 72 2.97852e-05Z"/>
+<path id="path3_fill" d="M 44 28L 42 28L 42 15.344C 42 7.98702 35.903 2 28.41 2L 15.59 2C 8.097 2 2 7.98602 2 15.344L 2 28L 3.66211e-06 28L 3.66211e-06 15.344C 3.66211e-06 6.88302 6.993 -7.32422e-07 15.59 -7.32422e-07L 28.41 -7.32422e-07C 37.007 -7.32422e-07 44 6.88302 44 15.344L 44 28Z"/>
+<path id="path4_fill" d="M 11 24C 4.626 24 3.66211e-06 18.953 3.66211e-06 12C 3.66211e-06 5.04699 4.626 -7.8125e-06 11 -7.8125e-06C 17.374 -7.8125e-06 22 5.04699 22 12C 22 18.953 17.374 24 11 24ZM 11 1.99999C 5.785 1.99999 2 6.20599 2 12C 2 17.794 5.785 22 11 22C 16.215 22 20 17.794 20 12C 20 6.20599 16.215 1.99999 11 1.99999Z"/>
+<path id="path5_fill" d="M 30.5904 21L 2.59035 21L 2.59035 17.092L 0.0523594 3.55301C -0.113641 2.67401 0.119336 1.77401 0.691337 1.08401C 1.26334 0.395014 2.10536 -7.32422e-07 3.00136 -7.32422e-07L 30.1803 -7.32422e-07C 31.0763 -7.32422e-07 31.9173 0.395014 32.4903 1.08401C 33.0613 1.77301 33.2954 2.67401 33.1294 3.55301L 30.5914 17.092L 30.5914 21L 30.5904 21ZM 4.59035 19L 28.5904 19L 28.6084 16.816L 31.1644 3.18301C 31.2394 2.78301 31.0623 2.49499 30.9513 2.36099C 30.8393 2.22599 30.5903 2.00003 30.1803 2.00003L 3.00036 2.00003C 2.59136 2.00003 2.34236 2.22699 2.22936 2.36099C 2.11836 2.49599 1.94135 2.78301 2.01635 3.18301L 4.58935 16.999L 4.58935 19L 4.59035 19Z"/>
+<path id="path6_fill" d="M 7 14C 3.141 14 3.66211e-06 10.86 3.66211e-06 6.99999C 3.66211e-06 3.13999 3.141 -7.8125e-06 7 -7.8125e-06C 7.67 -7.8125e-06 8.332 0.094998 8.969 0.280998L 8.40601 2.2C 7.95201 2.067 7.479 1.99999 7 1.99999C 4.243 1.99999 2 4.24299 2 6.99999C 2 9.75699 4.243 12 7 12L 7 14Z"/>
+<path id="path7_fill" d="M 1.817 14L 1.817 12C 4.574 12 6.817 9.75699 6.817 6.99999C 6.817 4.24299 4.574 1.99999 1.817 1.99999C 1.376 1.99999 0.939007 2.05701 0.520007 2.17001L -1.29395e-05 0.237999C 0.588987 0.0799988 1.2 -7.8125e-06 1.816 -7.8125e-06C 5.675 -7.8125e-06 8.816 3.13999 8.816 6.99999C 8.816 10.86 5.677 14 1.817 14Z"/>
+<path id="path8_fill" d="M 1.98399 11.788L 9.27734e-06 11.545C 0.0290093 11.302 0.0649875 11.062 0.108988 10.822C 1.24799 4.55101 7.053 -7.8125e-06 13.913 -7.8125e-06C 20.773 -7.8125e-06 26.578 4.55101 27.718 10.822C 27.755 11.029 27.787 11.239 27.815 11.45L 25.833 11.709C 25.81 11.532 25.783 11.356 25.751 11.182C 24.784 5.861 19.807 2.001 13.914 2.001C 8.02201 2.001 3.04401 5.86099 2.07801 11.18C 2.04001 11.381 2.00999 11.583 1.98399 11.788Z"/>
+<path id="path9_fill" d="M 15 6.99999L 3.66211e-06 6.99999L 3.66211e-06 -7.8125e-06L 2 -7.8125e-06L 2 4.99999L 15 4.99999L 15 6.99999Z"/>
+</defs>
+</svg>

@@ -1,0 +1,70 @@
+<script>
+    var w = window.screen.availWidth;
+    var container = document.querySelector(".container-fluid");
+    var contactsList = document.querySelector(".contacts__list");
+    var linksList = document.querySelector(".links__list");
+    var copy = document.querySelector(".copy");
+    var nav = {
+        nav: document.getElementById("sidebar"),
+        toggle:  document.getElementById("toggle"),
+        isOpenMenu: false,
+        openHideMenu: function() {
+            this.isOpenMenu = this.isOpenMenu === false ? true : false;
+            if (this.isOpenMenu) {
+                this.nav.classList.add("sidebar--open");
+            } else {
+                this.nav.classList.remove("sidebar--open")
+            }
+        },
+        click: function () {
+            this.toggle.addEventListener("click", this.openHideMenu.bind(this));
+        }
+    };
+
+    if (w <= 1367) {
+        contactsList.parentNode.removeChild(contactsList);
+        linksList.parentNode.removeChild(linksList);
+        copy.parentNode.removeChild(copy);
+        container.appendChild(contactsList);
+        container.appendChild(linksList);
+        container.appendChild(copy);
+        nav.click();
+    }
+
+    if (w<=479) {
+
+        var items = {
+            collection: document.querySelectorAll(".options__item"),
+            class: "options__item--hidden",
+            init: function () {
+
+                for (var i = 0; i < this.collection.length; i++) {
+                    console.log("tes1t", i);
+                    if (i !== 0) {
+                        this.collection[i].classList.add(this.class);
+                    }
+                    this.collection[i].addEventListener("click", this.click.bind(this));
+                }
+
+            },
+            click: function (e) {
+                console.log(e);
+                for (var i = 0; i < this.collection.length; i++) {
+                    if (!this.collection[i].classList.contains(this.class)) {
+                        this.collection[i].classList.add(this.class);
+                    }
+                }
+                if (e.target.localName ==="h3") {
+                    e.target.parentElement.classList.remove(this.class);
+                } else {
+                    e.target.classList.remove(this.class);
+                }
+            }
+        };
+
+        items.init();
+    }
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
