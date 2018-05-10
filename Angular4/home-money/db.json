@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 238760,
+    "value": 238759,
     "currency": "RUB"
   },
   "categories": [
@@ -89,6 +89,13 @@
       "category": 3,
       "date": "12.01.2018 11:41:30",
       "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "28.04.2018 10:21:27",
+      "id": 9
     }
   ]
 }
