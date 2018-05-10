@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Проекты</ion-title>
+
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let project of projects" (click)="presentModal(project)">
+            {{ project.name }}
+        </button>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons end>
+            <button type="button" ion-button (click)="add()">Добавить</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

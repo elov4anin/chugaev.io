@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Детали проекта
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="close()">
+                <span ion-text color="primary" showWhen="ios">Назад</span>
+                <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primaty" stacked>Название</ion-label>
+            <ion-input type="text" [(ngModel)] ='project.name' class="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primaty" stacked>Репозитоий</ion-label>
+            <ion-input type="text" [(ngModel)] ='project.gitlab' class="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primaty" stacked>Домен</ion-label>
+            <ion-input type="text" [(ngModel)] ='project.domain' class="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primaty" stacked>Комментарий</ion-label>
+            <ion-input type="text" [(ngModel)] ='project.comment' class="name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Виртуальная машина</ion-label>
+            <ion-select [(ngModel)]="vmSelect" (ionChange)="onChangeVm()">
+                <ion-option *ngFor="let vm of vms " value="{{vm.id}}">{{vm.ip}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+        <table>
+            <tbody>
+            <tr>
+                <th>Логин</th>
+                <th>Пароль</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let acc of accounts">
+                <td><ion-input type="text" [(ngModel)] ='acc.login' class="acc"></ion-input></td>
+                <td><ion-input type="text" [(ngModel)] ='acc.password' class="acc"></ion-input></td>
+                <td>   <button  ion-button type="button" (click)="deleteAcc(acc)" class="acc__del"> <ion-icon name="trash"></ion-icon> Удалить</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button ion-button type="button" (click)="addAccount()" ><ion-icon name="add"></ion-icon> Добавить</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons end>
+            <button type="button" ion-button (click)="close()">Закрыть</button>
+            <button type="button" ion-button (click)="delete()">Удалить</button>
+            <button type="button" ion-button (click)="save()" [disabled] ="vmSelect === null" >Сохранить</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
